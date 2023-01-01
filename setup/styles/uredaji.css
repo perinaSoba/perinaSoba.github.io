@@ -1,0 +1,61 @@
+/* Page Container */
+#pageContent {
+    width: 100%;
+    background-color: #fff;
+    padding: 2rem 2rem;
+}
+
+/* Classes */
+.infoText {
+    font-weight: 300;
+    font-size: 1.3rem;
+}
+
+/* Mobile Div */
+#downloadSec {
+    margin-top: 2rem;
+}
+#downloadSec h3 {
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+#downloadSec p {
+    font-size: 1.3rem;
+    font-weight: 300;
+}
+#downloadSec p a {
+    font-weight: 400;
+    text-decoration: none;
+    color: #3556E3;
+}
+#downloadSec p a:hover {
+    text-decoration: underline;
+    color: #1A16B4;
+    transition: 0.5s;
+}
+#downloadSec .appExp {
+    width: 100%;
+    height: auto;
+    border-radius: 1rem;
+    margin-top: 1rem;
+}
+
+/* Responsive stuff */
+@media screen and (max-device-width:480px)  {
+    #pageContent {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 100%;
+        justify-items: justify;
+    }
+
+    .contentHolder {
+        display: block;
+        padding: 1rem;
+    }
+
+    #downloadSec {
+        margin-top: 1rem;
+    }
+}

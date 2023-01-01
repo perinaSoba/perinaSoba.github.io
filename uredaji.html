@@ -1,22 +1,22 @@
 <html>
     <head>
-        <title>Perina Soba</title>
+        <title>Perina Soba - Uređaji</title>
+        <link rel="stylesheet" href="setup/styles/uredaji.css">
         <link rel="stylesheet" href="setup/styles/index.css">
-        <link rel="stylesheet" href="setup/styles/styles.css">
         <script src="setup/googleLogIn.js" defer></script>
         <script src="setup/mobileNav.js" defer></script>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta charset="UTF-8">
 
         <meta name="author" content="Perina Soba" />
-        <meta name="description" content="*///*" />
-        <link href="media/favicion.png" rel="icon"/>
-        <meta property="og:title" content="Perina Soba"/>
-        <meta property="og:url" content="https://perinasoba.github.io"/>
-        <meta property="og:description" content="*///*"/>
+        <meta name="description" content="Da bi ste kontrolisali uređaje, potrebno da instalirate aplikaciju na vaš uređaj. Za dodatne informacije pročitajte tekst koji se nalazi ispod, a koji je prilagođen za vaš uređaj." />
+        <link href="media/favicon.png" rel="icon"/>
+        <meta property="og:title" content="Nik Forum - Uređaji"/>
+        <meta property="og:url" content="https://perinasoba.github.io/nikForum"/>
+        <meta property="og:description" content="Da bi ste kontrolisali uređaje, potrebno da instalirate aplikaciju na vaš uređaj. Za dodatne informacije pročitajte tekst koji se nalazi ispod, a koji je prilagođen za vaš uređaj."/>
         <meta property="og:locale" content="sr_RS"/>
         <meta property="og:site_name" content="Perina Soba"/>
-        <meta property="og:image" content="*///*"/>
+        <meta property="og:image" content="https://perinasoba.github.io/nikForum/media/stories/googleHomeThumbnail.png"/>
     </head>
 
     <!-- Google tag (gtag.js) -->
@@ -40,7 +40,7 @@
             </div>
             
             <div id="sideButtons">
-                <button id="activeCard">
+                <button onclick="window.location.href = `index`">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather feather-home">
                         <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
                         <polyline points="9 22 9 12 15 12 15 22"></polyline>
@@ -74,6 +74,8 @@
         </div>
 
         <div id="pageContent">
+            <h1 class="pcTitle">Uređaji</h1>
+
             <div id="mobNavButt">
                 <svg id="navConfigButt" onclick="buttPressed()" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
                     <line x1="3" y1="12" x2="21" y2="12"></line>
@@ -81,31 +83,33 @@
                     <line x1="3" y1="18" x2="21" y2="18"></line>
                 </svg>
     
-                <h1 class="websiteTitle" id="mobTitle">Početna</h1>
+                <h1 class="websiteTitle" id="mobTitle">Uređaji</h1>
             </div>
 
             <br class="mobNavSpace">
 
             <div id="mobileNav">
-                <a id="currPageMob">Početna</a>
+                <a href="index">Početna</a>
                 <a href="nalog">Nalog</a>
                 <a href="nikBank">Nik Bank</a>
                 <a href="nikForum">Nik Forum</a>
             </div>
-            
+
             <div class="contentHolder">
-                <div id="pgBanner">
-                    <h1>Perina Soba</h1>
+                <span class="infoText">Da bi ste kontrolisali uređaje, potrebno da instalirate aplikaciju na vaš uređaj. Za dodatne informacije pročitajte tekst koji se nalazi ispod, a koji je prilagođen za vaš uređaj.</span>
+
+                <div id="downloadSec">
+                    <h3>Android uređaji</h3>
+                    <p>Za Android uređaje potrebno je da instalirate Google Home aplikaciju, čiji je proizvođač Google, a koja se nalazi na Google Play storu. Da bi ste je instalirali potrebno da pritisnete <a href="intent://google.com/#Intent;scheme=https;package=com.google.android.apps.chromecast.app;end">ovaj link</a> koji vas vodi direktno do aplikacije.</p>
+                    
+                    <img class="appExp" src="media/stories/googleHomeThumbnail.png">
                 </div>
 
-                <div class="textBox">
-                    <h2>O nama</h2>
-                    <p>Perina Soba je kompanija koja posluje na domaćem tržištu već tri godine, samo pod drugim imenom POST. Početak POST-a je bilo jedna mala prodavnica koja se kasnije proširila na veliku količinu usluga koje pruža i danas. Kao kompanija posedujemo par pod-usluga kao što su Nik Bank i Nik Forum.</p>
-                </div>
-
-                <div class="textBox">
-                    <h2>Kontakt</h2>
-                    <p>Naša e-mail adresa je <a href="mailto:perinaSoba@gmail.com">perinaSoba@gmail.com</a>. Ukoliko preferirate da ćaskate sa našim agentima, uvek nas možete kontaktirati preko našeg telefona +381 063 140 5895!</p>
+                <div id="downloadSec">
+                    <h3>Windows uređaji</h3>
+                    <p>Za sve windows uređaje potrebno je da instaliraju Smart Things aplikaciju od proizvođača Samsunga. Ova aplikacija se preuzima preko Microsft Stora što znači da nije potrebna administratorska dozvola da bi se instalirala. Ova aplikacija nudi mnogo manje nego Google Home aplikacija za Android uređaje, ali pošto ona nije dostupna za Windows uređaje, moramo da koristimo Smart Things aplikaciju. Da bi ste je preuzeli pritisnite <a href="https://apps.microsoft.com/store/detail/smartthings/9N3ZBH5V7HX6" target="_blank">ovaj link</a> koji vas vodi do Microsoft Stora.</p>
+                    
+                    <img class="appExp" src="media/stories/smartThingsThumbnail.png">
                 </div>
             </div>
         </div>

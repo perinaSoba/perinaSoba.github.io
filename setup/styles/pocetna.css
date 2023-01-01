@@ -1,0 +1,62 @@
+/* Page Container */
+#pageContent {
+    width: 100%;
+    background-color: #fff;
+    padding: 0;
+}
+
+/* Content */
+.contentHolder {
+    width: 100%;
+}
+
+.textBox {
+    border: 0;
+    padding: 1rem 10rem;
+    margin: 0;
+    text-align: center;
+    transition: 0.5s;
+}
+.textBox h2 {
+    margin-bottom: 1rem;
+    font-size: 1.9rem;
+    font-weight: 500;
+    font-weight: bold;
+    text-align: center;
+}
+.textBox p {
+    font-size: 1rem;
+    text-align: center;
+    margin-bottom: 0.5rem;
+}
+.textBox a {
+    justify-content: right;
+    color: #3556E3;
+    text-decoration: none;
+}
+.textBox:hover a{
+    text-decoration: underline;
+    color: #1A16B4;
+    transition: 0.5s;
+}
+
+/* Responsive stuff */
+@media screen and (max-device-width:480px)  {
+    #pageContent {
+        padding: 0;
+        margin: 0;
+        width: 100%;
+        height: 100%;
+        justify-items: center;
+    }
+
+    .contentHolder {
+        display: block;
+    }
+    .textBox {
+        background-color: white;
+        max-width: none;
+        width: auto;
+        padding: 1rem;
+    }
+}
