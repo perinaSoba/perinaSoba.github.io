@@ -10,7 +10,7 @@
 
         <meta name="author" content="Perina Soba" />
         <meta name="description" content="*///*" />
-        <link href="media/favicon.png" rel="icon"/>
+        <link href="media/favicion.png" rel="icon"/>
         <meta property="og:title" content="Perina Soba"/>
         <meta property="og:url" content="https://perinasoba.github.io"/>
         <meta property="og:description" content="*///*"/>
@@ -58,27 +58,22 @@
 
                     <p>Nalog</p>
                 </button>
-                <button onclick="window.location.href = `knjige`">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                        <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
-                        <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
-                    </svg>
+                <button onclick="window.location.href = `/nikBank`">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"></rect><line x1="1" y1="10" x2="23" y2="10"></line></svg>
 
-                    <p>Knjige</p> 
+                    <p>Bank</p> 
                 </button>
-                <button onclick="window.location.href = `price`">
+                <button onclick="window.location.href = `/nikForum`">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
                         <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
                     </svg>
 
-                    <p>Priče</p> 
+                    <p>Forum</p> 
                 </button>
             </div>
         </div>
 
         <div id="pageContent">
-            <h1 class="pcTitle">Perina Soba</h1>
-            
             <div id="mobNavButt">
                 <svg id="navConfigButt" onclick="buttPressed()" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
                     <line x1="3" y1="12" x2="21" y2="12"></line>
@@ -86,7 +81,7 @@
                     <line x1="3" y1="18" x2="21" y2="18"></line>
                 </svg>
     
-                <h1 class="websiteTitle" id="mobTitle">Perian Soba</h1>
+                <h1 class="websiteTitle" id="mobTitle">Početna</h1>
             </div>
 
             <br class="mobNavSpace">
@@ -94,22 +89,23 @@
             <div id="mobileNav">
                 <a id="currPageMob">Početna</a>
                 <a href="nalog">Nalog</a>
-                <a href="knjige">Knjige</a>
-                <a href="price">Priče</a>
+                <a href="/nikBank">Nik Bank</a>
+                <a href="/nikForum">Nik Forum</a>
             </div>
             
             <div class="contentHolder">
-                <div class="textBox" onclick="window.location.href = `price/ciljevi-za-novu-2023-godinu`">
-                    <h2>Ciljevi za novu 2023. godinu</h2>
-                    <img src="media/stories/ciljevi-2023.png">
-                    <p>Otkrite sve nove funkcije i novine kod postojećih koje nas čekaju u 2023. godini. Od novih kartica, do potpuno nove funkcije ovog sajta.</p>
-                    <a href="price/ciljevi-za-novu-2023-godinu">Pročitaj više -></a>
+                <div id="pgBanner">
+                    <h1>Perina Soba</h1>
                 </div>
-                <div class="textBox" onclick="window.location.href = `price/nova-kartica-knjige`">
-                    <h2>Nova kartica - Knjige</h2>
-                    <img src="media/stories/books.png">
-                    <p>Da li vam je potrebna neka knjiga ali niste sigurni da li je ona dostupna u biblioteci u Perinoj Sobi? E pa sada je to moguće proveriti na Nik Forum-u.</p>
-                    <a href="price/nova-kartica-knjige">Pročitaj više -></a>
+
+                <div class="textBox">
+                    <h2>O nama</h2>
+                    <p>Perina Soba je kompanija koja posluje na domaćem tržištu već tri godine, samo pod drugim imenom POST. Početak POST-a je bilo jedna mala prodavnica koja se kasnije proširila na veliku količinu usluga koje pruža i danas. Kao kompanija posedujemo par pod-usluga kao što su Nik Bank i Nik Forum.</p>
+                </div>
+
+                <div class="textBox">
+                    <h2>Kontakt</h2>
+                    <p>Naša e-mail adresa je <a href="mailto:perinaSoba@gmail.com">perinaSoba@gmail.com</a>. Ukoliko preferirate da ćaskate sa našim agentima, uvek nas možete kontaktirati preko našeg telefona +381 063 140 5895!</p>
                 </div>
             </div>
         </div>
