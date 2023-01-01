@@ -1,0 +1,272 @@
+@font-face {
+    font-family: segoePrint;
+    src: url(../segoePrint.ttf);
+}
+
+* {
+    font-family: 'Roboto', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-variant-ligatures: no-common-ligatures;
+    overflow: auto;
+    margin: 0;
+    padding: 0;
+    -webkit-tap-highlight-color: transparent;
+    color: #444746;
+}
+body {
+    display: flex;
+}
+
+/* SideBar */
+#sideBar {
+    min-width: fit-content;
+    background-color: #f3f6fc;
+    justify-content: center;
+}
+
+#sideBar #logInDiv {
+    box-shadow: 0px 2px 4px rgb(0 0 0 / 10%);
+    background-color: #fff;
+    border-radius: 0.7rem;
+    transition: 0.5s;
+    border-radius: 5rem;
+    text-align: center;
+    margin: 1rem;
+}
+#sideBar #logInDiv:hover {
+    transform: translateY(-2px);
+    box-shadow: 0px 4px 8px rgb(0 0 0 / 30%);
+    cursor: pointer;
+    transition: 0.5s;
+}
+#sideBar #logInDiv img {
+    padding: 1rem;
+    box-shadow: 0px 4px 8px rgb(0 0 0 / 30%);
+}
+#sideBar #userInfoCard {
+    display: flex;
+    min-height: 1rem;
+    padding: 0.5rem;
+    display: none;
+}
+#sideBar #userInfoCard #userImage {
+    height: 4rem;
+    border-radius: 100%;
+    border: 0.2rem solid #c2e7ff;
+    padding: 0;
+}
+#sideBar #sideButtons{
+    display: flex;
+    flex-direction: column;
+    width:100%;
+}
+#sideBar #sideButtons button {
+    border: 0;
+    background-color: #fff;
+    color: #444746;
+    text-align: left;
+    margin-bottom: 0.5rem;
+    padding-top: 0.7rem;
+    padding-bottom: 0.7rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    background-color: rgba(255, 255, 255, 0);
+    font-size: 12px;
+    font-weight: 400;
+    text-align: center;
+}
+#sideBar #sideButtons button svg {
+    width: 1.2rem;
+    height: 1.2rem;
+    padding: 0.3rem 0.9rem;
+    border-radius: 5rem;
+    transition: 0.4s;
+}
+#sideBar #sideButtons button p {
+    margin-left: 0.3rem;
+}
+#sideBar #sideButtons button:hover{
+    font-weight: 500;
+    cursor: pointer;
+}
+#sideBar #sideButtons button:hover svg {
+    background-color: #e8ecec;
+    transition: 0.4s;
+    transform: scale(1.05);
+}
+#sideBar #sideButtons #activeCard{
+    color: #001d35;
+}
+#sideBar #sideButtons #activeCard svg {
+    background-color: #c2e7ff;
+}
+#sideBar #sideButtons #activeCard p {
+    font-weight: 500;
+    color: #444746;
+}
+#sideBar #sideButtons #activeCard:hover{
+    cursor: pointer;
+    text-decoration: none;
+}
+
+/* Mobile stuff */
+#mobNavButt {
+    display: none;
+}
+.mobNavSpace {
+    display: none;
+}
+#mobileNav {
+    display: none;
+}
+.pcTitle {
+    font-weight: 400;
+    font-size: 2rem;
+    text-shadow: 0px 2px 4px rgb(0 0 0 / 10%), 0px 2px 4px rgb(0 0 0 / 10%);
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+/* Buttons */
+.simpleButt {
+    box-shadow: 0px 2px 4px rgb(0 0 0 / 10%);
+    border-radius: 0.8rem;
+    text-decoration: none;
+    margin-bottom: 3rem;
+    padding: 0.5rem;
+    width: fit-content;
+    transition: 0.5s;
+    border: 0.02rem solid rgb(0 0 0 / 10%);
+    background-color: #fff;
+    color: #001d35;
+}
+.imageButt {
+    box-shadow: 0px 2px 4px rgb(0 0 0 / 10%);
+    background-color: #fff;
+    border-radius: 1rem;
+    text-decoration: none;
+    margin-bottom: 3rem;
+    border: 0;
+    display: flex;
+    padding: 0.3rem;
+    width: fit-content;
+    transition: 0.5s;
+    padding-right: 0.8rem;
+    border: 0.02rem solid rgb(0 0 0 / 10%);
+    color: #444746!important;
+}
+.imageButt:hover {
+    text-shadow: none;
+    transform: translateY(-2px);
+    box-shadow: 0px 4px 8px rgb(0 0 0 / 30%);
+    cursor: pointer;
+    border-radius: 1.5rem;
+    transition: 0.5s;
+}
+.imageButt svg {
+    width: 3.5rem;
+    height: 3.5rem;
+}
+.imageButt p {
+    align-self: center;
+    font-size: 2rem;
+    margin-left: 0.5rem;
+    user-select: none;
+}
+
+/* Responsive stuff */
+@media screen and (max-device-width: 480px)  {
+    body {
+        display: block;
+        justify-content: center;
+        justify-items: center;
+    }
+
+    /* Hide Side Bar*/
+    #sideBar {
+        display: none;
+    }
+
+    /* Website title */
+    .websiteTitle {
+        margin: 0.5rem;
+        display: block;
+    }
+
+    /* Mobile properties */
+    .hideSmall {
+        display: none;
+    }
+
+    /* Mobile Nav*/
+    #mobileNav {
+        display: none;
+        background-color: #f3f6fc;
+        position: absolute;
+        top: 0;
+        left: 0;
+        margin: 0;
+        height: 100%;
+        width: 75%;
+        z-index: 2;
+        border-top-right-radius: 2rem;
+        border-bottom-right-radius: 2rem;
+        padding: 0.5rem;
+        padding-top: 5rem;
+        overflow-y: hidden;
+        overflow: hidden;
+    }
+    #mobileNav a {
+        text-decoration: none;
+        padding: 0.5rem;
+        border-radius: 100px;
+        display: block;
+        text-align: center;
+        margin-bottom: 1rem;
+        font-weight: 500;
+        font-size: 1rem;
+        transition: 0.2s;
+    }
+    #mobileNav #currPageMob {
+        background-color: #c8e4fc;
+    }
+    #mobileNav #currPageMob:hover {
+        background-color: #b5d7ed;
+        transition: 0.2s;
+    }
+    #mobileNav a:hover {
+        background-color: #c8e4fc;
+        transition: 0.2s;
+    }
+
+    .mobNavSpace {
+        line-height: 3.5rem;
+        display: block;
+    }
+
+    .pcTitle {
+        display: none;
+    }
+
+    #mobNavButt {
+        z-index: 3;
+        position: fixed;
+        display: flex;
+        align-items: center;
+        background-color: #fff;
+        width: 100%;
+        padding: 0.3rem;
+    }
+    #mobNavButt svg {
+        width: 2rem;
+        height: 2rem;
+        border-radius: 100%;
+    }
+    #mobNavButt .websiteTitle {
+        margin: 0;
+        margin-left: 0.3rem;
+        font-weight: 400;
+        font-size: 2rem;
+        text-shadow: 0px 2px 4px rgb(0 0 0 / 10%), 0px 2px 4px rgb(0 0 0 / 10%);
+    }
+}
+

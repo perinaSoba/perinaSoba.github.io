@@ -1,0 +1,120 @@
+<html>
+    <head>
+        <title>Nik Forum</title>
+        <link rel="stylesheet" href="setup/styles/index.css">
+        <link rel="stylesheet" href="setup/styles/styles.css">
+        <script src="setup/googleLogIn.js" defer></script>
+        <script src="setup/mobileNav.js" defer></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="UTF-8">
+
+        <meta name="author" content="Perina Soba" />
+        <meta name="description" content="Nik Forum je platforma za obljavljivanje priča u porodici Nikolić. Cilj ove platforme je da bi svi imali iste informacije, tojest, da bi neka priča bila ispričana (napisana) samo jednom i posle dostupna svima da je pročitaju." />
+        <link href="media/favicon.png" rel="icon"/>
+        <meta property="og:title" content="Nik Forum"/>
+        <meta property="og:url" content="https://perinasoba.github.io/nikForum"/>
+        <meta property="og:description" content="Nik Forum je platforma za obljavljivanje priča u porodici Nikolić. Cilj ove platforme je da bi svi imali iste informacije, tojest, da bi neka priča bila ispričana (napisana) samo jednom i posle dostupna svima da je pročitaju."/>
+        <meta property="og:locale" content="sr_RS"/>
+        <meta property="og:site_name" content="Perina Soba"/>
+        <meta property="og:image" content="https://perinasoba.github.io/nikForum/media/thumbnails/withYouDevice.png"/>
+    </head>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-V5VNC1HFFG"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-V5VNC1HFFG');
+    </script>
+
+    <body>
+        <div id="sideBar">
+            <img src="media/googleLogo.svg" id="logInDiv" onclick="reopenOneTap()" title="Log in with Google">
+        
+            <div id="g_id_onload" data-callback="handleCredentialResponse" data-context="signin" data-client_id="117118612983-7kq88fbtij8h4jlno2chui9gu37oqidg.apps.googleusercontent.com" data-skip_prompt_cookie="userCode"></div>
+        
+            <div id="userInfoCard">
+                <img id="userImage" src="">
+            </div>
+            
+            <div id="sideButtons">
+                <button id="activeCard">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather feather-home">
+                        <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                        <polyline points="9 22 9 12 15 12 15 22"></polyline>
+                    </svg>
+
+                    <p>Početna</p> 
+                </button>
+                <button onclick="window.location.href = `nalog`">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather feather-users">
+                        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                        <circle cx="9" cy="7" r="4"></circle>
+                        <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                        <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                    </svg>
+
+                    <p>Nalog</p>
+                </button>
+                <button onclick="window.location.href = `knjige`">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+                        <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+                    </svg>
+
+                    <p>Knjige</p> 
+                </button>
+                <button onclick="window.location.href = `price`">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                    </svg>
+
+                    <p>Priče</p> 
+                </button>
+            </div>
+        </div>
+
+        <div id="pageContent">
+            <h1 class="pcTitle">Nik Forum</h1>
+            
+            <div id="mobNavButt">
+                <svg id="navConfigButt" onclick="buttPressed()" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="3" y1="12" x2="21" y2="12"></line>
+                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                    <line x1="3" y1="18" x2="21" y2="18"></line>
+                </svg>
+    
+                <h1 class="websiteTitle" id="mobTitle">Nik Forum</h1>
+            </div>
+
+            <br class="mobNavSpace">
+
+            <div id="mobileNav">
+                <a id="currPageMob">Početna</a>
+                <a href="nalog">Nalog</a>
+                <a href="knjige">Knjige</a>
+                <a href="price">Priče</a>
+            </div>
+            
+            <div class="contentHolder">
+                <div class="textBox" onclick="window.location.href = `price/ciljevi-za-novu-2023-godinu`">
+                    <h2>Ciljevi za novu 2023. godinu</h2>
+                    <img src="media/stories/ciljevi-2023.png">
+                    <p>Otkrite sve nove funkcije i novine kod postojećih koje nas čekaju u 2023. godini. Od novih kartica, do potpuno nove funkcije ovog sajta.</p>
+                    <a href="price/ciljevi-za-novu-2023-godinu">Pročitaj više -></a>
+                </div>
+                <div class="textBox" onclick="window.location.href = `price/nova-kartica-knjige`">
+                    <h2>Nova kartica - Knjige</h2>
+                    <img src="media/stories/books.png">
+                    <p>Da li vam je potrebna neka knjiga ali niste sigurni da li je ona dostupna u biblioteci u Perinoj Sobi? E pa sada je to moguće proveriti na Nik Forum-u.</p>
+                    <a href="price/nova-kartica-knjige">Pročitaj više -></a>
+                </div>
+            </div>
+        </div>
+    </body>
+
+    <!-- Google sign in script -->
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
+</html>
