@@ -55,7 +55,7 @@ function handleCredentialResponse(response) {
     editData(responsePayload);
 
     // Set info on account page
-    if (window.location.href == "https://perinasoba.github.io/nikForum/nalog") {
+    if (window.location.href == "https://perinasoba.github.io/nalog") {
         accountEdit(responsePayload);
     };
 
@@ -67,7 +67,7 @@ function reopenOneTap() {
     document.cookie = "g_state=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
 
     google.accounts.id.initialize({
-        client_id: '117118612983-7kq88fbtij8h4jlno2chui9gu37oqidg.apps.googleusercontent.com',
+        client_id: '999983490280-43846b47m885ajbkffnmmar104juca7g.apps.googleusercontent.com',
         callback: handleCredentialResponse
     });
 
@@ -83,7 +83,7 @@ if (getCookie(`userCode`) != null) {
     editData(responsePayload);
 
     // Set info on account page
-    if (window.location.href == "https://perinasoba.github.io/nikForum/nalog") {
+    if (window.location.href == "https://perinasoba.github.io/nalog") {
         accountEdit(responsePayload);
     }
 }
