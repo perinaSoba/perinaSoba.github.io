@@ -1,0 +1,106 @@
+<html>
+    <head>
+        <title>Nik Bank</title>
+        <link rel="stylesheet" href="../setup/styles/index.css">
+        <link rel="stylesheet" href="../setup/styles/pocetna.css">
+        <script src="setup/googleLogIn.js" defer></script>
+        <script src="setup/mobileNav.js" defer></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="UTF-8">
+
+        <meta name="author" content="Perina Soba" />
+        <meta name="description" content="*///*" />
+        <link href="media/favicion.png" rel="icon"/>
+        <meta property="og:title" content="Perina Soba"/>
+        <meta property="og:url" content="https://perinasoba.github.io"/>
+        <meta property="og:description" content="*///*"/>
+        <meta property="og:locale" content="sr_RS"/>
+        <meta property="og:site_name" content="Perina Soba"/>
+        <meta property="og:image" content="*///*"/>
+    </head>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-V5VNC1HFFG"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-V5VNC1HFFG');
+    </script>
+
+    <body>
+        <div id="sideBar">
+            <img src="../media/googleLogo.svg" id="logInDiv" onclick="reopenOneTap()" title="Log in with Google">
+        
+            <div id="g_id_onload" data-callback="handleCredentialResponse" data-context="signin" data-client_id="999983490280-43846b47m885ajbkffnmmar104juca7g.apps.googleusercontent.com" data-skip_prompt_cookie="userCode"></div>
+        
+            <div id="userInfoCard">
+                <img id="userImage" src="">
+            </div>
+            
+            <div id="sideButtons">
+                <button onclick="window.location.href = `../index`">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather feather-home">
+                        <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                        <polyline points="9 22 9 12 15 12 15 22"></polyline>
+                    </svg>
+
+                    <p>Početna</p> 
+                </button>
+                <button onclick="window.location.href = `../nalog`">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather feather-users">
+                        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                        <circle cx="9" cy="7" r="4"></circle>
+                        <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                        <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                    </svg>
+
+                    <p>Nalog</p>
+                </button>
+                <button id="activeCard">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"></rect><line x1="1" y1="10" x2="23" y2="10"></line></svg>
+
+                    <p>Bank</p> 
+                </button>
+                <button onclick="window.location.href = `../nikForum`">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                    </svg>
+
+                    <p>Forum</p> 
+                </button>
+            </div>
+        </div>
+
+        <div id="pageContent">
+            <div id="mobNavButt">
+                <svg id="navConfigButt" onclick="buttPressed()" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="3" y1="12" x2="21" y2="12"></line>
+                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                    <line x1="3" y1="18" x2="21" y2="18"></line>
+                </svg>
+    
+                <h1 class="websiteTitle" id="mobTitle">Početna</h1>
+            </div>
+
+            <br class="mobNavSpace">
+
+            <div id="mobileNav">
+                <a id="currPageMob">Početna</a>
+                <a href="nalog">Nalog</a>
+                <a href="nikBank">Nik Bank</a>
+                <a href="nikForum">Nik Forum</a>
+            </div>
+            
+            <div class="contentHolder">
+                <div style="width:100%; height: 100%;">
+                    <iframe src="https://sites.google.com/view/nik-bank/nalog" style="width: 100%; height: 100%;"></iframe>
+                </div>
+            </div>
+        </div>
+    </body>
+
+    <!-- Google sign in script -->
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
+</html>
