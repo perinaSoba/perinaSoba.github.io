@@ -1,0 +1,71 @@
+* {
+    font-family: 'Roboto', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-variant-ligatures: no-common-ligatures;
+    overflow: auto;
+    margin: 0;
+    padding: 0;
+    -webkit-tap-highlight-color: transparent;
+    color: #444746;
+    text-align: center;
+}
+
+body {
+    background-color: #fff;
+}
+
+.title {
+    font-weight: 500;
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    text-shadow: 0px 2px 4px rgb(0 0 0 / 10%), 0px 2px 4px rgb(0 0 0 / 10%);
+}
+
+.buttonHolder {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+}
+.buttonHolder a {
+    background-color: #f8fafd;
+    border-radius: 48px;
+    padding: 1rem;
+    text-decoration: none;
+    transition: 0.2s;
+    box-shadow: 0px 2px 4px 3px rgb(0 0 0 / 10%);
+}
+.buttonHolder a img {
+    width: 15rem;
+    height: 15rem;
+}
+.buttonHolder a span {
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.buttonHolder a:hover {
+    transition: 0.2s;
+    transform: translateY(-0.2rem);
+    box-shadow: 0px 4px 8px rgb(0 0 0 / 30%);
+    background-color: #c2e7ff;
+}
+
+/* Responsive stuff */
+@media screen and (max-device-width: 480px)  {
+    .buttonHolder {
+        display: block;
+        height: fit-content;
+        padding: 0;
+        justify-content: left;
+        align-items:unset;
+    }
+
+    .buttonHolder a {
+        margin-bottom: 1rem;
+    }
+
+    .buttonHolder a img {
+        width: 1rem;
+        height: 1rem;
+    }
+}
