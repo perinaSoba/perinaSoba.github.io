@@ -40,7 +40,7 @@ function accountEdit(rP) {
     document.getElementById("onPageUserInfoCard").style.display = "block";
     document.getElementById("errorDiv").style.display = "none";
     document.getElementById("logOutButton").style.display = "flex";
-    document.getElementById("logOutButton").style.justifyContent = "right";
+    document.getElementById("logOutButton").style.float = "right";
     document.getElementById("onPageUserImage").src = rP.picture;
     document.getElementById("onPageUsersName").innerHTML = rP.given_name;
     document.getElementById("onPageUsersMail").innerHTML = rP.email;

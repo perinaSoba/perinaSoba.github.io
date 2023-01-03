@@ -75,6 +75,10 @@
 
 
         <div id="pageContent">
+            <div id="pgBanner">
+                <h1>Nalog</h1>
+            </div>
+
             <div id="mobNavButt">
                 <svg id="navConfigButt" onclick="buttPressed()" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
                     <line x1="3" y1="12" x2="21" y2="12"></line>
@@ -96,25 +100,27 @@
 
             <div id="errorDiv">
                 <img src="media/errorSmallImage.png">
-                <h1>Greška!</h1>
-                <p>Prvobitno je potrebno da se ulogujete na vaš Google nalog kako bi se vaši podaci prikazali.</p>
+                <div class="txtHolder">
+                    <h1>Greška!</h1>
+                    <p>Prvobitno je potrebno da se ulogujete na vaš Google nalog kako bi se vaši podaci prikazali.</p>
+                </div>
             </div>
             
             <div id="onPageUserInfoCard">
+                <div id="logOutButton" onclick="logOutButtonPress()">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                        <polyline points="12 5 19 12 12 19"></polyline>
+                    </svg>
+    
+                    <p>Izlogujte se</p>
+                </div>
+
                 <img id="onPageUserImage" src="">
                 <div id="onPageUserTextInfo">
                     <h1 id="onPageUsersName"></h1>
                     <h4 id="onPageUsersMail"></h4>
                 </div>
-            </div>
-
-            <div id="logOutButton" onclick="logOutButtonPress()">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                    <line x1="5" y1="12" x2="19" y2="12"></line>
-                    <polyline points="12 5 19 12 12 19"></polyline>
-                </svg>
-
-                <p>Izlogujte se</p>
             </div>
         </div>
     </body>

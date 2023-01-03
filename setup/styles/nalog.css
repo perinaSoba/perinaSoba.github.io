@@ -1,12 +1,7 @@
 /* Page Container */
 #pageContent {
     width: 100%;
-    margin: 2rem 4rem;
     background-color: #fff;
-    box-shadow: 0px 4px 8px rgb(0 0 0 / 30%);
-    border: 0.02rem solid rgb(0 0 0 / 10%);
-    border-radius: 1rem;
-    overflow: hidden;
 }
 
 #errorDiv {
@@ -22,19 +17,25 @@
     display: flex;
 }
 #errorDiv img {
-    width: 15rem;
+    width: 10rem;
     height: fit-content;
     text-align: center;
     align-self: center;
 }
-#errorDiv h1 {
-    display: none;
-}
-#errorDiv p {
-    text-align: center;
-    color: black;
-    font-size: 1.5rem;
+#errorDiv .txtHolder {
+    text-align: left;
     align-self: center;
+}
+#errorDiv .txtHolder h1 {
+    align-self: center;
+    font-size: 1.9rem;
+    font-weight: 500;
+}
+#errorDiv .txtHolder p {
+    text-align: center;
+    align-self: center;
+    font-size: 1rem;
+    font-weight: 350;
 }
 
 #onPageUserInfoCard {
@@ -53,25 +54,18 @@
     margin-left: 0.5rem;
 }
 #onPageUserInfoCard #onPageUserTextInfo h1 {
-    margin: 0;
-    padding: 0;
-    font-size: 4rem;
-    font-weight: 600;
+    font-size: 3rem;
+    font-weight: 500;
 }
 #onPageUserInfoCard #onPageUserTextInfo h4 {
-    font-size: 2rem;
+    font-size: 1.9rem;
     font-weight: 400;
 }
 
 #logOutButton {
     min-height: 2.5rem;
-    align-self: center;
-    display: flex;
     display: none;
-    min-width: fit-content;
-    position: absolute;
-    top: 6rem;
-    right: 9.5rem;
+    width: fit-content;
     box-shadow: 0px 2px 4px rgb(0 0 0 / 10%);
     background-color: #fff;
     border-radius: 1rem;
@@ -114,42 +108,24 @@
     }
 
     #errorDiv {
-        background-color: white;
-        justify-content: center;
-        text-align: center;
-        text-align: left;
         display: block;
         height: auto;
         padding: 0.5rem;
-        background-color: #fff;
-        box-shadow: 0px 4px 8px rgb(0 0 0 / 30%);
-        border: 0.02rem solid rgb(0 0 0 / 10%);
-        border-radius: 1rem;
         margin: 2rem 1rem;
     }
     #errorDiv img {
-        width: 100%;
-        text-align: center;
+        display: none;
     }
     #errorDiv h1 {
         display: block;
-        font-size: 1.8rem;
-        font-weight: bold;
     }
     #errorDiv p {
-        color: black;
         text-align: left;
-        font-size: 1.1rem;
-        margin-bottom: 0.5rem;
     }
 
     #onPageUserInfoCard {
         padding: 0.5rem;
-    }
-
-    #logOutButton {
-        top: 8rem;
-        right: 0.5rem;
+        height: auto;
     }
 }
 
