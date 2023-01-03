@@ -4,44 +4,9 @@
     background-color: #fff;
 }
 
-#errorDiv {
-    background-color: transparent;
-    color: black;
-    border-radius: 1rem;
-    border: none;
-    padding-left: 3rem;
-    padding-right: 3rem;
-    height: 100%;
-    margin: 0.2rem;
-    text-align: center;
-    display: flex;
-}
-#errorDiv img {
-    width: 10rem;
-    height: fit-content;
-    text-align: center;
-    align-self: center;
-}
-#errorDiv .txtHolder {
-    text-align: left;
-    align-self: center;
-}
-#errorDiv .txtHolder h1 {
-    align-self: center;
-    font-size: 1.9rem;
-    font-weight: 500;
-}
-#errorDiv .txtHolder p {
-    text-align: center;
-    align-self: center;
-    font-size: 1rem;
-    font-weight: 350;
-}
-
 #onPageUserInfoCard {
     padding: 2.5rem;
-    width: 100%;
-    height: 100%;
+    width: auto;
     display: none;
 }
 #onPageUserInfoCard #onPageUserImage {
@@ -105,22 +70,6 @@
         height: 100%;
         background-color: #fff;
         border: none;
-    }
-
-    #errorDiv {
-        display: block;
-        height: auto;
-        padding: 0.5rem;
-        margin: 2rem 1rem;
-    }
-    #errorDiv img {
-        display: none;
-    }
-    #errorDiv h1 {
-        display: block;
-    }
-    #errorDiv p {
-        text-align: left;
     }
 
     #onPageUserInfoCard {
