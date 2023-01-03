@@ -76,6 +76,10 @@
         border: none;
     }
 
+    #pgBanner {
+        background-position: bottom!important;
+    }
+
     #onPageUserInfoCard {
         height: auto;
     }
