@@ -8,7 +8,6 @@
     padding: 1rem;
     width: auto;
     display: none;
-    display: block;
 }
 #onPageUserInfoCard .contextHolder .mainData {
     display: flex;
@@ -43,6 +42,7 @@
     text-decoration: none;
     padding: 0.3rem;
     transition: 0.5s;
+    align-items: center;
 }
 #logOutButton:hover {
     border: 1px solid #0000001a;
@@ -58,9 +58,9 @@
     min-width: 2.5rem;
 }
 #logOutButton p {
-    align-self: center;
     padding: 0.5rem;
-    font-size: 1rem;
+    font-size: 1.3rem;
+    font-weight: 450;
 }
 
 
@@ -82,6 +82,10 @@
 
     #onPageUserInfoCard {
         height: auto;
+        width: 100%;
+    }
+    #logOutButton p {
+        display: none;
     }
 }
 
