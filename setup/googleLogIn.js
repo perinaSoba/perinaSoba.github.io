@@ -43,7 +43,7 @@ function accountEdit(rP) {
     document.getElementById("logOutButton").style.float = "right";
     document.getElementById("onPageUserImage").src = rP.picture;
     document.getElementById("onPageUsersName").innerHTML = rP.given_name;
-    document.getElementById("onPageUsersMail").innerHTML = rP.email;
+    document.getElementById("onPageUsersMail").innerHTML = `E-mail: ${rP.email}`;
 }
 
 // Google sign in response function

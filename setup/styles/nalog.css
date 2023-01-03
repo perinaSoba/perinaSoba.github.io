@@ -5,26 +5,30 @@
 }
 
 #onPageUserInfoCard {
-    padding: 2.5rem;
+    padding: 1rem;
     width: auto;
     display: none;
+    display: block;
 }
-#onPageUserInfoCard #onPageUserImage {
-    height: 7rem;
+#onPageUserInfoCard .contextHolder .mainData {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+#onPageUserInfoCard .contextHolder .mainData #onPageUserImage {
+    height: 4rem;
     border-radius: 100%;
-    border: 0.2rem solid #c2e7ff;
+    border: 0.1rem solid #c2e7ff;
     padding: 0;
+    margin-right: 1rem;
 }
-#onPageUserInfoCard #onPageUserTextInfo {
-    margin-left: 0.5rem;
-}
-#onPageUserInfoCard #onPageUserTextInfo h1 {
-    font-size: 3rem;
+#onPageUserInfoCard .contextHolder .mainData #onPageUsersName {
+    font-size: 1.9rem;
     font-weight: 500;
 }
-#onPageUserInfoCard #onPageUserTextInfo h4 {
-    font-size: 1.9rem;
-    font-weight: 400;
+#onPageUserInfoCard .contextHolder .otherData #onPageUsersMail {
+    font-size: 1.3rem;
+    font-weight: 450;
 }
 
 #logOutButton {
@@ -73,7 +77,6 @@
     }
 
     #onPageUserInfoCard {
-        padding: 0.5rem;
         height: auto;
     }
 }
