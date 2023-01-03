@@ -347,11 +347,5 @@ body {
         height: 2rem;
         border-radius: 100%;
     }
-    #mobNavButt .websiteTitle {
-        margin: 0;
-        margin-left: 0.3rem;
-        font-weight: 400;
-        font-size: 2rem;
-    }
 }
 
