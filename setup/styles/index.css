@@ -58,6 +58,7 @@ body {
     margin: 0;
     text-align: center;
     transition: 0.5s;
+    text-decoration: none;
 }
 .textBox h2 {
     margin-bottom: 1rem;
@@ -70,6 +71,10 @@ body {
     font-size: 1.3rem;
     font-weight: 450;
     text-align: center;
+}
+.textBox img {
+    width: 50%;
+    height: fit-content;
 }
 .textBox p {
     font-size: 1rem;
