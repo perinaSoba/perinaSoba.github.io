@@ -104,8 +104,7 @@ body {
     background-color: #f3f6fc;
     justify-content: center;
 }
-
-#sideBar #logInDiv {
+#logInDiv {
     box-shadow: 0px 2px 4px rgb(0 0 0 / 10%);
     background-color: #fff;
     border-radius: 0.7rem;
@@ -113,33 +112,84 @@ body {
     border-radius: 5rem;
     text-align: center;
     margin: 1rem;
+    width: 3rem;
+    height: fit-content;
 }
-#sideBar #logInDiv:hover {
+#logInDiv:hover {
     transform: translateY(-2px);
     box-shadow: 0px 4px 8px rgb(0 0 0 / 30%);
     cursor: pointer;
     transition: 0.5s;
 }
-#sideBar #logInDiv img {
+#logInDiv img {
     padding: 1rem;
     box-shadow: 0px 4px 8px rgb(0 0 0 / 30%);
+    width: 3rem;
+    height: fit-content;
 }
-#sideBar #userInfoCard {
+#userInfoCard {
     display: flex;
     min-height: 1rem;
     padding: 0.5rem;
     display: none;
 }
-#sideBar #userInfoCard #userImage {
+#userInfoCard #userImage {
     height: 4rem;
     border-radius: 100%;
     border: 0.2rem solid #c2e7ff;
     padding: 0;
 }
-#sideBar link {
+#sideButtons {
     display: flex;
     flex-direction: column;
-    width:100%;
+}
+#sideButtons button {
+    border: 0;
+    background-color: #fff;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    margin-bottom: 0.5rem;
+    padding-top: 0.7rem;
+    padding-bottom: 0.7rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    background-color: rgba(255, 255, 255, 0);
+    font-size: 12px;
+    font-weight: 400;
+    text-align: center;
+}
+#sideButtons button img {
+    width: 1.5rem;
+    height: 1.5rem;
+    padding: 0.3rem 0.9rem;
+    border-radius: 5rem;
+    transition: 0.4s;
+}
+#sideButtons button p {
+    margin-left: 0.3rem;
+}
+#sideButtons button:hover{
+    font-weight: 500;
+    cursor: pointer;
+}
+#sideButtons button:hover img {
+    background-color: #e8ecec;
+    transition: 0.4s;
+    transform: scale(1.05);
+}
+#sideButtons #activeCard{
+    color: #001d35;
+}
+#sideButtons #activeCard img {
+    background-color: #c2e7ff;
+}
+#sideButtons #activeCard p {
+    font-weight: 500;
+    color: #444746;
+}
+#sideButtons #activeCard:hover{
+    cursor: pointer;
+    text-decoration: none;
 }
 
 /* Mobile stuff */
