@@ -82,7 +82,7 @@
 
     #onPageUserInfoCard {
         height: auto;
-        width: 100%;
+        width: fit-content;
     }
     #logOutButton p {
         display: none;
