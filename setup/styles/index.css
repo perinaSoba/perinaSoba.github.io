@@ -177,7 +177,7 @@ body {
     transition: 0.4s;
     transform: scale(1.05);
 }
-#sideButtons #activeCard{
+#sideButtons #activeCard {
     color: #001d35;
 }
 #sideButtons #activeCard img {
