@@ -84,22 +84,6 @@
     font-weight: 350;
 }
 
-.specs {
-    margin: 1rem;
-}
-.specs div h2 {
-    font-size: 1.3rem;
-    font-weight: 450;
-}
-.specs div span {
-    font-size: 1rem;
-    font-weight: 400;
-    margin-left: 0.5rem;
-}
-.specs div span span {
-    font-weight: 350;
-}
-
 /* Responsive stuff */
 @media screen and (max-device-width:480px)  {
     #pageContent {
@@ -108,6 +92,16 @@
         width: 100%;
         height: 100%;
         justify-items: center;
+    }
+
+    .mainInfo {
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+    .mainInfo .buyBox {
+        width: unset;
+        margin: 0;
     }
 
     .contentHolder {

@@ -78,9 +78,14 @@ body {
 }
 .textBox p {
     font-size: 1rem;
-    text-align: center;
-    margin-bottom: 0.5rem;
     font-weight: 350;
+    text-align: center;
+    margin-top: 0.5rem;
+}
+.textBox span {
+    font-size: 1rem;
+    font-weight: 300;
+    text-align: center;
 }
 .textBox a {
     justify-content: right;
