@@ -1,0 +1,124 @@
+/* Page Container */
+#pageContent {
+    width: 100%;
+}
+
+/* New page button */
+.imageButt {
+    box-shadow: 0px 2px 4px rgb(0 0 0 / 10%);
+    background-color: #fff;
+    border-radius: 1rem;
+    text-decoration: none;
+    margin-bottom: 3rem;
+    border: 0;
+    display: flex;
+    width: fit-content;
+    transition: 0.5s;
+    margin: 1rem;
+    border: 0.02rem solid rgb(0 0 0 / 10%);
+    color: #444746!important;
+}
+.imageButt:hover {
+    text-shadow: none;
+    transform: translateY(-2px);
+    box-shadow: 0px 4px 8px rgb(0 0 0 / 30%);
+    cursor: pointer;
+    border-radius: 1.5rem;
+    transition: 0.5s;
+}
+.imageButt svg {
+    width: 3.5rem;
+    height: 3.5rem;
+}
+.imageButt p {
+    align-self: center;
+    font-size: 1rem;
+    font-weight: 350;
+    margin-left: 0.5rem;
+    user-select: none;
+}
+
+#storiesContainer {
+    padding-left: 1rem;
+    padding-right: 1rem;
+
+    display: flex;
+    flex-wrap: wrap;
+}
+#storiesContainer div {
+    box-shadow: 0 0 0 1px black;
+    background-color: #fff;
+    border-radius: 1rem;
+    border: 0.02rem solid rgb(0 0 0 / 10%);
+    padding: 1rem;
+    margin: 0.3rem;
+    transition: 0.5s;
+    flex: 40%;
+}
+#storiesContainer div:hover {
+    color: #111;
+    text-shadow: none;
+    box-shadow: 0px 4px 8px rgb(0 0 0 / 30%);
+    cursor: pointer;
+    border-radius: 1.5rem;
+    transition: 0.5s;
+    transform-origin: center;
+    transform: scale(0.99);
+}
+#storiesContainer div h4 {
+    font-size: 1.9rem;
+    font-weight: 500;
+}
+#storiesContainer div .storiesAuthor {
+    display: flex;
+    box-shadow: none;
+    border: 0;
+    padding: 0;
+    margin: 0;
+    margin-top: 0.5rem;
+    transform: none;
+    border-radius: 0;
+    align-items: center;
+}
+#storiesContainer div .storiesAuthor img {
+    border-radius: 100%;
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-right: 0.2rem;
+}
+#storiesContainer div p {
+    font-size: 1rem;
+    font-weight: 350;
+}
+
+
+/* Responsive stuff */
+@media screen and (max-device-width: 480px)  {
+    #pageContent {
+        justify-content: center;
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        border: none;
+    }
+
+    #storiesContainer {
+        justify-content: center;
+        justify-items: center;
+        width: 100%;
+        display: block;
+        padding: 0;
+    }
+
+    #storiesContainer div {
+        background-color: white;
+        margin: 0.5rem 1rem;
+        box-shadow: 0px 2px 4px 3px rgb(0 0 0 / 10%);
+        width: auto;
+    }
+    #storiesContainer div .storiesAuthor {
+        border: none;
+        box-shadow: none;
+    }
+}
+
