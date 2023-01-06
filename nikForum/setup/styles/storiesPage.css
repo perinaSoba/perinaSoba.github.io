@@ -71,7 +71,6 @@
     border: 0.02rem solid rgb(0 0 0 / 10%);
 }
 
-
 /* Responsive stuff */
 @media screen and (max-device-width:480px)  {
     #pageContent {

@@ -1,11 +1,26 @@
 [
     {
+        "title": "Elena - 06.01.2023.",
+        "author": {
+            "name": "Petar Nikolić",
+            "email": "petarnikolic1512@gmail.com",
+            "profile_pic": "https://perinasoba.github.io/nikForum/media/users/petarnikolic1512.png"
+        },
+        "public": false,
+        "relase_date": "06. Januar 2023.",
+        "short_relase_date": "06. 01. 2023.",
+        "url": "https://perinasoba.github.io/nikForum/prica?id=Elena - 06.01.2023.",
+        "short_text": "Celokupna priča o Perinom odlasku sa Elenom 06. 01. 2023.",
+        "html_code": "<p class=\"text\">Celokupna priča o Perinom odlasku sa Elenom 06. 01. 2023.<\/p> <br> <img src=\"https://perinasoba.github.io/nikForum/media/stories/elenaPetar06-01-23.jpg\" class=\"image\"> <br><br> <h1 class=\"heading\" id=\"gde-smo-se-nasli\">Gde smo se našli?<\/h1> <p class=\"text\">Kao i svaki put, našli smo se ispred kafane <a target=\"_blank\" href=\"https://goo.gl/maps/WEMUiev57aXdLgyh8\">Baristocratia coffee<\/a>. Možete videti tačnu lokaciju na slici ispod ili pritiskom na ime mesta u prethodnoj rečenici.<\/p> <br> <img src=\"https://perinasoba.github.io/nikForum/media/stories/baristocratiaLocation.png\" class=\"image\"> <br><br> <h1 class=\"heading\" id=\"putanja\">Putanja<\/h1> <p class=\"text\">Od lokacije gde smo se sreli sišli smo kroz Mitićevu rupu do autobuske stranice \"Trg Slavija\" broja 200. Na njoj smo u ušli u EKO2 i sa njim smo otišli do Studenskog trga i izašli na stanici broj 3032. Zatim smo prešli ulicu i čekali liniju 31 na stanici broj 82. Iz tog autobusa smo izašli na stanici \"Trg Slavija\" broj 199 i ušli smo u trolejbus. Iz njega smo izašli na Crvenom Krstu, stanica broj 207. Potom smo sišli peške ulicom Branka Krsmanovića i otišli u poslastičarnicu <a target=\"_blank\" href=\"https://goo.gl/maps/ERR53DhrQU8iAJes5\">Bombaj<\/a>. Kada smo završili sa jelom vratili smo se do Crvenog Krst gde smo ušli u trolejbus garažnog broja 2024 na stanici 208 i njime otišli do Slavije. Čim smo stigli otišli smo do vrha malog trgića (slika ispod)<\/p> <br> <img src=\"https://perinasoba.github.io/nikForum/media/stories/vrhTrgaSlavije.png\" class=\"image\"> <br><br> <p class=\"text\">Kada smo se tu ispričali, otišli smo do parka na Mitićevoj rupi gde se Elena ljuljala na ljuljašci. Potom sam ja predložio da odemo u park na Neimaru zbog veće vrećaste ljuljaške. Tamo smo i otišli. Kada smo se izigrali, vratio sam Elenu kući i to je kraj.<\/p> <br> <h1 class=\"heading\" id=\"detalji\">Detalji<\/h1> <p class=\"text\">Ima nekoliko detalja koje nisam spomenuo u prethodnom delu:<\/p> <p class=\"text\" style=\"padding-left: 1rem;\">• Šta smo jeli u Bombaju;<\/p> <p class=\"text\" style=\"padding-left: 1rem;\">• Detalji o Neimaru.<\/p> <br> <p class=\"text\">U bombaju, posle podužeg razmišljanja izabrali smo šta će nam biti posluženo. To je u ovom slučaju bila limunada, od pića, i dva padobranca i dva ??? svakome.<\/p> <br> <p class=\"text\">Na Neimaru je pri našem dolasku ljuljaška bila zauzeta tako da smo morali malo da sačekamo. Kada se ona oslobodila, mi smo se ljuljali otprilike 20 minuta a posle smo se igrali šuge i žmurke otprilike 10 minuta i onda smo krenuli. Pri našem izlasku iz parka nastale su slike koje ste već bili u prilici da vidite, a ukoliko niste pogledajte ispod kako da nas kontaktirate.<\/p> <br><br> <h1 class=\"heading\" id=\"kontaktirajte-nas\">Kontaktirajte nas<\/h1> <p class=\"text\">Ukoliko vas intresuje slike koje su nastale na ovaj dan ili imate pitanje vezano za neku drugu temu, molimo kontaktirajte nas putem naše e-mail adrese <a target=\"_blank\" href=\"mailto:perinaSoba@gmail.com?subject=Elena - 06.01.2023.\">perinaSoba@gmail.com<\/a>.<\/p> <br>"
+    },
+    {
         "title": "Nova mogućnost štampanja",
         "author": {
             "name": "Petar Nikolić",
             "email": "petarnikolic1512@gmail.com",
             "profile_pic": "https://perinasoba.github.io/nikForum/media/users/petarnikolic1512.png"
         },
+        "public": true,
         "relase_date": "05. Januar 2023.",
         "short_relase_date": "05. 01. 2023.",
         "url": "https://perinasoba.github.io/nikForum/prica?id=Nova mogućnost štampanja",
@@ -19,6 +34,7 @@
             "email": "petarnikolic1512@gmail.com",
             "profile_pic": "https://perinasoba.github.io/nikForum/media/users/petarnikolic1512.png"
         },
+        "public": true,
         "relase_date": "01. Januar 2023.",
         "short_relase_date": "01. 01. 2023.",
         "url": "https://perinasoba.github.io/nikForum/prica?id=Totalna promena sajta",
@@ -32,6 +48,7 @@
             "email": "petarnikolic1512@gmail.com",
             "profile_pic": "https://perinasoba.github.io/nikForum/media/users/petarnikolic1512.png"
         },
+        "public": true,
         "relase_date": "31. Decembar 2022.",
         "short_relase_date": "31. 12. 2022.",
         "url": "https://perinasoba.github.io/nikForum/prica?id=Ciljevi za novu 2023. godinu",
@@ -45,6 +62,7 @@
             "email": "petarnikolic1512@gmail.com",
             "profile_pic": "https://perinasoba.github.io/nikForum/media/users/petarnikolic1512.png"
         },
+        "public": true,
         "relase_date": "30. Decembar 2022.",
         "short_relase_date": "30. 12. 2022.",
         "url": "https://perinasoba.github.io/nikForum/prica?id=Nova kartica - Knjige",
@@ -58,6 +76,7 @@
             "email": "petarnikolic1512@gmail.com",
             "profile_pic": "https://perinasoba.github.io/nikForum/media/users/petarnikolic1512.png"
         },
+        "public": true,
         "relase_date": "23. Novembar 2022.",
         "short_relase_date": "23. 11. 2022.",
         "url": "https://perinasoba.github.io/nikForum/prica?id=Novi dizajn za mobilne korisnike",
@@ -71,6 +90,7 @@
             "email": "petarnikolic1512@gmail.com",
             "profile_pic": "https://perinasoba.github.io/nikForum/media/users/petarnikolic1512.png"
         },
+        "public": true,
         "relase_date": "22. Novembar 2022.",
         "short_relase_date": "22. 11. 2022.",
         "url": "https://perinasoba.github.io/nikForum/prica?id=Nova kartica - Uređaji",
@@ -84,6 +104,7 @@
             "email": "petarnikolic1512@gmail.com",
             "profile_pic": "https://perinasoba.github.io/nikForum/media/users/petarnikolic1512.png"
         },
+        "public": true,
         "relase_date": "11. Novembar 2022.",
         "short_relase_date": "11. 11. 2022.",
         "url": "https://perinasoba.github.io/nikForum/prica?id=Nova 2023. godina",
@@ -97,6 +118,7 @@
             "email": "petarnikolic1512@gmail.com",
             "profile_pic": "https://perinasoba.github.io/nikForum/media/users/petarnikolic1512.png"
         },
+        "public": true,
         "relase_date": "01. Novembar 2022.",
         "short_relase_date": "01. 11. 2022.",
         "url": "https://perinasoba.github.io/nikForum/prica?id=Pregled dana 01/11/22",
@@ -110,6 +132,7 @@
             "email": "petarnikolic1512@gmail.com",
             "profile_pic": "https://perinasoba.github.io/nikForum/media/users/petarnikolic1512.png"
         },
+        "public": true,
         "relase_date": "01. Novembar 2022.",
         "short_relase_date": "01. 11. 2022.",
         "url": "https://perinasoba.github.io/nikForum/prica?id=Informacije o Pericinom rođendanu",
@@ -123,6 +146,7 @@
             "email": "petarnikolic1512@gmail.com",
             "profile_pic": "https://perinasoba.github.io/nikForum/media/users/petarnikolic1512.png"
         },
+        "public": true,
         "relase_date": "01. Novembar 2022.",
         "short_relase_date": "01. 11. 2022.",
         "url": "https://perinasoba.github.io/nikForum/prica?id=Šta je Nik Forum?",
