@@ -84,7 +84,7 @@ fetch('https://perinasoba.github.io/nikForum/setup/stories.json')
             
             console.log(responsePayload.email)
 
-            if (responsePayload.email == "petarnikolic1512@gmail.com" || responsePayload.email == "postbgd@gmail.com" || responsePayload.email == "perinaSoba@gmail.com" || responsePayload.email == "jamiko1512@gmail.com" || responsePayload.email == "jasmina.nikolic@tenfore.net" || responsePayload.email == "miomirnikolic61@gmail.com") {
+            if (responsePayload.email == "petarnikolic1512@gmail.com" || responsePayload.email == "postbgd@gmail.com" || responsePayload.email == "perinasoba@gmail.com" || responsePayload.email == "jamiko1512@gmail.com" || responsePayload.email == "jasmina.nikolic@tenfore.net" || responsePayload.email == "miomirnikolic61@gmail.com") {
                 spawnStory()
             } else {
                 googleBlock()
