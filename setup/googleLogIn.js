@@ -93,6 +93,10 @@ function logOutButtonPress() {
     if(confirm('Da li ste sigurni da želite da se izlogujete?')) {
         document.cookie = "userCode=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
 
-        document.location.reload()
+        document.getElementById("mobLogInDiv").src = `https://perinasoba.github.io/media/googleLogo.svg`;
+        document.getElementById("mobLogInDiv").onclick = function() {reopenOneTap()};
+        document.getElementById("mobLogInDiv").style.boxShadow = "0px 2px 4px rgb(0 0 0 / 10%)";
+
+        document.location.reload();
     }
 }
