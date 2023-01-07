@@ -104,6 +104,11 @@
         margin: 0;
     }
 
+    .mainInfo .buyBox .main .buyButton {
+        width: 50%;
+        text-align: center;
+    }
+
     .contentHolder {
         display: block;
     }
