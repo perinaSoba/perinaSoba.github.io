@@ -36,7 +36,7 @@ function editData(rP) {
     document.getElementById("logInDiv").style.display = "none";
     document.getElementById("userImage").src = rP.picture;
 
-    document.getElementById("mobLogInDiv").src = responsePayload.picture;
+    document.getElementById("mobLogInDiv").src = rP.picture;
     document.getElementById("mobLogInDiv").onclick = function() {window.location.href = `https://perinasoba.github.io/nalog`};
     document.getElementById("mobLogInDiv").style.boxShadow = null;
 }
