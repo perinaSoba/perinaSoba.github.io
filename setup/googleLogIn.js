@@ -35,6 +35,10 @@ function editData(rP) {
     document.getElementById("userInfoCard").style.display = "flex";
     document.getElementById("logInDiv").style.display = "none";
     document.getElementById("userImage").src = rP.picture;
+
+    document.getElementById("mobLogInDiv").src = responsePayload.picture;
+    document.getElementById("mobLogInDiv").onclick = function() {window.location.href = `https://perinasoba.github.io/nalog`};
+    document.getElementById("mobLogInDiv").style.boxShadow = null;
 }
 function accountEdit(rP) {
     document.getElementById("onPageUserInfoCard").style.display = "block";
