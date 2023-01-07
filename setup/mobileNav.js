@@ -25,21 +25,19 @@ if (getCookie(`userCode`) != null) {
     // Decode the credential response
     const responsePayload = decodeJwtResponse(getCookie(`userCode`));
 
-    document.getElementById("movLogInDiv").src = responsePayload.picture;
-    document.getElementById("movLogInDiv").onclick = "window.location.href = `https://perinasoba.github.io/nalog`";
-    document.getElementById("movLogInDiv").title = null;
-
-
+    document.getElementById("mobLogInDiv").src = responsePayload.picture;
+    document.getElementById("mobLogInDiv").onclick = function() {window.location.href = `https://perinasoba.github.io/nalog`};
+    document.getElementById("mobLogInDiv").title = null;
 }
 
 function buttPressed() {
     if (window.getComputedStyle(document.getElementById("mobileNav"), null).display == "none") {
         document.getElementById("mobileNav").style.display = "block";
         document.getElementById("mobNavButt").style.background = "transparent";
-        document.getElementById("movLogInDiv").style.display = "none";
+        document.getElementById("mobLogInDiv").style.display = "none";
     } else if (window.getComputedStyle(document.getElementById("mobileNav"), null).display == "block") {
         document.getElementById("mobileNav").style.display = "none";
         document.getElementById("mobNavButt").style.background = "#fff";
-        document.getElementById("movLogInDiv").style.display = "block";
+        document.getElementById("mobLogInDiv").style.display = "block";
     }
 }
