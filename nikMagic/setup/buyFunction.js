@@ -22,6 +22,8 @@ function decodeJwtResponse(token) {
 
 // Buy phone
 function buyPhone(price, model) {
+    document.getElementById("buyButt").onclick = function() {console.log(`Procesujem...`)}
+
     if (getCookie(`userCode`) != null) { 
         const responsePayload = decodeJwtResponse(getCookie(`userCode`));
 
@@ -41,4 +43,6 @@ function buyPhone(price, model) {
     } else {
         alert(`Potrebno je da se ulogujete kako bi ste izvršili ovu kupovinu.`)
     }
+
+    document.getElementById("buyButt").onclick = function() {buyPhone(price, model)}
 }
