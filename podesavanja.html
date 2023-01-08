@@ -1,0 +1,100 @@
+<html>
+    <head>
+        <title>Perina Soba - Podešavanja</title>
+        <link rel="stylesheet" href="setup/styles/index.css">
+        <script src="setup/googleLogIn.js" defer></script>
+        <script src="setup/mobileNav.js" defer></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="UTF-8">
+
+        <meta name="author" content="Perina Soba" />
+        <meta name="description" content="Perina Soba je kompanija mogućnosti i poverenja još od 2019. godine." />
+        <link href="media/favicion.png" rel="icon"/>
+        <meta property="og:title" content="Perina Soba - Nalog"/>
+        <meta property="og:url" content="https://perinasoba.github.io/nikForum"/>
+        <meta property="og:description" content="Perina Soba je kompanija mogućnosti i poverenja još od 2019. godine."/>
+        <meta property="og:locale" content="sr_RS"/>
+        <meta property="og:site_name" content="Perina Soba"/>
+        <meta property="og:image" content="https://perinasoba.github.io/nikForum/media/thumbnails/withYouDevice.png"/>
+    </head>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-V5VNC1HFFG"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-V5VNC1HFFG');
+    </script>
+
+    <body>
+        <div id="sideBar">
+            <img src="media/googleLogo.svg" id="logInDiv" onclick="reopenOneTap()" title="Log in with Google">
+
+            <div id="g_id_onload" data-callback="handleCredentialResponse" data-context="signin" data-client_id="999983490280-43846b47m885ajbkffnmmar104juca7g.apps.googleusercontent.com" data-skip_prompt_cookie="userCode"></div>
+
+            <div id="userInfoCard">
+                <img id="userImage" src="">
+            </div>
+            
+            <div id="sideButtons">
+                <button onclick="window.location.href = `https://perinasoba.github.io`">
+                    <img src="https://perinasoba.github.io/media/navigation/index.svg" alt="">
+
+                    <p>Početna</p> 
+                </button>
+                
+                <button onclick="window.location.href = `https://perinasoba.github.io/nalog`">
+                    <img src="https://perinasoba.github.io/media/navigation/nalog.svg" alt="">
+
+                    <p>Nalog</p>
+                </button>
+                
+                <button onclick="window.location.href = `https://perinasoba.github.io/servisi`">
+                    <img src="https://perinasoba.github.io/media/navigation/servisi.svg" alt="">
+
+                    <p>Servisi</p> 
+                </button>
+
+                <button id="activeCard">
+                    <img src="https://perinasoba.github.io/media/navigation/podesavanja.svg" alt="">
+
+                    <p>Podešavanja</p> 
+                </button>
+            </div>
+        </div>
+
+
+        <div id="pageContent">
+            <div id="mobNavButt">
+                <svg id="navConfigButt" onclick="buttPressed()" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="3" y1="12" x2="21" y2="12"></line>
+                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                    <line x1="3" y1="18" x2="21" y2="18"></line>
+                </svg>
+    
+                <img class="websiteLogo" src="media/favicion.svg">
+                <img src="https://perinasoba.github.io/media/googleLogo.svg" id="mobLogInDiv" onclick="reopenOneTap()" title="Log in with Google">
+            </div>
+
+            <br class="mobNavSpace">
+
+            <div id="mobileNav">
+                <a href="https://perinasoba.github.io/index">Početna</a>
+                <a href="https://perinasoba.github.io/nalog">Nalog</a>
+                <a href="https://perinasoba.github.io/servisi">Servisi</a>
+                <a id="currPageMob">Podešavanja</a>
+            </div>
+
+            <div class="contentHolder">
+                <div id="pgBanner" style="background-image: url(media/podesavanjaSlika.png);">
+                    <h1>Podešavanja</h1>
+                </div>
+            </div>
+        </div>
+    </body>
+
+    <!-- Google sign in script -->
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
+</html>
