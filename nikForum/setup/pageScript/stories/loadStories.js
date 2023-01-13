@@ -29,18 +29,18 @@ fetch('https://perinasoba.github.io/nikForum/setup/stories.json')
         // Title
         var tempTitle = document.createElement('h4');
         // Author info
-        var tempAuthDiv = document.createElement('div');
+        /*var tempAuthDiv = document.createElement('div');
         var tempAuthImg = document.createElement('img');
-        var tempAuthName = document.createElement('p');
+        var tempAuthName = document.createElement('p');*/
         // Short text
         var tempShortText = document.createElement('p');
 
         // Set element data
         tempTitle.innerHTML = storiesJson[i].title;
         tempImg.src = storiesJson[i].image_url;
-        tempAuthDiv.classList.add('storiesAuthor');
+        /*tempAuthDiv.classList.add('storiesAuthor');
         tempAuthImg.src = storiesJson[i].author.profile_pic;
-        tempAuthName.innerHTML = storiesJson[i].author.name + " • " + storiesJson[i].short_relase_date;
+        tempAuthName.innerHTML = storiesJson[i].author.name + " • " + storiesJson[i].short_relase_date;*/
         tempShortText.innerHTML = storiesJson[i].short_text;
 
         // On Click function
@@ -48,11 +48,11 @@ fetch('https://perinasoba.github.io/nikForum/setup/stories.json')
 
         // Set elemnts location
         storiesContainerDiv.appendChild(tempDiv);
-        tempDiv.appendChild(tempTitle);
-        tempDiv.appendChild(tempAuthDiv);
         tempDiv.appendChild(tempImg);
+        tempDiv.appendChild(tempTitle);
+        /*tempDiv.appendChild(tempAuthDiv);
         tempAuthDiv.appendChild(tempAuthImg);
-        tempAuthDiv.appendChild(tempAuthName);
+        tempAuthDiv.appendChild(tempAuthName);*/
         tempDiv.appendChild(tempShortText);
     }
 });

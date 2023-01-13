@@ -45,27 +45,26 @@
     flex-wrap: wrap;
 }
 #storiesContainer div {
-    box-shadow: 0 0 0 1px black;
-    background-color: #fff;
-    border-radius: 1rem;
-    border: 0.02rem solid rgb(0 0 0 / 10%);
+    background-color: #f8fafd;
+    border-radius: 24px;
     margin: 0.3rem;
     transition: 0.5s;
     flex-basis: 29%;
+    margin-bottom: 0.2rem;
 }
 #storiesContainer div:hover {
-    color: #111;
     text-shadow: none;
-    box-shadow: 0px 4px 8px rgb(0 0 0 / 30%);
     cursor: pointer;
     border-radius: 1.5rem;
     transition: 0.5s;
     transform-origin: center;
     transform: scale(0.99);
+    background-color: #c2e7ff;
 }
 #storiesContainer img {
     width: 100%;
     height: fit-content;
+    border-radius: 24px;
 }
 #storiesContainer div h4 {
     font-size: 1.9rem;
