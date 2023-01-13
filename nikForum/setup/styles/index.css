@@ -38,21 +38,29 @@
     user-select: none;
 }
 
-#storiesContainer {
+.storyClass {
+    margin-left: 3rem;
+    margin-top: 3rem;
+}
+
+.storiesCont {
     padding-left: 0.5rem;
     padding-right: 0.5rem;
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 1rem;
 }
-#storiesContainer div {
+.storiesCont div {
     background-color: #f8fafd;
     border-radius: 24px;
     margin: 0.3rem;
     transition: 0.5s;
-    flex-basis: 29%;
-    margin-bottom: 0.2rem;
+    flex-basis: 31%;
+    padding-bottom: 0.7rem;
+    margin-bottom: 1rem;
 }
-#storiesContainer div:hover {
+.storiesCont div:hover {
     text-shadow: none;
     cursor: pointer;
     border-radius: 1.5rem;
@@ -61,17 +69,20 @@
     transform: scale(0.99);
     background-color: #c2e7ff;
 }
-#storiesContainer img {
+.storiesCont div:hover h4 {
+    font-weight: 450;
+}
+.storiesCont img {
     width: 100%;
     height: fit-content;
     border-radius: 24px;
 }
-#storiesContainer div h4 {
-    font-size: 1.9rem;
-    font-weight: 500;
+.storiesCont div h4 {
+    font-size: 1.5rem;
+    font-weight: 400;
     padding: 0rem 1rem;
 }
-#storiesContainer div .storiesAuthor {
+.storiesCont div .storiesAuthor {
     display: flex;
     box-shadow: none;
     border: 0;
@@ -82,13 +93,13 @@
     align-items: center;
     padding: 0rem 1rem;
 }
-#storiesContainer div .storiesAuthor img {
+.storiesCont div .storiesAuthor img {
     border-radius: 100%;
     width: 1.5rem;
     height: 1.5rem;
     margin-right: 0.2rem;
 }
-#storiesContainer div p {
+.storiesCont div p {
     font-size: 1rem;
     font-weight: 350;
     padding: 0rem 1rem;
@@ -105,21 +116,25 @@
         border: none;
     }
 
-    #storiesContainer {
+    .storyClass {
+        text-align: center;
+        margin-left: 0;
+    }
+
+    .storiesCont {
         justify-content: center;
         justify-items: center;
         width: 100%;
         display: block;
         padding: 0;
+        text-align: center;
     }
 
-    #storiesContainer div {
-        background-color: white;
-        margin: 0.5rem 1rem;
-        box-shadow: 0px 2px 4px 3px rgb(0 0 0 / 10%);
+    .storiesCont div {
+        margin: 1rem 1.5rem;
         width: auto;
     }
-    #storiesContainer div .storiesAuthor {
+    .storiesCont div .storiesAuthor {
         border: none;
         box-shadow: none;
     }
