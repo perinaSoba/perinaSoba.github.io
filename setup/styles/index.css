@@ -16,6 +16,18 @@ body {
     display: flex;
 }
 
+/* Page Container */
+#pageContent {
+    width: 100%;
+    background-color: #fff;
+    padding: 0;
+}
+
+/* Content */
+.contentHolder {
+    width: 100%;
+}
+
 .pcTitle {
     font-weight: 400;
     font-size: 2rem;
@@ -255,6 +267,18 @@ body {
         display: block;
         justify-content: center;
         justify-items: center;
+    }
+
+    #pageContent {
+        padding: 0;
+        margin: 0;
+        width: 100%;
+        height: 100%;
+        justify-items: center;
+    }
+
+    .contentHolder {
+        display: block;
     }
 
     /* Text boxes */
