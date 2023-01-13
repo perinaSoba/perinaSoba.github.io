@@ -11,6 +11,7 @@
     padding: 0;
     -webkit-tap-highlight-color: transparent;
     color: #444746;
+    transition: 0.2s;
 }
 body {
     display: flex;
@@ -43,11 +44,31 @@ body {
     text-align: center;
     background-position: center center;
     opacity: 0.7;
+    margin: 0.5rem;
+    border-radius: 24px;
 }
 #pgBanner h1{
     font-size: 3rem;
     font-weight: 600;
     color: #fff;
+}
+
+/* Font style */
+.fontTitle {
+    font-size: 3rem;
+    font-weight: 600;
+}
+.fontHeading {
+    font-size: 1.9rem;
+    font-weight: 500;
+}
+.fontSubHeading {
+    font-size: 1.3rem;
+    font-weight: 450;
+}
+.fontText {
+    font-size: 1rem;
+    font-weight: 350;
 }
 
 /* Text Boxes */
@@ -89,9 +110,9 @@ body {
     height: fit-content;
 }
 .textBox p {
+    text-align: center;
     font-size: 1rem;
     font-weight: 350;
-    text-align: center;
     margin-top: 0.5rem;
 }
 .textBox span {

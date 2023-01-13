@@ -1,0 +1,12 @@
+.settCont {
+    background-color: #f8fafd;
+    border-radius: 24px;
+    margin: 1rem;
+    padding: 0.5rem;
+    box-shadow: 0px 1px 2px 0px #0000004d,0px 1px 3px 1px #00000026;
+}
+
+.settCont .colorPicker {
+    float: right;
+}
+
