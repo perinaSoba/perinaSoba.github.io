@@ -24,6 +24,8 @@ fetch('https://perinasoba.github.io/nikForum/setup/stories.json')
         var storiesContainerDiv = document.getElementById('storiesContainer');
         // Main div
         var tempDiv = document.createElement('div');
+        // Image
+        var tempImg = document.createElement('img');
         // Title
         var tempTitle = document.createElement('h4');
         // Author info
@@ -35,6 +37,7 @@ fetch('https://perinasoba.github.io/nikForum/setup/stories.json')
 
         // Set element data
         tempTitle.innerHTML = storiesJson[i].title;
+        tempImg.src = storiesJson[i].image_url;
         tempAuthDiv.classList.add('storiesAuthor');
         tempAuthImg.src = storiesJson[i].author.profile_pic;
         tempAuthName.innerHTML = storiesJson[i].author.name + " • " + storiesJson[i].short_relase_date;
@@ -47,6 +50,7 @@ fetch('https://perinasoba.github.io/nikForum/setup/stories.json')
         storiesContainerDiv.appendChild(tempDiv);
         tempDiv.appendChild(tempTitle);
         tempDiv.appendChild(tempAuthDiv);
+        tempDiv.appendChild(tempImg);
         tempAuthDiv.appendChild(tempAuthImg);
         tempAuthDiv.appendChild(tempAuthName);
         tempDiv.appendChild(tempShortText);

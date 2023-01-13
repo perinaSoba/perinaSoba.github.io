@@ -39,9 +39,8 @@
 }
 
 #storiesContainer {
-    padding-left: 1rem;
-    padding-right: 1rem;
-
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
     display: flex;
     flex-wrap: wrap;
 }
@@ -50,10 +49,9 @@
     background-color: #fff;
     border-radius: 1rem;
     border: 0.02rem solid rgb(0 0 0 / 10%);
-    padding: 1rem;
     margin: 0.3rem;
     transition: 0.5s;
-    flex: 40%;
+    flex-basis: 29%;
 }
 #storiesContainer div:hover {
     color: #111;
@@ -65,20 +63,25 @@
     transform-origin: center;
     transform: scale(0.99);
 }
+#storiesContainer img {
+    width: 100%;
+    height: fit-content;
+}
 #storiesContainer div h4 {
     font-size: 1.9rem;
     font-weight: 500;
+    padding: 0rem 1rem;
 }
 #storiesContainer div .storiesAuthor {
     display: flex;
     box-shadow: none;
     border: 0;
-    padding: 0;
     margin: 0;
     margin-top: 0.5rem;
     transform: none;
     border-radius: 0;
     align-items: center;
+    padding: 0rem 1rem;
 }
 #storiesContainer div .storiesAuthor img {
     border-radius: 100%;
@@ -89,6 +92,7 @@
 #storiesContainer div p {
     font-size: 1rem;
     font-weight: 350;
+    padding: 0rem 1rem;
 }
 
 
