@@ -197,6 +197,13 @@ body {
     border-radius: 5rem;
     transition: 0.4s;
 }
+#sideButtons button svg {
+    width: 1.5rem;
+    height: 1.5rem;
+    padding: 0.3rem 0.9rem;
+    border-radius: 5rem;
+    transition: 0.4s;
+}
 #sideButtons button p {
     margin-left: 0.3rem;
 }
@@ -205,6 +212,11 @@ body {
     cursor: pointer;
 }
 #sideButtons button:hover img {
+    background-color: #e8ecec;
+    transition: 0.4s;
+    transform: scale(1.05);
+}
+#sideButtons button:hover svg {
     background-color: #e8ecec;
     transition: 0.4s;
     transform: scale(1.05);
