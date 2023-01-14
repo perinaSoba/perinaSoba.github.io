@@ -19,11 +19,8 @@ function getCookie(name) {
     return null;
 }
 
-if (getCookie(`tema`) == null) {
-    setCookie(`tema`,`svetla`,`365`);
-} else if (getCookie(`tema`) != null) {
-    if (getCookie(`tema`) == `tamna`) {
-        const star = document.createElement('style'); 
+function blackThemeSetup() {
+    const star = document.createElement('style'); 
         star.innerHTML = '*{color: #e3e3e3!important;}';
         document.body.append(star);
 
@@ -62,5 +59,33 @@ if (getCookie(`tema`) == null) {
         const userInfoCard_userImage = document.createElement('style'); 
         userInfoCard_userImage.innerHTML = '#userInfoCard #userImage{border: 0.2rem solid #0f537d;}';
         document.body.append(userInfoCard_userImage);
+}
+
+if (getCookie(`tema`) == null) {
+    setCookie(`tema`,`svetla`,`365`);
+} else if (getCookie(`tema`) != null) {
+    if (getCookie(`tema`) == `tamna`) {
+        blackThemeSetup();
+
+        document.getElementById(`blackColor`).classList.add(`active`);
+        document.getElementById(`whiteColor`).classList.remove(`active`);
     }
+}
+
+function setBlackTheme() {
+    blackThemeSetup();
+
+    setCookie(`tema`, `tamna`, 365);
+    
+    document.getElementById(`blackColor`).classList.add(`active`);
+    document.getElementById(`whiteColor`).classList.remove(`active`);
+}
+
+function setWhiteTheme() {
+    setCookie(`tema`, `svetla`, 365);
+    
+    document.getElementById(`whiteColor`).classList.add(`active`);
+    document.getElementById(`blackColor`).classList.remove(`active`);
+
+    location.reload();
 }

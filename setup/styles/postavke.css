@@ -1,12 +1,25 @@
-.settCont {
+.settingsChoser {
+    display: flex;
+    text-align: center;
     background-color: #f8fafd;
-    border-radius: 24px;
-    margin: 1rem;
-    padding: 0.5rem;
-    box-shadow: 0px 1px 2px 0px #0000004d,0px 1px 3px 1px #00000026;
+    border-radius: 40px;
+    margin-right: 0.5rem;
+    margin-left: 0.5rem;
 }
-
-.settCont .colorPicker {
-    float: right;
+.settingsChoser span {
+    width: calc(100%/2);
+    padding: 2rem 1rem;
+    font-size: 1.2rem;
+    font-weight: 350;
+}
+.settingsChoser span:hover {
+    cursor: pointer;
+    background-color: #f0ecec;
+}
+.settingsChoser .active {
+    background-color: #c2e7ff;
+}
+.settingsChoser .active:hover {
+    background-color: #b5d7ed;
 }
 

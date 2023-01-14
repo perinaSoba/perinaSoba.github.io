@@ -5,6 +5,7 @@
         <link rel="stylesheet" href="setup/styles/postavke.css">
         <script src="setup/googleLogIn.js" defer></script>
         <script src="setup/mobileNav.js" defer></script>
+        <script src="setup/settings.js" defer></script>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
         <meta charset="UTF-8">
@@ -64,6 +65,14 @@
 
                     <p>Servisi</p> 
                 </button>
+
+                <button id="activeCard">
+                    <span class="material-symbols-rounded">
+                        settings
+                    </span>
+
+                    <p>Postavke</p> 
+                </button>
             </div>
         </div>
 
@@ -93,17 +102,10 @@
             </div>
             
             <div class="contentHolder">
-                <div class="settCont">
-                    <h2 class="fontHeading">Tema</h2>
-
-                    <div class="colorPicker">
-                        <span>Svetla</span>
-                        <br>
-                        <span>Tamna</span>
-                    </div>
+                <div class="settingsChoser">
+                    <span id="whiteColor" class="active" onclick="setWhiteTheme()">Svetla tema</span>
+                    <span id="blackColor" onclick="setBlackTheme()">Tamna tema</span>
                 </div>
-
-                <button id="saveButt">Sačuvaj</button>
             </div>
         </div>
     </body>
