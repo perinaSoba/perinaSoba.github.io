@@ -5,6 +5,7 @@
         <script src="setup/googleLogIn.js" defer></script>
         <script src="setup/mobileNav.js" defer></script>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
         <meta charset="UTF-8">
 
         <meta name="author" content="Perina Soba" />
@@ -40,19 +41,25 @@
             
             <div id="sideButtons">
                 <button id="activeCard">
-                    <img src="https://perinasoba.github.io/media/navigation/index.svg" alt="">
+                    <span class="material-symbols-rounded">
+                        dashboard
+                    </span>
                     
                     <p>Početna</p> 
                 </button>
                 
                 <button onclick="window.location.href = `https://perinasoba.github.io/nalog`">
-                    <img src="https://perinasoba.github.io/media/navigation/nalog.svg" alt="">
+                    <span class="material-symbols-rounded">
+                        people
+                    </span>
 
                     <p>Nalog</p>
                 </button>
                 
                 <button onclick="window.location.href = `https://perinasoba.github.io/servisi`">
-                    <img src="https://perinasoba.github.io/media/navigation/servisi.svg" alt="">
+                    <span class="material-symbols-rounded">
+                        design_services
+                    </span>
 
                     <p>Servisi</p> 
                 </button>

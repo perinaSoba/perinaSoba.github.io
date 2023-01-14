@@ -17,6 +17,14 @@ body {
     display: flex;
 }
 
+.material-symbols-rounded {
+    font-variation-settings:
+    'FILL' 0,
+    'wght' 200,
+    'GRAD' 0,
+    'opsz' 48
+  }
+
 /* Page Container */
 #pageContent {
     width: 100%;
@@ -105,7 +113,7 @@ body {
     font-weight: 450;
     text-align: center;
 }
-.textBox img {
+.textBox span {
     width: 50%;
     height: fit-content;
 }
@@ -122,7 +130,7 @@ body {
 }
 .textBox a {
     justify-content: right;
-    color: #3556E3;
+    color: #3556E3!important;
     text-decoration: none;
 }
 .textBox:hover a{
@@ -153,7 +161,7 @@ body {
     cursor: pointer;
     transition: 0.5s;
 }
-#logInDiv img {
+#logInDiv span {
     padding: 1rem;
     box-shadow: 0px 4px 8px rgb(0 0 0 / 30%);
     width: 3rem;
@@ -190,19 +198,13 @@ body {
     font-weight: 400;
     text-align: center;
 }
-#sideButtons button img {
+#sideButtons button span {
     width: 1.5rem;
     height: 1.5rem;
     padding: 0.3rem 0.9rem;
     border-radius: 5rem;
     transition: 0.4s;
-}
-#sideButtons button svg {
-    width: 1.5rem;
-    height: 1.5rem;
-    padding: 0.3rem 0.9rem;
-    border-radius: 5rem;
-    transition: 0.4s;
+    text-align: center;
 }
 #sideButtons button p {
     margin-left: 0.3rem;
@@ -211,12 +213,12 @@ body {
     font-weight: 500;
     cursor: pointer;
 }
-#sideButtons button:hover img {
+#sideButtons button:hover span {
     background-color: #e8ecec;
     transition: 0.4s;
     transform: scale(1.05);
 }
-#sideButtons button:hover svg {
+#sideButtons button:hover span {
     background-color: #e8ecec;
     transition: 0.4s;
     transform: scale(1.05);
@@ -224,7 +226,7 @@ body {
 #sideButtons #activeCard {
     color: #001d35;
 }
-#sideButtons #activeCard img {
+#sideButtons #activeCard span {
     background-color: #c2e7ff;
 }
 #sideButtons #activeCard p {
