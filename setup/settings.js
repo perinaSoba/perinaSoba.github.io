@@ -77,7 +77,7 @@ function blackThemeSetup() {
     document.body.append(userInfoCard_userImage);
 
     const mobLogInDiv = document.createElement('style'); 
-    mobLogInDiv.innerHTML = '#mobLogInDiv{border: 0.1rem #8b8e8c solid!important; background-color: transparent;}';
+    mobLogInDiv.innerHTML = '#mobLogInDiv{border-color: 0.1rem!important #8b8e8c!important solid!important; background-color: transparent;}';
     document.body.append(mobLogInDiv);
 
     const settingsChoser = document.createElement('style'); 
@@ -119,6 +119,14 @@ function blackThemeSetup() {
     const text_a = document.createElement('style'); 
     text_a.innerHTML = '.text a{color: #a8c7fa!important;}';
     document.body.append(text_a);
+
+    const logOutButton = document.createElement('style'); 
+    logOutButton.innerHTML = '#logOutButton{background-color: #28292a!important;}';
+    document.body.append(logOutButton);
+
+    const onPageUserInfoCard_contextHolder_mainData_onPageUserImage = document.createElement('style'); 
+    onPageUserInfoCard_contextHolder_mainData_onPageUserImage.innerHTML = '#onPageUserInfoCard .contextHolder .mainData #onPageUserImage{border-color: #0f537d!important;}';
+    document.body.append(onPageUserInfoCard_contextHolder_mainData_onPageUserImage);
 }
 
 if (getCookie(`tema`) == null) {

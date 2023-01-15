@@ -31,26 +31,20 @@
 }
 
 #logOutButton {
-    min-height: 2.5rem;
+    min-height: 3rem;
     display: none;
     width: fit-content;
-    box-shadow: 0px 2px 4px rgb(0 0 0 / 10%);
-    background-color: #fff;
-    border-radius: 1rem;
-    border: 0.02rem solid rgb(0 0 0 / 10%);
-    color: #444746!important;
+    background-color: #f8fafd;
+    border-radius: 24px;
     text-decoration: none;
     padding: 0.3rem;
-    transition: 0.5s;
     align-items: center;
 }
 #logOutButton:hover {
-    border: 1px solid #0000001a;
-    box-shadow: 0px 4px 8px rgb(0 0 0 / 30%);
-    transition: 0.5s;
     transform-origin: center;
     transform: translateY(-2px);
     cursor: pointer;
+    background-color: #004a77;
 }
 #logOutButton svg {
     background-color: transparent;
@@ -83,6 +77,12 @@
     #onPageUserInfoCard {
         height: auto;
         width: fit-content;
+    }
+    #logOutButton {
+        width: 3rem;
+        height: 3rem;
+        text-align: center;
+        justify-content: center;
     }
     #logOutButton p {
         display: none;
