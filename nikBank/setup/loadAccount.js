@@ -3,15 +3,6 @@ fetch('https://perinasoba.github.io/nikBank/users.json')
 .then(response=> response.json())
 .then((allUsers) => {
     // Cookie functions
-    function setCookie(name,value,days) {
-        var expires = "";
-        if (days) {
-            var date = new Date();
-            date.setTime(date.getTime() + (days*24*60*60*1000));
-            expires = "; expires=" + date.toUTCString();
-        }
-        document.cookie = name + "=" + (value || "")  + expires + "; path=/";
-    }
     function getCookie(name) {
         var nameEQ = name + "=";
         var ca = document.cookie.split(';');
@@ -45,7 +36,7 @@ fetch('https://perinasoba.github.io/nikBank/users.json')
                 return responsePayload.email == el.emails[0];
             });
         } catch(e) {
-            // Spawn no account error msg
+            document.getElementById(`errorMsg`).innerText = `Google nalog na koji ste se prijavili nije povezan ni sa jednim Nik Bank nalogom.`;
         }
         
         var userObject = usersArray[0];
@@ -67,5 +58,11 @@ fetch('https://perinasoba.github.io/nikBank/users.json')
         document.getElementById(`birthYear`).innerText = `${userObject.bithday}`;
         document.getElementById(`address`).innerText = `${userObject.location}`;
         document.getElementById(`e-mail`).innerText = `${userObject.emails[0]}`;
+
+        document.getElementById(`loggedInDiv`).style.display = `block`;
+        document.getElementById(`accountInfo`).style.display = `block`;
+        document.getElementById(`errorDiv`).style.display = `none`;
+    } else {
+        document.getElementById(`errorMsg`).innerHTML = `Molimo ulogujte se na vaš Google nalog kako bi ste videli vaš Nik Bank nalog. Više informacija o tome kako da se ulogujete pogledajte na <a href="https://perinaSoba.github.io/nalog" target="_blank">kartici nalog</a>.`;
     }
 })
