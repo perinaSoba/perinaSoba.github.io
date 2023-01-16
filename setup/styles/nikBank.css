@@ -119,6 +119,12 @@
         display: block;
     }
 
+    #errorDiv {
+        margin: 0.5rem;
+        width: auto;
+        padding: 0.5rem;
+    }
+
     .box {
         margin: 0.5rem;
         width: auto;

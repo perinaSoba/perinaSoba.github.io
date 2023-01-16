@@ -131,6 +131,14 @@ function blackThemeSetup() {
     const mainInfo_buyBox_onSale_svg = document.createElement('style'); 
     mainInfo_buyBox_onSale_svg.innerHTML = '.mainInfo .buyBox .onSale svg{fill: #fff;}';
     document.body.append(mainInfo_buyBox_onSale_svg);
+
+    const errorDiv = document.createElement('style'); 
+    errorDiv.innerHTML = '#errorDiv {background-color: #28292a;}';
+    document.body.append(errorDiv);
+
+    const errorDiv_span_a = document.createElement('style'); 
+    errorDiv_span_a.innerHTML = '#errorDiv span a{color: #a8c7fa!important;}';
+    document.body.append(errorDiv_span_a);
 }
 
 if (getCookie(`tema`) == null) {
