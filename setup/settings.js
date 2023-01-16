@@ -127,6 +127,10 @@ function blackThemeSetup() {
     const onPageUserInfoCard_contextHolder_mainData_onPageUserImage = document.createElement('style'); 
     onPageUserInfoCard_contextHolder_mainData_onPageUserImage.innerHTML = '#onPageUserInfoCard .contextHolder .mainData #onPageUserImage{border-color: #0f537d!important;}';
     document.body.append(onPageUserInfoCard_contextHolder_mainData_onPageUserImage);
+
+    const mainInfo_buyBox_onSale_svg = document.createElement('style'); 
+    mainInfo_buyBox_onSale_svg.innerHTML = '.mainInfo .buyBox .onSale svg{fill: #fff;}';
+    document.body.append(mainInfo_buyBox_onSale_svg);
 }
 
 if (getCookie(`tema`) == null) {
