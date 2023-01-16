@@ -29,39 +29,41 @@ fetch('https://perinasoba.github.io/nikBank/users.json')
         const responsePayload = decodeJwtResponse(getCookie(`userCode`));
 
         document.getElementById(`googleImage`).src = `${responsePayload.picture}`;
-        
-        var usersArray
-        try {
-            usersArray = allUsers.filter(function (el) {
-                return responsePayload.email == el.emails[0];
-            });
-        } catch(e) {
+
+        var usersArray = allUsers.filter(function (el) {
+            return responsePayload.email == el.emails[0];
+        });
+
+        if (0 == usersArray.length) {
             document.getElementById(`errorMsg`).innerText = `Google nalog na koji ste se prijavili nije povezan ni sa jednim Nik Bank nalogom.`;
+            document.getElementById(`loggedInDiv`).style.display = `none`;
+            document.getElementById(`accountInfo`).style.display = `none`;
+            document.getElementById(`errorDiv`).style.display = `block`;
+        } else {
+            var userObject = usersArray[0];
+            var numberOfTrans = userObject.transactions.length;
+
+            document.getElementById(`name`).innerText = `${userObject.nameAndSurname}`;
+            document.getElementById(`balance`).innerText = `Stanje računa: ${userObject.balance}`;
+            
+            var repeatNum = 0;
+            while (repeatNum != numberOfTrans) {
+                var transDiv = document.getElementById('transDiv');
+                var tempspan = document.createElement('span');
+                tempspan.innerHTML = `${userObject.transactions[repeatNum]}`;
+                transDiv.appendChild(tempspan);
+
+                repeatNum++;
+            }
+
+            document.getElementById(`birthYear`).innerText = `${userObject.bithday}`;
+            document.getElementById(`address`).innerText = `${userObject.location}`;
+            document.getElementById(`e-mail`).innerText = `${userObject.emails[0]}`;
+
+            document.getElementById(`loggedInDiv`).style.display = `block`;
+            document.getElementById(`accountInfo`).style.display = `block`;
+            document.getElementById(`errorDiv`).style.display = `none`;
         }
-        
-        var userObject = usersArray[0];
-        var numberOfTrans = userObject.transactions.length();
-
-        document.getElementById(`name`).innerText = `${userObject.nameAndSurname}`;
-        document.getElementById(`balance`).innerText = `Stanje računa: ${userObject.balance}`;
-        
-        var repeatNum = 0;
-        while (repeatNum != numberOfTrans) {
-            var transDiv = document.getElementById('transDiv');
-            var tempspan = document.createElement('span');
-            tempspan.innerHTML = `${userObject.transactions[repeatNum]}`;
-            transDiv.appendChild(tempspan);
-
-            repeatNum++;
-        }
-
-        document.getElementById(`birthYear`).innerText = `${userObject.bithday}`;
-        document.getElementById(`address`).innerText = `${userObject.location}`;
-        document.getElementById(`e-mail`).innerText = `${userObject.emails[0]}`;
-
-        document.getElementById(`loggedInDiv`).style.display = `block`;
-        document.getElementById(`accountInfo`).style.display = `block`;
-        document.getElementById(`errorDiv`).style.display = `none`;
     } else {
         document.getElementById(`errorMsg`).innerHTML = `Molimo ulogujte se na vaš Google nalog kako bi ste videli vaš Nik Bank nalog. Više informacija o tome kako da se ulogujete pogledajte na <a href="https://perinaSoba.github.io/nalog" target="_blank">kartici nalog</a>.`;
     }
