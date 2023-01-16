@@ -1,0 +1,32 @@
+[
+    {
+        "nameAndSurname": "Jasmina Nikolić",
+        "name": "Jasmina",
+        "surname": "Nikolić",
+        "bithday": "22/01/1973",
+        "location": "Jovana Rajića 5c",
+        "balance": "240rsd",
+        "emails": [
+            "jamiko1512@gmail.com",
+            "jasmina.nikolic@tenfore.net",
+            "jamiko@mts.rs"
+        ],
+        "transactions": [
+            "03/01 | -30rsd | x1 | Perina Soba - Mesčna Vožnja"
+        ]
+    },
+    {
+        "nameAndSurname": "Miomir Nikolić",
+        "name": "Miomir",
+        "surname": "Nikolić",
+        "bithday": "02/08/1961",
+        "location": "Jovana Rajića 5c",
+        "balance": "0rsd",
+        "emails": [
+            "miomirnikolic61@gmail.com"
+        ],
+        "transactions": [
+            "Nijedna za sada!"
+        ]
+    }
+]

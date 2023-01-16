@@ -2,6 +2,7 @@
     <head>
         <title>Nik Bank</title>
         <link rel="stylesheet" href="../setup/styles/index.css">
+        <link rel="stylesheet" href="../setup/styles/nikBank.css">
         <script src="../setup/googleLogIn.js" defer></script>
         <script src="../setup/mobileNav.js" defer></script>
         <script src="../setup/settings.js" defer></script>
@@ -96,14 +97,43 @@
                 <a href="https://perinasoba.github.io/postavke">Postavke</a>
             </div>
             
+            <div id="pgBanner" style="background-image: url(../media/nikBank/bankSlika.png);">
+                <h1>Nik Bank</h1>
+            </div>
+
             <div class="contentHolder">
-                <div id="pgBanner" style="background-image: url(../media/nikBank/bankSlika.png);">
-                    <h1>Nik Bank</h1>
+                <div class="box" id="loggedInDiv">
+                    <div class="userInfo">
+                        <img id="googleImage" src="" alt="">
+                        <h2 id="name"></h2>
+                    </div>
+                    <span id="balance"></span>
+                    <hr class="lttlSpc">
+                    
+                    <div id="transDiv">
+                        <h3>Transakcije:</h3>
+                    </div>
                 </div>
 
-                <div class="textBox">
-                    <h3>O nama</h3>
-                    <p>Nik Bank je moderan sistem za olakšano plaćanje kako u prodavnicama, tako i u online svetu. Ukoliko vas intresuje vaše trenutno stanje na računu ili želite da donirate novac nekoj od naših humanitarnih organizacija možete to uraditi na web stranici Nik Bank-e ili putem aplikacije za Android uređaje</p>
+                <div class="box" id="accountInfo">
+                    <h2>O vama</h2>
+
+                    <div class="dataCont">
+                        <div class="dataInfo">
+                            <h3>Godina Rođenja</h3>
+                            <span class="birthYear"></span>
+                        </div>
+    
+                        <div class="dataInfo">
+                            <h3>Adresa</h3>
+                            <span class="address"></span>
+                        </div>
+    
+                        <div class="dataInfo">
+                            <h3>E-mail adresa</h3>
+                            <span class="e-mail"></span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

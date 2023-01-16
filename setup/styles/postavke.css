@@ -1,3 +1,7 @@
+* {
+    transition: 0.5s;
+}
+
 .settingsChoser {
     display: flex;
     text-align: center;
