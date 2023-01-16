@@ -39,12 +39,14 @@
     text-decoration: none;
     padding: 0.3rem;
     align-items: center;
+    transform: 0.5s;
 }
 #logOutButton:hover {
     transform-origin: center;
     transform: translateY(-2px);
     cursor: pointer;
     background-color: #004a77;
+    transform: 0.5s;
 }
 #logOutButton svg {
     background-color: transparent;
