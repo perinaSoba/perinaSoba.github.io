@@ -133,7 +133,7 @@ function blackThemeSetup() {
     document.body.append(mainInfo_buyBox_onSale_svg);
 
     const errorDiv = document.createElement('style'); 
-    errorDiv.innerHTML = '#errorDiv {background-color: #28292a;}';
+    errorDiv.innerHTML = '#errorDiv {background-color: #201c1c;}';
     document.body.append(errorDiv);
 
     const errorDiv_span_a = document.createElement('style'); 
