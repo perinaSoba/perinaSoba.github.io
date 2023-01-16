@@ -139,6 +139,26 @@ function blackThemeSetup() {
     const errorDiv_span_a = document.createElement('style'); 
     errorDiv_span_a.innerHTML = '#errorDiv span a{color: #a8c7fa!important;}';
     document.body.append(errorDiv_span_a);
+
+    const box = document.createElement('style'); 
+    box.innerHTML = '.box{background-color: #28292a!important;}';
+    document.body.append(box);
+
+    const accountInfo_dataCont_dataInfo = document.createElement('style'); 
+    accountInfo_dataCont_dataInfo.innerHTML = '#accountInfo .dataCont .dataInfo{background-color: #004a77!important;}';
+    document.body.append(accountInfo_dataCont_dataInfo);
+
+    const loggedInDiv_transDiv = document.createElement('style'); 
+    loggedInDiv_transDiv.innerHTML = '#loggedInDiv #transDiv{background-color: #004a77!important;}';
+    document.body.append(loggedInDiv_transDiv);
+
+    const loggedInDiv_lttlSpc = document.createElement('style'); 
+    loggedInDiv_lttlSpc.innerHTML = '#loggedInDiv .lttlSpc{border-color: #004a77!important;}';
+    document.body.append(loggedInDiv_lttlSpc);
+
+    const loggedInDiv_userInfo_img = document.createElement('style'); 
+    loggedInDiv_userInfo_img.innerHTML = '#loggedInDiv .userInfo img{border-color: #004a77!important;}';
+    document.body.append(loggedInDiv_userInfo_img);
 }
 
 if (getCookie(`tema`) == null) {
