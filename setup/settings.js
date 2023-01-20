@@ -159,6 +159,14 @@ function blackThemeSetup() {
     const loggedInDiv_userInfo_img = document.createElement('style'); 
     loggedInDiv_userInfo_img.innerHTML = '#loggedInDiv .userInfo img{border-color: #004a77!important;}';
     document.body.append(loggedInDiv_userInfo_img);
+
+    const productPreviewCont_productPreviewBox = document.createElement('style'); 
+    productPreviewCont_productPreviewBox.innerHTML = '.productPreviewCont .productPreviewBox{background-color: #28292a!important;}';
+    document.body.append(productPreviewCont_productPreviewBox);
+
+    const productPreviewCont_productPreviewBox_HOVER = document.createElement('style'); 
+    productPreviewCont_productPreviewBox_HOVER.innerHTML = '.productPreviewCont .productPreviewBox:hover{background-color: #004a77!important;}';
+    document.body.append(productPreviewCont_productPreviewBox_HOVER);
 }
 
 if (getCookie(`tema`) == null) {

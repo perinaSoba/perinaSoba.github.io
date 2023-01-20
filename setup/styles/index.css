@@ -299,6 +299,39 @@ body {
     user-select: none;
 }
 
+/* Product Preview Boxes */
+.productPreviewCont {
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+}
+.productPreviewCont .productPreviewBox {
+    flex: 20%;
+    margin: 1rem;
+    padding: 0.5rem;
+    text-decoration: none;
+    background-color: #f8fafd;
+    border-radius: 24px;
+    transition: 0.5s;
+}
+.productPreviewCont .productPreviewBox:hover {
+    background-color: #c2e7ff;
+    transition: 0.5s;
+    transform: scale(1.01);
+    cursor: pointer;
+}
+.productPreviewCont .productPreviewBox img {
+    width: 100%;
+}
+.productPreviewCont .productPreviewBox h3 {
+    font-size: 1.3rem;
+    font-weight: 450;
+}
+.productPreviewCont .productPreviewBox span {
+    font-size: 1rem;
+    font-weight: 350;
+}
+
 /* Responsive stuff */
 @media screen and (max-device-width: 480px)  {
     body {
