@@ -465,5 +465,14 @@ body {
         right: 1rem;
         top: 0.2rem;
     }
+
+    /* Product Preview Boxes */
+    .productPreviewCont {
+        display: block;
+    }
+    .productPreviewCont .productPreviewBox {
+        height: fit-content;
+        display: block;
+    }
 }
 
