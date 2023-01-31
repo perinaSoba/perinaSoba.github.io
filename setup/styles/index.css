@@ -79,6 +79,11 @@ body {
 }
 
 /* Text Boxes */
+.mainMultCont {
+    background-color: #f8fafd;
+    margin: 0.5rem;
+    border-radius: 24px;
+}
 .multiCont {
     display: flex;
 }
@@ -91,14 +96,20 @@ body {
 .multiCont .textBox {
     padding: 1rem;
     padding-top: 0;
+    background-color: #c2e7ff;
+}
+.multiCont .textBox p {
+    color: #000000!important;
 }
 .textBox {
     border: 0;
     padding: 1rem 10rem;
-    margin: 0;
     text-align: center;
     transition: 0.5s;
     text-decoration: none;
+    margin: 0.5rem;
+    border-radius: 24px;
+    background-color: #f8fafd;
 }
 .textBox h2 {
     margin-bottom: 1rem;
@@ -133,7 +144,7 @@ body {
 }
 .textBox a {
     justify-content: right;
-    color: #3556E3!important;
+    color: #0b57d0!important;
     text-decoration: none;
 }
 .textBox:hover a{
