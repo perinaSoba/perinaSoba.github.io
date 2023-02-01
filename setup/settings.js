@@ -67,6 +67,10 @@ function blackThemeSetup() {
     const logInDiv = document.createElement('style'); 
     logInDiv.innerHTML = '#logInDiv{border: 0.1rem #8b8e8c solid!important; background-color: transparent;}';
     document.body.append(logInDiv);
+
+    const textBox = document.createElement('style'); 
+    textBox.innerHTML = '.textBox{background-color: #28292a!important;}';
+    document.body.append(textBox);
     
     const textBox_a = document.createElement('style'); 
     textBox_a.innerHTML = '.textBox a{color: #a8c7fa!important;}';
@@ -167,6 +171,18 @@ function blackThemeSetup() {
     const productPreviewCont_productPreviewBox_HOVER = document.createElement('style'); 
     productPreviewCont_productPreviewBox_HOVER.innerHTML = '.productPreviewCont .productPreviewBox:hover{background-color: #004a77!important;}';
     document.body.append(productPreviewCont_productPreviewBox_HOVER);
+
+    const mainMultCont = document.createElement('style'); 
+    mainMultCont.innerHTML = '.mainMultCont{background-color: #28292a!important;}';
+    document.body.append(mainMultCont);
+
+    const multiCont_textBox = document.createElement('style'); 
+    multiCont_textBox.innerHTML = '.multiCont .textBox{background-color: #004a77!important;}';
+    document.body.append(multiCont_textBox);
+
+    const multiCont_textBox_p = document.createElement('style'); 
+    multiCont_textBox_p.innerHTML = '.multiCont .textBox p{color: #fff!important;}';
+    document.body.append(multiCont_textBox_p);
 }
 
 if (getCookie(`tema`) == null) {
