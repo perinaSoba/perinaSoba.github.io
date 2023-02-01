@@ -148,9 +148,13 @@ function blackThemeSetup() {
     box.innerHTML = '.box{background-color: #28292a!important;}';
     document.body.append(box);
 
-    const accountInfo_dataCont_dataInfo = document.createElement('style'); 
-    accountInfo_dataCont_dataInfo.innerHTML = '#accountInfo .dataCont .dataInfo{background-color: #004a77!important;}';
-    document.body.append(accountInfo_dataCont_dataInfo);
+    const listedInfo = document.createElement('style'); 
+    listedInfo.innerHTML = '.listedInfo{background-color: #28292a!important;}';
+    document.body.append(listedInfo);
+
+    const listedInfo_dataCont_dataInfo = document.createElement('style'); 
+    listedInfo_dataCont_dataInfo.innerHTML = '.listedInfo .dataCont .dataInfo{background-color: #004a77!important;}';
+    document.body.append(listedInfo_dataCont_dataInfo);
 
     const loggedInDiv_transDiv = document.createElement('style'); 
     loggedInDiv_transDiv.innerHTML = '#loggedInDiv #transDiv{background-color: #004a77!important;}';

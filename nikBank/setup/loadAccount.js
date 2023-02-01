@@ -52,11 +52,9 @@ fetch('https://perinasoba.github.io/nikBank/users.json')
                 var tempspan = document.createElement('span');
 
                 if (transDiv.firstChild) {
-                    var tempspace1 = document.createElement('br');
-                    var tempspace2 = document.createElement('br');
+                    var tempspace = document.createElement('br');
 
-                    transDiv.appendChild(tempspace1);
-                    transDiv.appendChild(tempspace2);
+                    transDiv.appendChild(tempspace);
                 }
 
                 tempspan.innerHTML = `${userObject.transactions[repeatNum]}`;
