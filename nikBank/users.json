@@ -11,17 +11,15 @@
             "jasmina.nikolic@tenfore.net",
             "jamiko@mts.rs"
         ],
-        "cards": [
-            {
-                "cardHolder": "Jasmina Nikolić",
-                "mainCardNumbers": "5381",
-                "cardNumber": "5381 8921 3564 7856",
-                "validThru": "01/30",
-                "cardType": "credit",
-                "cardNetwork": "mastercard",
-                "CVV": "846"
-            }
-        ],
+        "creditCard": {
+            "cardHolder": "Jasmina Nikolić",
+            "mainCardNumbers": "5381",
+            "cardNumber": "5381 8921 3564 7856",
+            "validThru": "01/30",
+            "cardType": "credit",
+            "cardNetwork": "mastercard",
+            "CVV": "846"
+        },
         "transactions": [
             "01/02 | -2.000rsd | x1 | Nik Magic - Lego I Pro",
             "01/02 | -30rsd | x1 | Perina Soba - Mesečna Vožnja"
@@ -37,17 +35,15 @@
         "emails": [
             "miomirnikolic61@gmail.com"
         ],
-        "cards": [
-            {
-                "cardHolder": "Miomir Nikolić",
-                "mainCardNumbers": "5381",
-                "cardNumber": "5381 8921 9564 9975",
-                "validThru": "01/30",
-                "cardType": "credit",
-                "cardNetwork": "mastercard",
-                "CVV": "391"
-            }
-        ],
+        "creditCard": {
+            "cardHolder": "Miomir Nikolić",
+            "mainCardNumbers": "5381",
+            "cardNumber": "5381 8921 9564 9975",
+            "validThru": "01/30",
+            "cardType": "credit",
+            "cardNetwork": "mastercard",
+            "CVV": "391"
+        },
         "transactions": [
             "Nijedna za sada!"
         ]

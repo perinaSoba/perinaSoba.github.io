@@ -12,25 +12,25 @@
     display: none;
 }
 
-#accountInfo {
+.listedInfo {
     text-align: center;
 }
-#accountInfo h2 {
+.listedInfo h2 {
     font-size: 1.9rem;
     font-weight: 500;
     padding: calc(5rem - 1.9rem - 2rem);
 }
-#accountInfo .dataCont .dataInfo {
+.listedInfo .dataCont .dataInfo {
     background-color: #c2e7ff;
     border-radius: 24px;
     margin: 0.5rem;
     padding: 0.5rem;
 }
-#accountInfo .dataCont .dataInfo h3 {
+.listedInfo .dataCont .dataInfo h3 {
     font-size: 1.3rem;
     font-weight: 450;
 }
-#accountInfo .dataCont .dataInfo span {
+.listedInfo .dataCont .dataInfo span {
     font-size: 1rem;
     font-weight: 350;
 }
@@ -74,6 +74,16 @@
 #loggedInDiv #transDiv span {
     font-size: 1rem;
     font-weight: 350;
+}
+
+#accountInfo {
+    margin: 0.5rem;
+    width: 50%;
+    background-color: #f8fafd;
+    border-radius: 24px;
+    padding: 0.5rem;
+    height: 100%;
+    display: none;
 }
 
 #errorDiv {
@@ -130,6 +140,11 @@
         width: auto;
         padding: 0.5rem;
         height: auto;
+    }
+
+    #accountInfo {
+        width: unset;
+        height: unset;
     }
 }
 

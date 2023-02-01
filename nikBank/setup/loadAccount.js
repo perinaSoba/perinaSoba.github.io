@@ -52,21 +52,28 @@ fetch('https://perinasoba.github.io/nikBank/users.json')
                 var tempspan = document.createElement('span');
 
                 if (transDiv.firstChild) {
-                    tempspan.innerHTML = `${userObject.transactions[repeatNum]}`;
-                } else {
-                    tempspan.innerHTML = `<br> <br> ${userObject.transactions[repeatNum]}`;
+                    var tempspace1 = document.createElement('br');
+                    var tempspace2 = document.createElement('br');
+
+                    transDiv.appendChild(tempspace1);
+                    transDiv.appendChild(tempspace2);
                 }
 
+                tempspan.innerHTML = `${userObject.transactions[repeatNum]}`;
                 transDiv.appendChild(tempspan);
 
                 repeatNum++;
             }
 
+            document.getElementById(`cardNum`).innerText = `XXXX XXXX XXXX ${userObject.creditCard.cardNumber.slice(-4)}`;
+            document.getElementById(`validThruCard`).innerText = `${userObject.creditCard.validThru}`;
+            document.getElementById(`cvvCard`).innerText = `${userObject.creditCard.CVV}`;
+
             document.getElementById(`birthYear`).innerText = `${userObject.bithday}`;
             document.getElementById(`address`).innerText = `${userObject.location}`;
             document.getElementById(`e-mail`).innerText = `${userObject.emails[0]}`;
 
-            document.getElementById(`loggedInDiv`).style.display = `block`;
+            document.getElementById(`transCardDiv`).style.display = `block`;
             document.getElementById(`accountInfo`).style.display = `block`;
             document.getElementById(`errorDiv`).style.display = `none`;
         }
