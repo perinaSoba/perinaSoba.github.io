@@ -31,7 +31,7 @@
         "surname": "Nikolić",
         "bithday": "02/08/1961",
         "location": "Jovana Rajića 5c",
-        "balance": "0rsd",
+        "balance": "5rsd",
         "emails": [
             "miomirnikolic61@gmail.com"
         ],
@@ -45,7 +45,7 @@
             "CVV": "391"
         },
         "transactions": [
-            "Nijedna za sada!"
+            "05/02 | -5rsd | x1 | Perina Soba - Pregled računa"
         ]
     }
 ]
