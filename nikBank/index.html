@@ -58,6 +58,14 @@
 
                     <p>Nalog</p>
                 </button>
+
+                <button onclick="window.location.href = `https://perinasoba.github.io/shop`">
+                    <span class="material-symbols-rounded">
+                        shopping_bag
+                    </span>
+
+                    <p>Shop</p> 
+                </button>
                 
                 <button onclick="window.location.href = `https://perinasoba.github.io/servisi`">
                     <span class="material-symbols-rounded">
@@ -66,13 +74,13 @@
 
                     <p>Servisi</p> 
                 </button>
+            </div>
 
-                <button onclick="window.location.href = `https://perinasoba.github.io/postavke`">
+            <div id="themeSetter">
+                <button id="themeSwitchButt">
                     <span class="material-symbols-rounded">
-                        settings
+                        dark_mode
                     </span>
-
-                    <p>Postavke</p> 
                 </button>
             </div>
         </div>
@@ -94,11 +102,18 @@
             <div id="mobileNav">
                 <a href="https://perinasoba.github.io/index">Početna</a>
                 <a href="https://perinasoba.github.io/nalog">Nalog</a>
+                <a href="https://perinasoba.github.io/shop">Shop</a>
                 <a href="https://perinasoba.github.io/servisi">Servisi</a>
-                <a href="https://perinasoba.github.io/postavke">Postavke</a>
+
+                <button id="mobThemeSwitcher" onclick="switchTheme()">
+                    <span class="material-symbols-rounded" id="themeEmoji">
+                        dark_mode
+                    </span>
+                    <span id="mobThemeText">Podesi tamnu temu</span>
+                </button>
             </div>
             
-            <div id="pgBanner" style="background-image: url(../media/nikBank/bankSlika.png);">
+            <div id="pgBanner" style="background-image: url(../media/nikBank/thumbnail.png);">
                 <h1>Nik Bank</h1>
             </div>
 

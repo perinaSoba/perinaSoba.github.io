@@ -187,6 +187,20 @@ function blackThemeSetup() {
     const multiCont_textBox_p = document.createElement('style'); 
     multiCont_textBox_p.innerHTML = '.multiCont .textBox p{color: #fff!important;}';
     document.body.append(multiCont_textBox_p);
+
+    // Theme Button
+    const themeSwitchButt = document.createElement('style'); 
+    themeSwitchButt.innerHTML = '#themeSwitchButt {border: 0.1rem #8b8e8c solid!important; background-color: transparent!important;}';
+    document.body.append(themeSwitchButt);
+
+    const themeSwitchButt_span = document.getElementById('themeSwitchButt').firstElementChild
+    themeSwitchButt_span.innerHTML = 'light_mode';
+
+    const themeEmoji = document.getElementById('themeEmoji')
+    themeEmoji.innerHTML = 'light_mode';
+
+    const mobThemeText = document.getElementById('mobThemeText')
+    mobThemeText.innerHTML = 'Podesi svetlu temu';
 }
 
 if (getCookie(`tema`) == null) {
@@ -194,9 +208,6 @@ if (getCookie(`tema`) == null) {
 } else if (getCookie(`tema`) != null) {
     if (getCookie(`tema`) == `tamna`) {
         blackThemeSetup();
-
-        document.getElementById(`blackColor`).classList.add(`active`);
-        document.getElementById(`whiteColor`).classList.remove(`active`);
     }
 }
 
@@ -204,16 +215,24 @@ function setBlackTheme() {
     blackThemeSetup();
 
     setCookie(`tema`, `tamna`, 365);
-    
-    document.getElementById(`blackColor`).classList.add(`active`);
-    document.getElementById(`whiteColor`).classList.remove(`active`);
 }
 
 function setWhiteTheme() {
     setCookie(`tema`, `svetla`, 365);
-    
-    document.getElementById(`whiteColor`).classList.add(`active`);
-    document.getElementById(`blackColor`).classList.remove(`active`);
 
     location.reload();
 }
+
+function switchTheme() {
+    var themeSwitchButt = document.getElementById("themeSwitchButt");
+
+    if (themeSwitchButt.firstElementChild.innerText.includes("dark_mode")) {
+        blackThemeSetup();
+        setCookie(`tema`, `tamna`, 365);
+    } else if (themeSwitchButt.firstElementChild.innerText.includes("light_mode")) {
+        location.reload();
+        setCookie(`tema`, `svetla`, 365);
+    }
+}
+
+document.getElementById("themeSwitchButt").addEventListener("click", switchTheme);

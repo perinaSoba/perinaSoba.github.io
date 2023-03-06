@@ -1,4 +1,0 @@
-Fill: 0
-Weight: 200
-Grade: 0
-Optical size: 48

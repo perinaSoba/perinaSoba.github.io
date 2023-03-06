@@ -157,17 +157,19 @@ body {
 #sideBar {
     min-width: fit-content;
     background-color: #f3f6fc;
-    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
 }
 #logInDiv {
     box-shadow: 0px 2px 4px rgb(0 0 0 / 10%);
     background-color: #fff;
     transition: 0.5s;
     border-radius: 100%;
-    text-align: center;
     margin: 1rem;
     width: 3rem;
     height: fit-content;
+    align-self: center;
 }
 #logInDiv:hover {
     transform: translateY(-2px);
@@ -182,7 +184,6 @@ body {
     height: fit-content;
 }
 #userInfoCard {
-    display: flex;
     min-height: 1rem;
     padding: 0.5rem;
     display: none;
@@ -250,6 +251,30 @@ body {
 #sideButtons #activeCard:hover{
     cursor: pointer;
     text-decoration: none;
+}
+#themeSetter {
+    margin-top: auto;
+}
+#themeSetter #themeSwitchButt {
+    box-shadow: 0px 2px 4px rgb(0 0 0 / 10%);
+    background-color: #fff;
+    transition: 0.5s;
+    border-radius: 100%;
+    border: 0;
+    width: 3rem;
+    height: 3rem;
+    margin: 0.5rem;
+}
+#themeSetter #themeSwitchButt:hover {
+    transform: translateY(-2px);
+    box-shadow: 0px 4px 8px rgb(0 0 0 / 30%);
+    cursor: pointer;
+    transition: 0.5s;
+}
+#themeSetter #themeSwitchButt span {
+    width: fit-content;
+    height: fit-content;
+    padding: 0.2rem;
 }
 
 /* Mobile stuff */
@@ -438,6 +463,32 @@ body {
     #mobileNav a:hover {
         background-color: #c8e4fc;
         transition: 0.2s;
+    }
+
+    #mobThemeSwitcher {
+        transition: 0.5s;
+        height: fit-content;
+        align-self: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 0.1rem #8b8e8c solid; 
+        background-color: transparent!important;
+        text-decoration: none;
+        padding: 0.5rem;
+        border-radius: 100px;
+        font-weight: 500;
+        font-size: 1rem;
+        text-align: center;
+        width: 100%;
+    }
+    #mobThemeSwitcher #themeEmoji {
+        padding: 0.2rem;
+    }
+    #mobThemeSwitcher:hover {
+        transform: translateY(-2px);
+        cursor: pointer;
+        transition: 0.5s;
     }
 
     .mobNavSpace {
