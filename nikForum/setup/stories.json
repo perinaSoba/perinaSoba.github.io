@@ -1,5 +1,20 @@
 [
     {
+        "title": "Novi način za kontrolisanje teme",
+        "author": {
+            "name": "Perina Soba",
+            "email": "perinaSoba@gmail.com",
+            "profile_pic": "https://perinasoba.github.io/media/favicion.svg"
+        },
+        "public": true,
+        "relase_date": "06. Mart 2023.",
+        "short_relase_date": "06. 03. 2023.",
+        "url": "https://perinasoba.github.io/nikForum/prica?id=Novi način za kontrolisanje teme",
+        "image_url": "https://perinasoba.github.io/nikForum/media/stories/noviNacinZaKontrolisanjeTeme.png",
+        "short_text": "Najnovija verzija naše web-stranice vam omogućava da promenite temu na bilo kojoj stranici bez potrebe da odlazite u podešavanja",
+        "html_code": "<p class=\"text\">Najnovija verzija naše web-stranice vam omogućava da promenite temu na bilo kojoj stranici bez potrebe da odlazite u podešavanja<\/p> <br> <img src=\"https://perinasoba.github.io/nikForum/media/stories/noviNacinZaKontrolisanjeTeme.png\" class=\"image\"> <br><br> <h1 class=\"heading\" id=\"sta-je-novina\">Šta je novina?<\/h1> <p class=\"text\">Novina je to da od danas možete da promenite temu sajta bez odlaska u podešavanja koja su pritom potpuno uklonjena. Kod desktop korisnika to je dugme u levoj donjem ćošku a kod mobilnih korisnika to je dugme koje se nalazi na dnu navigacionog menija. Isto smo dodali novu karticu Shop, gde će se nalaziti svi proizvodi koje imamo u ponudi. Na slici ispod možete videti dugmad koju je potrebno pritisnuti da bi ste promenili temu sajta.<\/p> <br> <img src=\"https://perinasoba.github.io/nikForum/media/stories/izaberiTemuNovoDugmeNaDesktopITelefonu.png\" class=\"image\"> <br><br> <h1 class=\"heading\" id=\"kontaktirajte-nas\">Kontaktirajte nas<\/h1> <p class=\"text\">Molimo kontaktirajte nas putem naše e-mail adrese <a target=\"_blank\" href=\"mailto:perinaSoba@gmail.com?subject=Novi način za kontrolisanje teme\">perinaSoba@gmail.com<\/a> ukoliko imate neko pitanje ili niste u mogućnosi da nađete ovu dugmad..<\/p> <br>"
+    },
+    {
         "title": "Novi dizajn i nova kartica",
         "author": {
             "name": "Perina Soba",
