@@ -1,5 +1,20 @@
 [
     {
+        "title": "Nova kartica - Shop",
+        "author": {
+            "name": "Perina Soba",
+            "email": "perinaSoba@gmail.com",
+            "profile_pic": "https://perinasoba.github.io/media/favicion.svg"
+        },
+        "public": true,
+        "relase_date": "06. Mart 2023.",
+        "short_relase_date": "06. 03. 2023.",
+        "url": "https://perinasoba.github.io/nikForum/prica?id=Nova kartica - Shop",
+        "image_url": "https://perinasoba.github.io/media/nikForum/stories/novaKarticaShop.png",
+        "short_text": "Nova kartica koja vam omogućava lakoću pri kupovini",
+        "html_code": "<p class=\"text\">Nova kartica koja vam omogućava lakoću pri kupovini<\/p> <br> <img src=\"https://perinasoba.github.io/media/nikForum/stories/novaKarticaShop.png\" class=\"image\"> <br><br> <h1 class=\"heading\" id=\"kako-izgleda\">Kako izleda?<\/h1> <p class=\"text\">Kartica Shop vam omogućava da sve proizvode Perine Sobe vidite na jednom mestu. Za sada tu se nalaze samo proizvodi Nik Magic-a ali uskoro će tu biti i proizvodi novih proizvođača kao i novi proizvodi već postojećih.<\/p> <br> <img src=\"https://perinasoba.github.io/media/nikForum/stories/novaShopKarticaPrvaVerzija.png\" class=\"image\"> <br><br> <h1 class=\"heading\" id=\"vezane-novine\">Vezane novine<\/h1> <p class=\"text\">Sličan dizajn koji se nalazi na Shop kartici (slika iznad) je od sada i na glavnoj strani <a target=\"_blank\" href=\"https://perinaSoba.github.io/nikMagic\">Nik Magic-a<\/a>.<\/p> <br><br> <h1 class=\"heading\" id=\"kontaktirajte-nas\">Kontaktirajte nas<\/h1> <p class=\"text\">Molimo kontaktirajte nas putem naše e-mail adrese <a target=\"_blank\" href=\"mailto:perinaSoba@gmail.com?subject=Nova kartica - Shop\">perinaSoba@gmail.com<\/a> ukoliko imate neko pitanje ili u bilo kojem drugom slučaju.<\/p> <br>"
+    },
+    {
         "title": "Novi način za kontrolisanje teme",
         "author": {
             "name": "Perina Soba",
