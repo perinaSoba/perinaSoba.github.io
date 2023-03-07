@@ -24,13 +24,13 @@ function buyElectronics(modelName) {
     var price
 
     if (modelName == `Lego Mini`) {
-        price = document.getElementById("legoMiniPrice").innerText;
+        price = `15€`;
     } else if (modelName == `Lego I`) {
-        price = document.getElementById("legoIPrice").innerText;
+        price = `20€`;
     } else if (modelName == `Lego I Pro`) {
-        price = document.getElementById("legoIProPrice").innerText;
+        price = `50€`;
     } else if (modelName == `Lego Watch`) {
-        price = document.getElementById("legoWatchPrice").innerText;
+        price = `30€`;
     }
 
     if (getCookie(`userCode`) != null) { 

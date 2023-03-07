@@ -340,6 +340,7 @@ body {
     font-size: 1.9rem;
     font-weight: 500;
     margin: 0.5rem;
+    text-align: center;
 }
 
 .shopHolder {
@@ -375,9 +376,9 @@ body {
     font-size: 1.5rem;
     font-weight: 500;
 }
-.shopHolder .shopItem .shopItemPrice {
-    font-size: 1.2rem;
-    font-weight: 400;
+.shopHolder .shopItem .shopItemDesc {
+    font-size: 1rem;
+    font-weight: 350;
 }
 .shopHolder .shopItem .shopItemBuy {
     font-size: 1.3rem;
