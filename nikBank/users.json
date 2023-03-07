@@ -5,7 +5,7 @@
         "surname": "Nikolić",
         "bithday": "22/01/1963",
         "location": "Jovana Rajića 5c",
-        "balance": "-2020rsd",
+        "balance": "-2000rsd",
         "emails": [
             "jamiko1512@gmail.com",
             "jasmina.nikolic@tenfore.net",
@@ -23,7 +23,8 @@
         "transactions": [
             "01/02 | -2.000rsd | x1 | Nik Magic - Lego I Pro",
             "01/03 | -200rsd | x1 | Nik Bank - Kreditna provizija",
-            "01/03 | -30rsd | x1 | Perina Soba - Mesečna Vožnja"
+            "01/03 | -30rsd | x1 | Perina Soba - Mesečna Vožnja",
+            "01/03 | +20rsd | x1 | Nik Bank - Uplata"
         ]
     },
     {
