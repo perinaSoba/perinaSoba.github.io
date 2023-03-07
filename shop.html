@@ -5,6 +5,7 @@
         <script src="setup/googleLogIn.js" defer></script>
         <script src="setup/mobileNav.js" defer></script>
         <script src="setup/settings.js" defer></script>
+        <script src="setup/purchase.js" defer></script>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
         <meta charset="UTF-8">
@@ -115,10 +116,37 @@
                 <div id="pgBanner" style="background-image: url(media/indexPage/thumbnail.png);">
                     <h1>Nik Shop</h1>
                 </div>
+
+                <h1  class="shopTitles">Elektronika</h1>
                 
-                <div class="textBox">
-                    <h2>Obaveštenje!</h2>
-                    <p>Ova stranica je trenutno u fazi testiranja i biće dostupna za par dana.</p>
+                <div class="shopHolder">
+                    <a class="shopItem" href="https://perinasoba.github.io/nikMagic/uredaji/legoMini">
+                        <img src="media/nikMagic/legoMini/front.png" class="shopItemImage">
+                        <h2 class="shopItemTitle">Lego Mini</h2>
+                        <p class="shopItemPrice" id="legoMiniPrice">15€</p>
+                        <button class="shopItemBuy" onclick="buyElectronics(`Lego Mini`)">Kupi</button>
+                    </a>
+
+                    <a class="shopItem" href="https://perinasoba.github.io/nikMagic/uredaji/legoI">
+                        <img src="media/nikMagic/lego1/logo.png" class="shopItemImage">
+                        <h2 class="shopItemTitle">Lego I</h2>
+                        <p class="shopItemPrice" id="legoIPrice">20€</p>
+                        <button class="shopItemBuy" onclick="buyElectronics(`Lego I`)">Kupi</button>
+                    </a>
+
+                    <a class="shopItem" href="https://perinasoba.github.io/nikMagic/uredaji/legoIPro">
+                        <img src="media/nikMagic/lego1Pro/Logo.png" class="shopItemImage">
+                        <h2 class="shopItemTitle">Lego I Pro</h2>
+                        <p class="shopItemPrice" id="legoIProPrice">50€</p>
+                        <button class="shopItemBuy" onclick="buyElectronics(`Lego I Pro`)">Kupi</button>
+                    </a>
+
+                    <a class="shopItem" href="https://perinasoba.github.io/nikMagic/uredaji/legoWatch">
+                        <img src="media/nikMagic/legoWatch/frontSide.png" class="shopItemImage">
+                        <h2 class="shopItemTitle">Lego Watch</h2>
+                        <p class="shopItemPrice" id="legoWatchPrice">30€</p>
+                        <button class="shopItemBuy" onclick="buyElectronics(`Lego Watch`)">Kupi</button>
+                    </a>
                 </div>
             </div>
         </div>

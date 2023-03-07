@@ -335,37 +335,71 @@ body {
     user-select: none;
 }
 
-/* Product Preview Boxes */
-.productPreviewCont {
+/* Shop */
+.shopTitles {
+    font-size: 1.9rem;
+    font-weight: 500;
+    margin: 0.5rem;
+}
+
+.shopHolder {
     display: flex;
-    flex-wrap: wrap;
+}
+
+.shopHolder .shopItem {
+    border: 0;
+    padding: 1rem;
     text-align: center;
-}
-.productPreviewCont .productPreviewBox {
-    flex: 20%;
-    margin: 1rem;
-    padding: 0.5rem;
+    transition: 0.5s;
     text-decoration: none;
-    background-color: #f8fafd;
+    margin: 0.5rem;
     border-radius: 24px;
+    background-color: #f8fafd;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: calc(100%/4);
+}
+.shopHolder .shopItem .shopItemImage {
+    padding: 0.5rem;
+    border: 0.1rem #c2e7ff solid;
+    border-radius: 100%;
+    width: 10rem;
+    height: 10rem;
     transition: 0.5s;
+    z-index: 1;
+    background-color: #fff;
 }
-.productPreviewCont .productPreviewBox:hover {
-    background-color: #c2e7ff;
-    transition: 0.5s;
-    transform: scale(1.01);
-    cursor: pointer;
+.shopHolder .shopItem .shopItemTitle {
+    font-size: 1.5rem;
+    font-weight: 500;
 }
-.productPreviewCont .productPreviewBox img {
-    width: 100%;
+.shopHolder .shopItem .shopItemPrice {
+    font-size: 1.2rem;
+    font-weight: 400;
 }
-.productPreviewCont .productPreviewBox h3 {
+.shopHolder .shopItem .shopItemBuy {
     font-size: 1.3rem;
     font-weight: 450;
+    border: 0;
+    width: 100%;
+    border-radius: 24px;
+    padding: 0.5rem;
+    margin-top: 3rem;
+    background-color: #c2e7ff;
+    transition: 0.5s;
 }
-.productPreviewCont .productPreviewBox span {
-    font-size: 1rem;
-    font-weight: 350;
+
+.shopHolder .shopItem:hover .shopItemImage {
+    transition: 0.5s;
+    transform: scale(1.1);
+    cursor: pointer;
+}
+.shopHolder .shopItem .shopItemBuy:hover {
+    transition: 0.5s;
+    transform: scale(1.1);
+    cursor: pointer;
 }
 
 /* Responsive stuff */
@@ -528,13 +562,11 @@ body {
         top: 0.2rem;
     }
 
-    /* Product Preview Boxes */
-    .productPreviewCont {
+    .shopHolder {
         display: block;
     }
-    .productPreviewCont .productPreviewBox {
-        height: fit-content;
-        display: block;
+    .shopHolder .shopItem {
+        width: unset;
     }
 }
 

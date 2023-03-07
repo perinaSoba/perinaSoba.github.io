@@ -188,6 +188,18 @@ function blackThemeSetup() {
     multiCont_textBox_p.innerHTML = '.multiCont .textBox p{color: #fff!important;}';
     document.body.append(multiCont_textBox_p);
 
+    const shopHolder_shopItem = document.createElement('style'); 
+    shopHolder_shopItem.innerHTML = '.shopHolder .shopItem{background-color: #28292a!important;}';
+    document.body.append(shopHolder_shopItem);
+
+    const shopHolder_shopItem_shopItemImage = document.createElement('style'); 
+    shopHolder_shopItem_shopItemImage.innerHTML = '.shopHolder .shopItem .shopItemImage{border: 0.1rem #004a77 solid!important;}';
+    document.body.append(shopHolder_shopItem_shopItemImage);
+
+    const shopHolder_shopItem_shopItemBuy = document.createElement('style'); 
+    shopHolder_shopItem_shopItemBuy.innerHTML = '.shopHolder .shopItem .shopItemBuy{background-color: #004a77!important;}';
+    document.body.append(shopHolder_shopItem_shopItemBuy);
+
     // Theme Button
     const themeSwitchButt = document.createElement('style'); 
     themeSwitchButt.innerHTML = '#themeSwitchButt {border: 0.1rem #8b8e8c solid!important; background-color: transparent!important;}';
