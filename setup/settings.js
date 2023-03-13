@@ -200,6 +200,10 @@ function blackThemeSetup() {
     shopHolder_shopItem_shopItemBuy.innerHTML = '.shopHolder .shopItem .shopItemBuy{background-color: #004a77!important;}';
     document.body.append(shopHolder_shopItem_shopItemBuy);
 
+    const bookCont = document.createElement('style'); 
+    bookCont.innerHTML = '.bookCont{background-color: #28292a!important;}';
+    document.body.append(bookCont);
+
     // Theme Button
     const themeSwitchButt = document.createElement('style'); 
     themeSwitchButt.innerHTML = '#themeSwitchButt {border: 0.1rem #8b8e8c solid!important; background-color: transparent!important;}';
