@@ -124,8 +124,10 @@ body {
     text-align: center;
 }
 .textBox img {
-    width: 50%;
+    width: 60%;
     height: fit-content;
+    border-radius: 24px;
+    margin-top: 1rem;
 }
 .textBox span {
     width: 50%;
