@@ -5,7 +5,7 @@
         "surname": "Nikolić",
         "bithday": "22/01/1963",
         "location": "Jovana Rajića 5c",
-        "balance": "-2200rsd",
+        "balance": "-2400rsd",
         "emails": [
             "jamiko1512@gmail.com",
             "jasmina.nikolic@tenfore.net",
@@ -25,7 +25,8 @@
             "01/03 | -200rsd | x1 | Nik Bank - Kreditna provizija",
             "01/03 | -30rsd | x1 | Perina Soba - Mesečna Vožnja",
             "01/03 | +20rsd | x1 | Nik Bank - Uplata",
-            "08/03 | -200rsd | x1 | Nik Bank - Kreditna provizija"
+            "08/03 | -200rsd | x1 | Nik Bank - Kreditna provizija",
+            "15/03 | -200rsd | x1 | Nik Bank - Kreditna provizija"
         ]
     },
     {
@@ -34,7 +35,7 @@
         "surname": "Nikolić",
         "bithday": "02/08/1961",
         "location": "Jovana Rajića 5c",
-        "balance": "5rsd",
+        "balance": "10rsd",
         "emails": [
             "miomirnikolic61@gmail.com"
         ],
@@ -48,7 +49,7 @@
             "CVV": "391"
         },
         "transactions": [
-            "05/02 | -5rsd | x1 | Perina Soba - Pregled računa"
+            "15/03 | +5rsd | x1 | Perina Soba - Isplata za mesečnu vožnju"
         ]
     }
 ]
