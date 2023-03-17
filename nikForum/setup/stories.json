@@ -1,5 +1,20 @@
 [
     {
+        "title": "Nik Bank - Gold kartice",
+        "author": {
+            "name": "Perina Soba",
+            "email": "perinaSoba@gmail.com",
+            "profile_pic": "https://perinasoba.github.io/media/favicion.svg"
+        },
+        "public": true,
+        "relase_date": "17. Mart 2023.",
+        "short_relase_date": "17. 03. 2023.",
+        "url": "https://perinasoba.github.io/nikForum/prica?id=Nik Bank - Gold kartice",
+        "image_url": "https://perinasoba.github.io/media/nikForum/stories/nikBank-goldCard.png",
+        "short_text": "Novi lojaliti program u slokpu Perine Sobe, zamena POST-B programa",
+        "html_code": "<p class=\"text\">Novi lojaliti program u slokpu Perine Sobe, zamena POST-B programa</p> <br> <img src=\"https://perinasoba.github.io/media/nikForum/stories/nikBank-goldCard.png\" class=\"image\"> <br><br> <h1 class=\"heading\" id=\"sta-je-gold-kartica\">Šta je gold kartica?</h1> <p class=\"text\">Nik Bank - Gold kartica je naslednik našeg POST-B loyality programa, i to na mnogo bolji način. Ukoliko se sećate, vlasnici POST-B kartice su imali 15% popusta na sve proizvode dok vam Gold kartica omogućava <b>50%</b> popusta na svaku kupovinu u našim poslovnicama ili onlajn.</p> <br><br> <h1 class=\"heading\" id=\"kako-do-kartice\">Kako do kartice?</h1> <p class=\"text\">Da bi ste postali srećni vlasnik Gold kartice morate da imate Nik Bank nalog. Ova kartica funkcioniše kao svaka kreditna/debitna, samo što na sve kupovine u Perinoj Sobi dobijate prepolovljenu cenu.</p> <br><br> <h1 class=\"heading\" id=\"kontaktirajte-nas\">Kontaktirajte nas</h1> <p class=\"text\">Možete naručiti vašu Nik Gold karticu slanjem e-maila na <a target=\"_blank\" href=\"mailto:perinaSoba@gmail.com?subject=Nik Bank - Gold kartice\">perinaSoba@gmail.com</a>.</p> <br>"
+    },
+    {
         "title": "Redizajn Knjiga",
         "author": {
             "name": "Perina Soba",
