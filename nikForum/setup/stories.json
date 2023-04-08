@@ -1,5 +1,20 @@
 [
     {
+        "title": "Nik Bank - Promena sistema isplate sa racuna",
+        "author": {
+            "name": "Perina Soba",
+            "email": "perinaSoba@gmail.com",
+            "profile_pic": "https://perinasoba.github.io/media/favicion.svg"
+        },
+        "public": true,
+        "relase_date": "08. April 2023.",
+        "short_relase_date": "08. 04. 2023.",
+        "url": "https://perinasoba.github.io/nikForum/prica?id=Nik Bank - Promena sistema isplate sa racuna",
+        "image_url": "https://perinasoba.github.io/media/nikForum/stories/promenaSistemaIsplate.png",
+        "short_text": "Obaveštavamo vas o novom sistemu po kome možete dobiti novac sa vašeg Nik Bank naloga",
+        "html_code": "<p class=\"text\">Obaveštavamo vas o novom sistemu po kome možete dobiti novac sa vašeg Nik Bank naloga</p> <br> <img src=\"https://perinasoba.github.io/media/nikForum/stories/promenaSistemaIsplate.png\" class=\"image\"> <br><br> <h1 class=\"heading\" id=\"sta-se-menja\">Šta se menja?</h1> <p class=\"text\">Po starom sistemu imali ste mogućnost da sa vašeg naloga podignete bilo koji iznos. Po novom principu rada ovo se menja. Naime, sada možete podići samo iznos koji se završava sa nulom (npr. 30, 100, 540). Ukoliko želite da podignete iznos koji se ne završava sa pomenutim brojem morate da nam se javite najmanje 5 radnih dana, kako bi smo mi obezbedili taj iznos.</p> <br><br> <h1 class=\"heading\" id=\"novine\">Novine</h1> <p class=\"text\">Naravno, novi sistem dovodi i svoje novine. Jedna od njih je da ukoliko želite da podignete novac sa vašeg računa, koji je veći od 10.000rsd morate nas obavestiti o tome 5 radnih dana pre.</p> <br><br> <h1 class=\"heading\" id=\"kada-ovo-pocinje-da-vazi\">Kada ovo počinje da važi?</h1> <p class=\"text\">Ovaj sistem će postati važeći od 17. 04. 2023. godine u ponoć.</p> <br><br> <h1 class=\"heading\" id=\"kontaktirajte-nas\">Kontaktirajte nas</h1> <p class=\"text\">Ukoliko vam neki deo nije jasan, ili imate neku nejasnu molimo kontaktirajte nas putem naše e-mail adrese <a target=\"_blank\" href=\"mailto:perinaSoba@gmail.com?subject=Nik Bank - Promena sistema isplate sa racuna\">perinaSoba@gmail.com</a>.</p> <br>"
+    },
+    {
         "title": "Nik Bank - Gold kartice",
         "author": {
             "name": "Perina Soba",
