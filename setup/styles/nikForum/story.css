@@ -7,7 +7,7 @@
 /* StoriesInfo */
 .storiesInfo {
     display: block;
-    padding: 2rem;
+    padding: 2rem 5rem;
     padding-bottom: 0;
 }
 .storiesInfo h1 {
@@ -42,7 +42,7 @@
 
 /* Container */
 #artCont {
-    padding: 2rem 2rem;
+    padding: 2rem 5rem;
 }
 
 /* Text decoration */
