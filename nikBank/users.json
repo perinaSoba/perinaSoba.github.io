@@ -5,7 +5,7 @@
         "surname": "Nikolić",
         "bithday": "22/01/1963",
         "location": "Jovana Rajića 5c",
-        "balance": "-30rsd",
+        "balance": "20rsd",
         "emails": [
             "jamiko1512@gmail.com",
             "jasmina.nikolic@tenfore.net",
@@ -21,7 +21,7 @@
             "CVV": "846"
         },
         "transactions": [
-            "02/05 | +10rsd | x1 | Nik Bank - Uplata",
+            "02/05 | +60rsd | x1 | Nik Bank - Uplata",
             "02/05 | -30rsd | x1 | Perina Soba - Mesečna vožnja"
         ]
     },
