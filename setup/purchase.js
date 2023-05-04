@@ -31,6 +31,8 @@ function buyElectronics(modelName) {
         price = `50€`;
     } else if (modelName == `Lego Watch`) {
         price = `30€`;
+    } else if (modelName == `Lego Book`) {
+        price = `50€`;
     }
 
     if (getCookie(`userCode`) != null) { 

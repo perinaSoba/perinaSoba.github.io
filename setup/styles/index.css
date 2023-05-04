@@ -362,7 +362,6 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: calc(100%/4);
 }
 .shopHolder .shopItem .shopItemImage {
     padding: 0.5rem;
@@ -399,9 +398,9 @@ body {
     transform: scale(1.1);
     cursor: pointer;
 }
-.shopHolder .shopItem .shopItemBuy:hover {
+.shopHolder .shopItem:hover .shopItemBuy {
     transition: 0.5s;
-    transform: scale(1.1);
+    transform: scale(1.01);
     cursor: pointer;
 }
 
