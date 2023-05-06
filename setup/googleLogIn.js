@@ -41,13 +41,20 @@ function editData(rP) {
     document.getElementById("mobLogInDiv").style.boxShadow = null;
 }
 function accountEdit(rP) {
-    document.getElementById("onPageUserInfoCard").style.display = "block";
-    document.getElementById("errorDiv").style.display = "none";
-    document.getElementById("logOutButton").style.display = "flex";
-    document.getElementById("logOutButton").style.float = "right";
-    document.getElementById("onPageUserImage").src = rP.picture;
-    document.getElementById("onPageUsersName").innerHTML = rP.given_name;
-    document.getElementById("onPageUsersMail").innerHTML = `E-mail: ${rP.email}`;
+    document.getElementById(`name`).innerText = `${rP.name}`;
+    document.getElementById(`e-mail`).innerText = `${rP.email}`;
+
+    document.getElementById(`balance`).style.display = `none`; 
+    document.getElementById(`balance`).style.display = `none`; 
+            
+    document.getElementById(`dataHolder`).style.display = `block`;
+    document.getElementById(`accountInfo`).style.display = `block`;
+
+    document.getElementById(`transDiv`).style.display = `none`;
+    document.getElementById(`cards`).style.display = `none`;
+    document.getElementById(`spaceLine`).style.display = `none`;
+    document.getElementById(`birthYear`).parentElement.style.display = `none`;
+    document.getElementById(`address`).parentElement.style.display = `none`;
 }
 
 // Google sign in response function

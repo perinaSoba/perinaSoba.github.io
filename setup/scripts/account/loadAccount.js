@@ -37,13 +37,13 @@ fetch('https://dev--nikbank--perinasoba.autocode.dev/userData?useOfData=read')
         if (JSON.stringify(usersArray) == `[]`) {
             document.getElementById(`name`).innerText = `${responsePayload.name}`;
             document.getElementById(`e-mail`).innerText = `${responsePayload.email}`;
-
-            document.getElementById(`balance`).style.display = `none`; 
-            document.getElementById(`balance`).style.display = `none`; 
             
             document.getElementById(`dataHolder`).style.display = `block`;
+            document.getElementById(`accountInfo`).style.display = `block`;
+
             document.getElementById(`transDiv`).style.display = `none`;
             document.getElementById(`cards`).style.display = `none`;
+            document.getElementById(`balance`).style.display = `none`;
             document.getElementById(`spaceLine`).style.display = `none`;
             document.getElementById(`birthYear`).parentElement.style.display = `none`;
             document.getElementById(`address`).parentElement.style.display = `none`;
