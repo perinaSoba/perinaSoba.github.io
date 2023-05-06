@@ -6,6 +6,7 @@
         <script src="setup/googleLogIn.js" defer></script>
         <script src="setup/mobileNav.js" defer></script>
         <script src="setup/settings.js" defer></script>
+        <script src="setup/scripts/account/loadAccount.js" defer></script>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
         <meta charset="UTF-8">
@@ -138,7 +139,65 @@
                     </div>
                 </div>
             </div>
+
+            <div class="box" id="transCardDiv">
+                <div id="loggedInDiv">
+                    <div class="userInfo">
+                        <img id="googleImage" src="" alt="">
+                        <h2 id="name"></h2>
+                    </div>
+                    <span id="balance"></span>
+                    <hr class="lttlSpc">
+                    
+                    <div id="transDiv">
+                        <h3>Transakcije:</h3>
+                    </div>
+                </div>
+
+                <div id="cards" class="listedInfo">
+                    <h2>Kreditna kartica</h2>
+                    
+                    <div class="dataCont">
+                        <div class="dataInfo">
+                            <h3>Broj kartice</h3>
+                            <span id="cardNum"></span>
+                        </div>
+        
+                        <div class="dataInfo">
+                            <h3>Važi do</h3>
+                            <span id="validThruCard"></span>
+                        </div>
+        
+                        <div class="dataInfo">
+                            <h3>CVV</h3>
+                            <span id="cvvCard"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="accountInfo" class="listedInfo">
+                    <h2>O vama</h2>
+
+                    <div class="dataCont">
+                        <div class="dataInfo">
+                            <h3>Godina Rođenja</h3>
+                            <span id="birthYear"></span>
+                        </div>
+        
+                        <div class="dataInfo">
+                            <h3>Adresa</h3>
+                            <span id="address"></span>
+                        </div>
+        
+                        <div class="dataInfo">
+                            <h3>E-mail adresa</h3>
+                            <span id="e-mail"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
             
+            <!--
             <div id="onPageUserInfoCard">
                 <div id="logOutButton" onclick="logOutButtonPress()">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
@@ -160,6 +219,7 @@
                     </div>
                 </div>
             </div>
+            -->
         </div>
     </body>
 
