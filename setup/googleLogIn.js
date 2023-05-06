@@ -40,22 +40,6 @@ function editData(rP) {
     document.getElementById("mobLogInDiv").onclick = function() {window.location.href = `https://perinasoba.github.io/nalog`};
     document.getElementById("mobLogInDiv").style.boxShadow = null;
 }
-function accountEdit(rP) {
-    document.getElementById(`name`).innerText = `${rP.name}`;
-    document.getElementById(`e-mail`).innerText = `${rP.email}`;
-
-    document.getElementById(`balance`).style.display = `none`; 
-    document.getElementById(`balance`).style.display = `none`; 
-            
-    document.getElementById(`dataHolder`).style.display = `block`;
-    document.getElementById(`accountInfo`).style.display = `block`;
-
-    document.getElementById(`transDiv`).style.display = `none`;
-    document.getElementById(`cards`).style.display = `none`;
-    document.getElementById(`spaceLine`).style.display = `none`;
-    document.getElementById(`birthYear`).parentElement.style.display = `none`;
-    document.getElementById(`address`).parentElement.style.display = `none`;
-}
 
 // Google sign in response function
 function handleCredentialResponse(response) {
@@ -64,11 +48,6 @@ function handleCredentialResponse(response) {
 
     // Set info visible to end user
     editData(responsePayload);
-
-    // Set info on account page
-    if (window.location.href == "https://perinasoba.github.io/nalog") {
-        accountEdit(responsePayload);
-    };
 
     setCookie(`userCode`, `${response.credential}`, 7);
 }
@@ -92,11 +71,6 @@ if (getCookie(`userCode`) != null) {
 
     // Set info visible to end user
     editData(responsePayload);
-
-    // Set info on account page
-    if (window.location.href == "https://perinasoba.github.io/nalog") {
-        accountEdit(responsePayload);
-    }
 }
 
 // Log out function
