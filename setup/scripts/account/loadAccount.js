@@ -34,10 +34,10 @@ fetch('https://dev--nikbank--perinasoba.autocode.dev/userData?useOfData=read')
             return responsePayload.email == el.emails[0];
         });
 
+        document.getElementById(`name`).innerText = `${responsePayload.name}`;
+        document.getElementById(`e-mail`).innerText = `${responsePayload.email}`;
+
         if (JSON.stringify(usersArray) == `[]`) {
-            document.getElementById(`name`).innerText = `${responsePayload.name}`;
-            document.getElementById(`e-mail`).innerText = `${responsePayload.email}`;
-            
             document.getElementById(`dataHolder`).style.display = `block`;
             document.getElementById(`accountInfo`).style.display = `block`;
 
@@ -76,7 +76,6 @@ fetch('https://dev--nikbank--perinasoba.autocode.dev/userData?useOfData=read')
     
             document.getElementById(`birthYear`).innerText = `${userObject.bithday}`;
             document.getElementById(`address`).innerText = `${userObject.location}`;
-            document.getElementById(`e-mail`).innerText = `${userObject.emails[0]}`;
     
             document.getElementById(`dataHolder`).style.display = `block`;
             document.getElementById(`accountInfo`).style.display = `block`; 
