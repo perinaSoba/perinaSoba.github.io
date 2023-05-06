@@ -1,5 +1,5 @@
 // Get all stories
-fetch('https://dev--nikbank--perinasoba.autocode.dev/userData?useOfData=read')
+fetch('https://perinasoba.github.io/nikBank/users.json')
 .then(response=> response.json())
 .then((allUsers) => {
     // Cookie functions
