@@ -40,9 +40,11 @@ fetch('https://dev--nikbank--perinasoba.autocode.dev/userData?useOfData=read')
 
             document.getElementById(`balance`).style.display = `none`; 
             document.getElementById(`balance`).style.display = `none`; 
-            document.getElementsByClassName(`lttlSpc`).style.display = `none`; 
+            
+            document.getElementById(`dataHolder`).style.display = `block`;
             document.getElementById(`transDiv`).style.display = `none`;
             document.getElementById(`cards`).style.display = `none`;
+            document.getElementById(`spaceLine`).style.display = `none`;
             document.getElementById(`birthYear`).parentElement.style.display = `none`;
             document.getElementById(`address`).parentElement.style.display = `none`;
         } else {
@@ -76,7 +78,7 @@ fetch('https://dev--nikbank--perinasoba.autocode.dev/userData?useOfData=read')
             document.getElementById(`address`).innerText = `${userObject.location}`;
             document.getElementById(`e-mail`).innerText = `${userObject.emails[0]}`;
     
-            document.getElementById(`transCardDiv`).style.display = `block`;
+            document.getElementById(`dataHolder`).style.display = `block`;
             document.getElementById(`accountInfo`).style.display = `block`; 
         }
 
