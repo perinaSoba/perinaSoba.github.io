@@ -44,7 +44,7 @@ fetch('https://dev--nikbank--perinasoba.autocode.dev/userData?useOfData=read')
             var numberOfTrans = userObject.transactions.length;
 
             document.getElementById(`name`).innerText = `${userObject.nameAndSurname}`;
-            document.getElementById(`balance`).innerText = `Stanje računa: ${userObject.balance}`;
+            document.getElementById(`balance`).innerText = `Stanje računa: ${userObject.balance}rsd`;
             
             var repeatNum = 0;
             while (repeatNum != numberOfTrans) {

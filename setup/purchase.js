@@ -21,18 +21,20 @@ function decodeJwtResponse(token) {
 };
 
 function buyElectronics(modelName) {
-    var price
+    var price;
 
     if (modelName == `Lego Mini`) {
-        price = `15€`;
+        price = 1500;
     } else if (modelName == `Lego I`) {
-        price = `20€`;
+        price = 2000;
     } else if (modelName == `Lego I Pro`) {
-        price = `50€`;
+        price = 5000;
     } else if (modelName == `Lego Watch`) {
-        price = `30€`;
+        price = 3000;
     } else if (modelName == `Lego Book`) {
-        price = `50€`;
+        price = 5000;
+    } else if (modelName == `test`) {
+        price = 10;
     }
 
     if (getCookie(`userCode`) != null) { 
@@ -41,17 +43,20 @@ function buyElectronics(modelName) {
         var name = userInformation.given_name;
         var email = userInformation.email;
 
-        var requestURL = `https://perinasoba.autocode.dev/purchase@dev/nikMagicPhone?name=${name}&email=${email}&price=${price}&model=${modelName}`
-        fetch(requestURL)
-        .then(response=> response.json())
-        .then((rsp) => {
-            if (rsp.done == true) {
-                alert(`Uspešna kupovina, proverite vaš e-mail ${email}.`);
-            } else {
-                alert(`Desila se neka greška, molimo pokušajte kasnije.`)
-            }
-        })
+        if (confirm(`Sa vašeg računa će biti skinut iznos od ${price} dinara. Da li ste sigurni?`) == true) {
+            fetch(`https://dev--nikbank--perinasoba.autocode.dev/purchase?name=${name}&email=${email}&price=${price}&modelName=${modelName}`)
+            .then(response=> response.json())
+            .then((rsp) => {
+                if (rsp == `success`) {
+                    alert(`Uspešna kupovina, proverite vaš e-mail ${email}.`);
+                } else if (rsp == `error`) {
+                    alert(`Desila se neka greška, molimo pokušajte kasnije.`)
+                }
+            })
+        } else {
+            alert(`Kupovina obustavljena. Iznos na vašem računu je ostao nepromenjen.`)
+        }
     } else {
-        alert(`Potrebno je da se ulogujete kako bi ste izvršili ovu kupovinu.`)
+        alert(`Potrebno je da se ulogujete kako bi izvršili kupovinu ${modelName}.`)
     }
 }

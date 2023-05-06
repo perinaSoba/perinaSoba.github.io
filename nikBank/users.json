@@ -5,7 +5,7 @@
         "surname": "Nikolić",
         "bithday": "22/01/1963",
         "location": "Jovana Rajića 5c",
-        "balance": "30rsd",
+        "balance": 30,
         "emails": [
             "jamiko1512@gmail.com",
             "jasmina.nikolic@tenfore.net",
@@ -31,7 +31,7 @@
         "surname": "Nikolić",
         "bithday": "02/08/1961",
         "location": "Jovana Rajića 5c",
-        "balance": "15rsd",
+        "balance": 15,
         "emails": [
             "miomirnikolic61@gmail.com"
         ],
