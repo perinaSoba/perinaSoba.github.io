@@ -30,6 +30,10 @@ fetch('https://dev--nikbank--perinasoba.autocode.dev/userData?useOfData=read')
 
         document.getElementById(`googleImage`).src = `${responsePayload.picture}`;
 
+        var usersArray = allUsers.filter(function (el) {
+            return responsePayload.email == el.emails[0];
+        });
+
         if (JSON.stringify(usersArray) == `[]`) {
             document.getElementById(`name`).innerText = `${responsePayload.name}`;
             document.getElementById(`e-mail`).innerText = `${responsePayload.email}`;
@@ -42,14 +46,9 @@ fetch('https://dev--nikbank--perinasoba.autocode.dev/userData?useOfData=read')
             document.getElementById(`birthYear`).parentElement.style.display = `none`;
             document.getElementById(`address`).parentElement.style.display = `none`;
         } else {
-            var usersArray = allUsers.filter(function (el) {
-                return responsePayload.email == el.emails[0];
-            });
-            
             var userObject = usersArray[0];
             var numberOfTrans = userObject.transactions.length;
     
-            
             document.getElementById(`balance`).innerText = `Stanje računa: ${userObject.balance}rsd`;
                     
             var repeatNum = 0;
