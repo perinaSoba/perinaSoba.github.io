@@ -568,7 +568,7 @@ body {
         display: block;
     }
     .shopHolder .shopItem {
-        width: unset;
+        width: unset!important;
     }
 }
 

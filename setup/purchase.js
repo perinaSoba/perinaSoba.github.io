@@ -49,8 +49,8 @@ function buyElectronics(modelName) {
             .then((rsp) => {
                 if (rsp == `success`) {
                     alert(`Uspešna kupovina, proverite vaš e-mail ${email}.`);
-                } else if (rsp == `error`) {
-                    alert(`Desila se neka greška, molimo pokušajte kasnije.`)
+                } else if (rsp == `no_money`) {
+                    alert(`Nemate dovoljno sredstava na vašem računu.`)
                 }
             })
         } else {
