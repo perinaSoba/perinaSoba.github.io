@@ -104,13 +104,13 @@ function blackThemeSetup() {
     mainInfo_buyBox.innerHTML = '.mainInfo .buyBox{background-color: #28292a;}';
     document.body.append(mainInfo_buyBox);
 
-    const mainInfo_buyBox_main_buyButton = document.createElement('style'); 
-    mainInfo_buyBox_main_buyButton.innerHTML = '.mainInfo .buyBox .main .buyButton{background-color: #004a77;}';
-    document.body.append(mainInfo_buyBox_main_buyButton);
+    const mainInfo_buyBox_data_main_buyButton = document.createElement('style'); 
+    mainInfo_buyBox_data_main_buyButton.innerHTML = '.mainInfo .buyBox .data .main .buyButton{background-color: #004a77;}';
+    document.body.append(mainInfo_buyBox_data_main_buyButton);
 
-    const mainInfo_buyBox_main_buyButton_HOVER = document.createElement('style'); 
-    mainInfo_buyBox_main_buyButton_HOVER.innerHTML = '.mainInfo .buyBox .main .buyButton:hover{background-color: #125680;}';
-    document.body.append(mainInfo_buyBox_main_buyButton_HOVER);
+    const mainInfo_buyBox_data_main_buyButton_HOVER = document.createElement('style'); 
+    mainInfo_buyBox_data_main_buyButton_HOVER.innerHTML = '.mainInfo .buyBox .data .main .buyButton:hover{background-color: #125680;}';
+    document.body.append(mainInfo_buyBox_data_main_buyButton_HOVER);
 
     const storiesCont_div = document.createElement('style'); 
     storiesCont_div.innerHTML = '.storiesCont div{background-color: #28292a;}';
