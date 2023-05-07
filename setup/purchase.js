@@ -50,7 +50,11 @@ function buyElectronics(modelName) {
                 if (rsp == `success`) {
                     alert(`Uspešna kupovina, proverite vaš e-mail ${email}.`);
                 } else if (rsp == `no_money`) {
-                    alert(`Nemate dovoljno sredstava na vašem računu.`)
+                    alert(`Nemate dovoljno sredstava na vašem računu.`);
+                } else if (rsp == `no_account`) {
+                    alert(`Da bi ste završili transakciju potreban vam je Nik Bank nalog.`);
+                } else {
+                    alert(`Desila se nepoznata greška. Molimo pokušajte ponovo kasnije.`);
                 }
             })
         } else {
