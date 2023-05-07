@@ -45,7 +45,6 @@
     align-items: center;
 }
 #chatHolder #inputHolder #userInput {
-    box-shadow: 0px 2px 4px rgb(0 0 0 / 10%);
     height: 3rem;
     border-radius: 24px;
     width: 85%;
@@ -62,7 +61,6 @@
     outline-offset: 0;
 }
 #chatHolder #inputHolder #sendButton {
-    box-shadow: 0px 2px 4px rgb(0 0 0 / 10%);
     height: 3rem;
     width: 3rem;
     border: 0;
@@ -72,7 +70,6 @@
 }
 #chatHolder #inputHolder #sendButton:hover {
     transform: translateY(-2px);
-    box-shadow: 0px 4px 8px rgb(0 0 0 / 30%);
     cursor: pointer;
 }
 #chatHolder #inputHolder #sendButton span {

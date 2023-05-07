@@ -36,14 +36,6 @@ body {
     width: 100%;
 }
 
-.pcTitle {
-    font-weight: 400;
-    font-size: 2rem;
-    text-shadow: 0px 2px 4px rgb(0 0 0 / 10%), 0px 2px 4px rgb(0 0 0 / 10%);
-    text-align: center;
-    margin-bottom: 1.5rem;
-}
-
 /* Page Banner */
 #pgBanner {
     text-align: center;
@@ -164,7 +156,6 @@ body {
     text-align: center;
 }
 #logInDiv {
-    box-shadow: 0px 2px 4px rgb(0 0 0 / 10%);
     background-color: #fff;
     transition: 0.5s;
     border-radius: 100%;
@@ -174,14 +165,12 @@ body {
     align-self: center;
 }
 #logInDiv:hover {
-    transform: translateY(-2px);
-    box-shadow: 0px 4px 8px rgb(0 0 0 / 30%);
+    border-radius: 12px;
     cursor: pointer;
     transition: 0.5s;
 }
 #logInDiv span {
     padding: 1rem;
-    box-shadow: 0px 4px 8px rgb(0 0 0 / 30%);
     width: 3rem;
     height: fit-content;
 }
@@ -258,7 +247,6 @@ body {
     margin-top: auto;
 }
 #themeSetter #themeSwitchButt {
-    box-shadow: 0px 2px 4px rgb(0 0 0 / 10%);
     background-color: #fff;
     transition: 0.5s;
     border-radius: 100%;
@@ -268,8 +256,7 @@ body {
     margin: 0.5rem;
 }
 #themeSetter #themeSwitchButt:hover {
-    transform: translateY(-2px);
-    box-shadow: 0px 4px 8px rgb(0 0 0 / 30%);
+    border-radius: 12px;
     cursor: pointer;
     transition: 0.5s;
 }
@@ -288,53 +275,6 @@ body {
 }
 #mobileNav {
     display: none;
-}
-
-/* Buttons */
-.simpleButt {
-    box-shadow: 0px 2px 4px rgb(0 0 0 / 10%);
-    border-radius: 0.8rem;
-    text-decoration: none;
-    margin-bottom: 3rem;
-    padding: 0.5rem;
-    width: fit-content;
-    transition: 0.5s;
-    border: 0.02rem solid rgb(0 0 0 / 10%);
-    background-color: #fff;
-    color: #001d35;
-}
-.imageButt {
-    box-shadow: 0px 2px 4px rgb(0 0 0 / 10%);
-    background-color: #fff;
-    border-radius: 1rem;
-    text-decoration: none;
-    margin-bottom: 3rem;
-    border: 0;
-    display: flex;
-    padding: 0.3rem;
-    width: fit-content;
-    transition: 0.5s;
-    padding-right: 0.8rem;
-    border: 0.02rem solid rgb(0 0 0 / 10%);
-    color: #444746!important;
-}
-.imageButt:hover {
-    text-shadow: none;
-    transform: translateY(-2px);
-    box-shadow: 0px 4px 8px rgb(0 0 0 / 30%);
-    cursor: pointer;
-    border-radius: 1.5rem;
-    transition: 0.5s;
-}
-.imageButt svg {
-    width: 3.5rem;
-    height: 3.5rem;
-}
-.imageButt p {
-    align-self: center;
-    font-size: 2rem;
-    margin-left: 0.5rem;
-    user-select: none;
 }
 
 /* Shop */
@@ -522,7 +462,7 @@ body {
         padding: 0.2rem;
     }
     #mobThemeSwitcher:hover {
-        transform: translateY(-2px);
+        border-radius: 12px;
         cursor: pointer;
         transition: 0.5s;
     }
@@ -552,7 +492,6 @@ body {
     }
 
     #mobLogInDiv {
-        box-shadow: 0px 2px 4px rgb(0 0 0 / 10%);
         background-color: #fff;
         transition: 0.5s;
         border-radius: 100%;

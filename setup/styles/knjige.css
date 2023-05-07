@@ -69,7 +69,7 @@
 }
 
 .bookCont:hover {
-    transform:scale(1.01);
+    border-radius: 12px;
     transition: 0.5s;
     cursor: pointer;
 }
