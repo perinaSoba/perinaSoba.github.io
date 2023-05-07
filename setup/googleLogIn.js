@@ -49,6 +49,10 @@ function handleCredentialResponse(response) {
     // Set info visible to end user
     editData(responsePayload);
 
+    if (document.location.href == `https://perinasoba.github.io/nalog`) {
+        document.location.reload();
+    }
+
     setCookie(`userCode`, `${response.credential}`, 7);
 }
 
