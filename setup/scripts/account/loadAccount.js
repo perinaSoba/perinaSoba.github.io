@@ -42,7 +42,7 @@ if (getCookie(`userCode`) != null) {
 
         if (JSON.stringify(usersArray) == `[]`) {
             document.getElementById(`dataHolder`).style.display = `block`;
-            document.getElementById(`accountInfo`).style.display = `block`;
+            document.getElementById(`aboutUser`).style.display = `block`;
 
             document.getElementById(`transDiv`).style.display = `none`;
             document.getElementById(`cards`).style.display = `none`;
@@ -81,7 +81,7 @@ if (getCookie(`userCode`) != null) {
             document.getElementById(`address`).innerText = `${userObject.location}`;
 
             document.getElementById(`dataHolder`).style.display = `block`;
-            document.getElementById(`accountInfo`).style.display = `block`; 
+            document.getElementById(`aboutUser`).style.display = `block`; 
         }
 
         document.getElementById(`infoDiv`).style.display = `none`; 
