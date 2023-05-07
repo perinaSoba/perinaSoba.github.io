@@ -28,6 +28,10 @@ if (getCookie(`userCode`) != null) {
     document.getElementById("mobLogInDiv").src = responsePayload.picture;
     document.getElementById("mobLogInDiv").onclick = function() {window.location.href = `https://perinasoba.github.io/nalog`};
     document.getElementById("mobLogInDiv").style.boxShadow = null;
+
+    if (document.href == `https://perinasoba.github.io/nalog`) {
+        location.reload();
+    }
 }
 
 function buttPressed() {
