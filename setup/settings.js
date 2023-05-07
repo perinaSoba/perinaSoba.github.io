@@ -125,7 +125,7 @@ function blackThemeSetup() {
     document.body.append(text_a);
 
     const logOutButton = document.createElement('style'); 
-    logOutButton.innerHTML = '#logOutButton{background-color: #28292a!important;}';
+    logOutButton.innerHTML = '#logOutButton{background-color: #004a77!important;}';
     document.body.append(logOutButton);
 
     const onPageUserInfoCard_contextHolder_mainData_onPageUserImage = document.createElement('style'); 
