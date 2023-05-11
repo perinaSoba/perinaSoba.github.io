@@ -394,7 +394,6 @@ body {
         width: auto!important;
     }
     .textBox {
-        background-color: #0000;
         max-width: none;
         width: auto;
         padding: 1rem;
@@ -425,6 +424,11 @@ body {
     }
 
     /* Mobile Nav*/
+    .mobOtherOption {
+        margin-left: 2.5rem;
+        margin-right: 2.5rem;
+    }
+
     #mobileNav {
         display: none;
         background-color: #f3f6fc;
@@ -440,16 +444,20 @@ body {
         border-bottom-left-radius: 2rem;
         border-bottom-right-radius: 2rem;
     }
-    #mobileNav a {
+    .mobNavOption {
         text-decoration: none;
         padding: 0.5rem;
         border-radius: 100px;
-        display: block;
-        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         margin-bottom: 1rem;
         font-weight: 500;
         font-size: 1rem;
         transition: 0.2s;
+    }
+    .mobNavOption span {
+        padding: 0.2rem;
     }
     #mobileNav #currPageMob {
         background-color: #c8e4fc;
@@ -458,7 +466,7 @@ body {
         background-color: #b5d7ed;
         transition: 0.2s;
     }
-    #mobileNav a:hover {
+    .mobNavOption:hover {
         background-color: #c8e4fc;
         transition: 0.2s;
     }
@@ -492,10 +500,6 @@ body {
     .mobNavSpace {
         line-height: 3.5rem;
         display: block;
-    }
-
-    .pcTitle {
-        display: none;
     }
 
     #mobNavButt {

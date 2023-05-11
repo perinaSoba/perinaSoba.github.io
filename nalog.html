@@ -4,7 +4,6 @@
         <link rel="stylesheet" href="setup/styles/nalog.css">
         <link rel="stylesheet" href="setup/styles/index.css">
         <script src="setup/googleLogIn.js" defer></script>
-        <script src="setup/mobileNav.js" defer></script>
         <script src="setup/settings.js" defer></script>
         <script src="setup/scripts/account/loadAccount.js" defer></script>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -113,7 +112,7 @@
 
         <div id="pageContent">
             <div id="mobNavButt">
-                <svg id="navConfigButt" onclick="buttPressed()" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+                <svg id="navConfigButt" onclick="mobNavOpen()" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
                     <line x1="3" y1="12" x2="21" y2="12"></line>
                     <line x1="3" y1="6" x2="21" y2="6"></line>
                     <line x1="3" y1="18" x2="21" y2="18"></line>
@@ -126,11 +125,59 @@
             <br class="mobNavSpace">
 
             <div id="mobileNav">
-                <a href="https://perinasoba.github.io/index">Početna</a>
-                <a id="currPageMob">Nalog</a>
-                <a href="https://perinasoba.github.io/shop">Shop</a>
-                <a href="https://perinasoba.github.io/ostalo">Ostalo</a>
+                <a href="https://perinasoba.github.io/index" class="mobNavOption">
+                    <span class="material-symbols-rounded">
+                        dashboard
+                    </span>
 
+                    Početna
+                </a>
+                <a id="currPageMob" class="mobNavOption">
+                    <span class="material-symbols-rounded">
+                        people
+                    </span>
+
+                    Nalog
+                </a>
+                <a href="https://perinasoba.github.io/shop" class="mobNavOption">
+                    <span class="material-symbols-rounded">
+                        shopping_bag
+                    </span>
+
+                    Shop
+                </a>
+                <a class="mobNavOption" onclick="showOtherOptions()">
+                    <span class="material-symbols-rounded">
+                        read_more
+                    </span>
+
+                    Ostalo
+                </a>
+
+                <div id="mobOtherOptionDiv" style="display: none;">
+                    <a href="https://perinasoba.github.io/nikForum" class="mobOtherOption mobNavOption" id="firstMobOtherOption">
+                        <span class="material-symbols-rounded">
+                            forum
+                        </span>
+    
+                        Nik Forum
+                    </a>
+                    <a href="https://perinasoba.github.io/nikBank" class="mobOtherOption mobNavOption">
+                        <span class="material-symbols-rounded">
+                            account_balance
+                        </span>
+    
+                        Nik Bank
+                    </a>
+                    <a href="https://perinasoba.github.io/nikMagic" class="mobOtherOption mobNavOption">
+                        <span class="material-symbols-rounded">
+                            devices_other
+                        </span>
+                        Nik Magic
+                    </a>
+    
+                </div>
+                
                 <button id="mobThemeSwitcher" onclick="switchTheme()">
                     <span class="material-symbols-rounded" id="themeEmoji">
                         dark_mode
@@ -138,92 +185,94 @@
                     <span id="mobThemeText">Podesi tamnu temu</span>
                 </button>
             </div>
-
-            <div id="pgBanner" style="background-image: url(media/account/thumbnail.png);">
-                <h1>Nalog</h1>
-            </div>
-
-            <div id="infoDiv">
-                <div class="textBox">
-                    <h2>Ulogujte se</h2>
-                    <p>Ova stranica vam omogućava da proverite podatke o vašem Google nalogu. Da bi se te informacije prikazale na ovoj stranici molimo ulogujte se</p>
+            
+            <div class="contentHolder">
+                <div id="pgBanner" style="background-image: url(media/account/thumbnail.png);">
+                    <h1>Nalog</h1>
                 </div>
-
-                <div class="mainMultCont">
-                    <h2 class="multiTitl">Kako da se ulogujem?</h2>
-                    <div class="multiCont">
-                        <div class="textBox" style="width: calc(100%/2)">
-                            <h3>Mali ekran</h3>
-                            <p>Na malim ekranima, u desnom gornjem uglu pritisnite mali Google logo. Ukoliko se posle par sekundi ništa ne desi, molimo promenite web browser koji koristite i pokušajte ponovo</p>
-                        </div>
-
-                        <div class="textBox" style="width: calc(100%/2)">
-                            <h3>Veliki ekran</h3>
-                            <p>Na velikim ekranima u levom gornjem uglu pritisnite mali Google logo. Ukoliko se posle par sekundi ništa ne desi, molimo promenite web browser koji koristite i pokušajte ponovo</p>
+    
+                <div id="infoDiv">
+                    <div class="textBox">
+                        <h2>Ulogujte se</h2>
+                        <p>Ova stranica vam omogućava da proverite podatke o vašem Google nalogu. Da bi se te informacije prikazale na ovoj stranici molimo ulogujte se</p>
+                    </div>
+    
+                    <div class="mainMultCont">
+                        <h2 class="multiTitl">Kako da se ulogujem?</h2>
+                        <div class="multiCont">
+                            <div class="textBox" style="width: calc(100%/2)">
+                                <h3>Mali ekran</h3>
+                                <p>Na malim ekranima, u desnom gornjem uglu pritisnite mali Google logo. Ukoliko se posle par sekundi ništa ne desi, molimo promenite web browser koji koristite i pokušajte ponovo</p>
+                            </div>
+    
+                            <div class="textBox" style="width: calc(100%/2)">
+                                <h3>Veliki ekran</h3>
+                                <p>Na velikim ekranima u levom gornjem uglu pritisnite mali Google logo. Ukoliko se posle par sekundi ništa ne desi, molimo promenite web browser koji koristite i pokušajte ponovo</p>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-
-            <div class="box" id="dataHolder">
-                <div id="logOutButton" onclick="logOutButtonPress()">
-                    <span class="material-symbols-rounded">
-                        logout
-                    </span>
-                    <span id="text">Izlogujte se</span>
-                </div>
-
-                <div id="loggedInDiv">
-                    <div class="userInfo">
-                        <img id="googleImage" src="" alt="">
-                        <h2 id="name"></h2>
+    
+                <div class="box" id="dataHolder">
+                    <div id="logOutButton" onclick="logOutButtonPress()">
+                        <span class="material-symbols-rounded">
+                            logout
+                        </span>
+                        <span id="text">Izlogujte se</span>
                     </div>
-                    <span id="balance"></span>
-                    <hr class="lttlSpc" id="spaceLine">
-                    
-                    <div id="transDiv">
-                        <h3>Transakcije:</h3>
-                    </div>
-                </div>
-
-                <div id="cards" class="listedInfo">
-                    <h2>Kreditna kartica</h2>
-                    
-                    <div class="dataCont">
-                        <div class="dataInfo">
-                            <h3>Broj kartice</h3>
-                            <span id="cardNum"></span>
+    
+                    <div id="loggedInDiv">
+                        <div class="userInfo">
+                            <img id="googleImage" src="" alt="">
+                            <h2 id="name"></h2>
                         </div>
-        
-                        <div class="dataInfo">
-                            <h3>Važi do</h3>
-                            <span id="validThruCard"></span>
-                        </div>
-        
-                        <div class="dataInfo">
-                            <h3>CVV</h3>
-                            <span id="cvvCard"></span>
+                        <span id="balance"></span>
+                        <hr class="lttlSpc" id="spaceLine">
+                        
+                        <div id="transDiv">
+                            <h3>Transakcije:</h3>
                         </div>
                     </div>
-                </div>
-
-                <div id="aboutUser" class="listedInfo">
-                    <h2>O vama</h2>
-
-                    <div class="dataCont">
-                        <div class="dataInfo">
-                            <h3>Godina Rođenja</h3>
-                            <span id="birthYear"></span>
+    
+                    <div id="cards" class="listedInfo">
+                        <h2>Kreditna kartica</h2>
+                        
+                        <div class="dataCont">
+                            <div class="dataInfo">
+                                <h3>Broj kartice</h3>
+                                <span id="cardNum"></span>
+                            </div>
+            
+                            <div class="dataInfo">
+                                <h3>Važi do</h3>
+                                <span id="validThruCard"></span>
+                            </div>
+            
+                            <div class="dataInfo">
+                                <h3>CVV</h3>
+                                <span id="cvvCard"></span>
+                            </div>
                         </div>
-        
-                        <div class="dataInfo">
-                            <h3>Adresa</h3>
-                            <span id="address"></span>
-                        </div>
-        
-                        <div class="dataInfo">
-                            <h3>E-mail adresa</h3>
-                            <span id="e-mail"></span>
+                    </div>
+    
+                    <div id="aboutUser" class="listedInfo">
+                        <h2>O vama</h2>
+    
+                        <div class="dataCont">
+                            <div class="dataInfo">
+                                <h3>Godina Rođenja</h3>
+                                <span id="birthYear"></span>
+                            </div>
+            
+                            <div class="dataInfo">
+                                <h3>Adresa</h3>
+                                <span id="address"></span>
+                            </div>
+            
+                            <div class="dataInfo">
+                                <h3>E-mail adresa</h3>
+                                <span id="e-mail"></span>
+                            </div>
                         </div>
                     </div>
                 </div>

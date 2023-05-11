@@ -6,7 +6,6 @@
         <link rel="stylesheet" href="../setup/styles/index.css">
         <script src="../setup/googleLogIn.js" defer></script>
         <script src="../setup/scripts/nikForum/spawnStory.js" defer></script>
-        <script src="../setup/mobileNav.js" defer></script>
         <script src="../setup/settings.js" defer></script>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
@@ -113,7 +112,7 @@
 
         <div id="pageContent">
             <div id="mobNavButt">
-                <svg id="navConfigButt" onclick="buttPressed()" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+                <svg id="navConfigButt" onclick="mobNavOpen()" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
                     <line x1="3" y1="12" x2="21" y2="12"></line>
                     <line x1="3" y1="6" x2="21" y2="6"></line>
                     <line x1="3" y1="18" x2="21" y2="18"></line>
@@ -126,11 +125,59 @@
             <br class="mobNavSpace">
 
             <div id="mobileNav">
-                <a href="https://perinasoba.github.io/index">Početna</a>
-                <a href="https://perinasoba.github.io/nalog">Nalog</a>
-                <a href="https://perinasoba.github.io/shop">Shop</a>
-                <a href="https://perinasoba.github.io/ostalo">Ostalo</a>
+                <a href="https://perinasoba.github.io/index" class="mobNavOption">
+                    <span class="material-symbols-rounded">
+                        dashboard
+                    </span>
 
+                    Početna
+                </a>
+                <a href="https://perinasoba.github.io/nalog" class="mobNavOption">
+                    <span class="material-symbols-rounded">
+                        people
+                    </span>
+
+                    Nalog
+                </a>
+                <a href="https://perinasoba.github.io/shop" class="mobNavOption">
+                    <span class="material-symbols-rounded">
+                        shopping_bag
+                    </span>
+
+                    Shop
+                </a>
+                <a class="mobNavOption" onclick="showOtherOptions()">
+                    <span class="material-symbols-rounded">
+                        read_more
+                    </span>
+
+                    Ostalo
+                </a>
+
+                <div id="mobOtherOptionDiv" style="display: none;">
+                    <a href="https://perinasoba.github.io/nikForum" class="mobOtherOption mobNavOption" id="firstMobOtherOption">
+                        <span class="material-symbols-rounded">
+                            forum
+                        </span>
+    
+                        Nik Forum
+                    </a>
+                    <a href="https://perinasoba.github.io/nikBank" class="mobOtherOption mobNavOption">
+                        <span class="material-symbols-rounded">
+                            account_balance
+                        </span>
+    
+                        Nik Bank
+                    </a>
+                    <a href="https://perinasoba.github.io/nikMagic" class="mobOtherOption mobNavOption">
+                        <span class="material-symbols-rounded">
+                            devices_other
+                        </span>
+                        Nik Magic
+                    </a>
+    
+                </div>
+                
                 <button id="mobThemeSwitcher" onclick="switchTheme()">
                     <span class="material-symbols-rounded" id="themeEmoji">
                         dark_mode
@@ -138,24 +185,26 @@
                     <span id="mobThemeText">Podesi tamnu temu</span>
                 </button>
             </div>
-            
-            <div class="storiesInfo" id="storiesInfo">
-                <h1 class="titleOfStories" id="title"></h1>
-                <div id="downSectionInfo">
-                    <img src="" id="authImg">
-                    <span id="authName"></span>
 
-                    <hr>
-
-                    <span id="relsDate"></span>
+            <div class="contentHolder">
+                <div class="storiesInfo" id="storiesInfo">
+                    <h1 class="titleOfStories" id="title"></h1>
+                    <div id="downSectionInfo">
+                        <img src="" id="authImg">
+                        <span id="authName"></span>
+    
+                        <hr>
+    
+                        <span id="relsDate"></span>
+                    </div>
                 </div>
-            </div>
-
-            <div id="artCont"></div>
-
-            <div class="textBox" id="errorDiv">
-                <h2>Greška!</h2>
-                <p>Ova priča je dostupna samo korisnicima koji su se ulogovali na svoj Google nalog. Ukoliko ste se već ulogovali a i dalje vidite ovu poruku reloadujte ovu stranicu par puta. Za više informacija o tome kako da se ulogujete pritisnite <a href="https://perinasoba.github.io/nalog">ovaj link</a>.</p>
+    
+                <div id="artCont"></div>
+    
+                <div class="textBox" id="errorDiv">
+                    <h2>Greška!</h2>
+                    <p>Ova priča je dostupna samo korisnicima koji su se ulogovali na svoj Google nalog. Ukoliko ste se već ulogovali a i dalje vidite ovu poruku reloadujte ovu stranicu par puta. Za više informacija o tome kako da se ulogujete pritisnite <a href="https://perinasoba.github.io/nalog">ovaj link</a>.</p>
+                </div>
             </div>
         </div>
     </body>

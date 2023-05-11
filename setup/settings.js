@@ -49,7 +49,7 @@ function blackThemeSetup() {
     document.body.append(mobileNav_currPageMob);
 
     const mobileNav_a_HOVER = document.createElement('style'); 
-    mobileNav_a_HOVER.innerHTML = '#mobileNav a:hover{background-color: #383a3c!important; color: #bce2fa;}';
+    mobileNav_a_HOVER.innerHTML = '.mobNavOption:hover{background-color: #383a3c!important; color: #bce2fa;}';
     document.body.append(mobileNav_a_HOVER);
 
     const material_symbols_rounded = document.createElement('style'); 
@@ -292,5 +292,40 @@ function openOtherPopUp() {
         pageContent.style.filter = `blur(5px)`;
         
         navButt.classList.add(`activeCard`);
+    }
+}
+
+function mobNavOpen() {
+    var mobileNav = document.getElementById("mobileNav");
+    var mobNavButt = document.getElementById("mobNavButt");
+
+    if (window.getComputedStyle(mobileNav, null).display == "none") {
+        mobileNav.style.display = "block";
+        mobNavButt.style.background = "transparent";
+
+        const pageContent_style = document.createElement('style'); 
+        pageContent_style.innerHTML = '.contentHolder{filter: blur(5px)!important;}';
+        document.body.append(pageContent_style);
+    } else if (window.getComputedStyle(mobileNav, null).display == "block") {
+        mobileNav.style.display = "none";
+        mobNavButt.style.background = "#fff";
+        
+        const pageContent_style = document.createElement('style'); 
+        pageContent_style.innerHTML = '.contentHolder{filter: none!important;}';
+        document.body.append(pageContent_style);
+    }
+}
+
+function showOtherOptions() {
+    var mobOtherOptionDiv = window.getComputedStyle(document.getElementById(`mobOtherOptionDiv`), null).display;
+
+    if (mobOtherOptionDiv == `none`) {
+        const mobOtherOptionDiv_style = document.createElement('style'); 
+        mobOtherOptionDiv_style.innerHTML = '#mobOtherOptionDiv{display: block!important;}';
+        document.body.append(mobOtherOptionDiv_style);
+    } else if (mobOtherOptionDiv == `block`) {
+        const mobOtherOptionDiv_style = document.createElement('style'); 
+        mobOtherOptionDiv_style.innerHTML = '#mobOtherOptionDiv{display: none!important;}';
+        document.body.append(mobOtherOptionDiv_style);
     }
 }
