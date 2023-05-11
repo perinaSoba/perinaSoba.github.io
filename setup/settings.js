@@ -24,6 +24,10 @@ function blackThemeSetup() {
     star.innerHTML = '*{color: #e3e3e3!important;}';
     document.body.append(star);
 
+    const body = document.createElement('style'); 
+    body.innerHTML = 'body{background-color: #201c1c;}';
+    document.body.append(body);
+
     const pageContent = document.createElement('style'); 
     pageContent.innerHTML = '#pageContent{background-color: #201c1c;}';
     document.body.append(pageContent);
@@ -52,12 +56,12 @@ function blackThemeSetup() {
     material_symbols_rounded.innerHTML = '.material-symbols-rounded{color: #c4c7c5!important;}';
     document.body.append(material_symbols_rounded);
 
-    const sideButtons_button_HOVER_span = document.createElement('style'); 
-    sideButtons_button_HOVER_span.innerHTML = '#sideButtons button:hover span {background-color: #383a3c!important;}';
-    document.body.append(sideButtons_button_HOVER_span);
+    const tabButton_HOVER_span = document.createElement('style'); 
+    tabButton_HOVER_span.innerHTML = '.tabButton:hover span {background-color: #383a3c!important;}';
+    document.body.append(tabButton_HOVER_span);
 
     const activeCard_span = document.createElement('style'); 
-    activeCard_span.innerHTML = '#activeCard span{background-color: #0f537d!important; color: #c2e7ff!important;}';
+    activeCard_span.innerHTML = '.activeCard span{background-color: #0f537d!important; color: #c2e7ff!important;}';
     document.body.append(activeCard_span);
 
     const pgBanner_h1 = document.createElement('style'); 
@@ -204,6 +208,10 @@ function blackThemeSetup() {
     bookCont.innerHTML = '.bookCont{background-color: #28292a!important;}';
     document.body.append(bookCont);
 
+    const popUp = document.createElement('style'); 
+    popUp.innerHTML = '.popUp{background-color: #2d2f31!important;}';
+    document.body.append(popUp);
+
     // Theme Button
     const themeSwitchButt = document.createElement('style'); 
     themeSwitchButt.innerHTML = '#themeSwitchButt {border: 0.1rem #8b8e8c solid!important; background-color: transparent!important;}';
@@ -252,3 +260,37 @@ function switchTheme() {
 }
 
 document.getElementById("themeSwitchButt").addEventListener("click", switchTheme);
+
+function openOtherPopUp() {
+    var navButt = document.getElementById(`otherNavButt`);
+    var activeCard = document.getElementById(`activeCard`);
+    var pageContent = document.getElementById(`pageContent`);
+    var popUp = document.getElementById(`sidePopUp`);
+    var popUpVisible = popUp.style.display == `flex`;
+
+    if (popUpVisible) {
+        popUp.style.display = `none`;
+
+        navButt.classList.remove(`activeCard`);
+
+        pageContent.style.filter = `none`;
+
+        try {
+            activeCard.classList.add(`activeCard`);
+        } catch (e) {
+            
+        }
+    } else if (!popUpVisible) {
+        popUp.style.display = `flex`;
+
+        try {
+            activeCard.classList.remove(`activeCard`);
+        } catch (e) {
+            
+        }
+    
+        pageContent.style.filter = `blur(5px)`;
+        
+        navButt.classList.add(`activeCard`);
+    }
+}

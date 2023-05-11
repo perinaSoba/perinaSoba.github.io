@@ -1,10 +1,11 @@
 @font-face {
-    font-family: segoePrint;
-    src: url(../segoePrint.ttf);
+    font-family: googleSans;
+    src: url(../googleSans.ttf);
 }
 
 * {
-    font-family: 'Roboto', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    /*font-family: 'Roboto', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";*/
+    font-family: googleSans;
     font-variant-ligatures: no-common-ligatures;
     overflow: auto;
     margin: 0;
@@ -198,7 +199,7 @@ body {
     display: flex;
     flex-direction: column;
 }
-#sideButtons button {
+.tabButton {
     border: 0;
     background-color: #fff;
     padding-left: 1rem;
@@ -213,7 +214,7 @@ body {
     font-weight: 400;
     text-align: center;
 }
-#sideButtons button span {
+.tabButton span {
     width: 1.5rem;
     height: 1.5rem;
     padding: 0.3rem 0.9rem;
@@ -221,34 +222,34 @@ body {
     transition: 0.4s;
     text-align: center;
 }
-#sideButtons button p {
+.tabButton p {
     margin-left: 0.3rem;
 }
-#sideButtons button:hover{
+.tabButton:hover{
     font-weight: 500;
     cursor: pointer;
 }
-#sideButtons button:hover span {
+.tabButton:hover span {
     background-color: #e8ecec;
     transition: 0.4s;
     transform: scale(1.05);
 }
-#sideButtons button:hover span {
+.tabButton:hover span {
     background-color: #e8ecec;
     transition: 0.4s;
     transform: scale(1.05);
 }
-#sideButtons #activeCard {
+#sideButtons .activeCard {
     color: #001d35;
 }
-#sideButtons #activeCard span {
+#sideButtons .activeCard span {
     background-color: #c2e7ff;
 }
-#sideButtons #activeCard p {
+#sideButtons .activeCard p {
     font-weight: 500;
     color: #444746;
 }
-#sideButtons #activeCard:hover{
+#sideButtons .activeCard:hover{
     cursor: pointer;
     text-decoration: none;
 }
@@ -283,6 +284,18 @@ body {
     display: none;
 }
 #mobileNav {
+    display: none;
+}
+
+/* Pop up */
+.popUp {
+    min-width: max-content;
+    background-color: #f3f6fc;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    border-top-right-radius: 24px;
+    border-bottom-right-radius: 24px;
     display: none;
 }
 

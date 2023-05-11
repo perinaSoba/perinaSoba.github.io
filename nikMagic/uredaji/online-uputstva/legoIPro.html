@@ -41,7 +41,7 @@
             </div>
             
             <div id="sideButtons">
-                <button onclick="window.location.href = `https://perinasoba.github.io/`">
+                <button onclick="window.location.href = `https://perinasoba.github.io/`" class="tabButton">
                     <span class="material-symbols-rounded">
                         dashboard
                     </span>
@@ -49,7 +49,7 @@
                     <p>Početna</p> 
                 </button>
                 
-                <button onclick="window.location.href = `https://perinasoba.github.io/nalog`">
+                <button onclick="window.location.href = `https://perinasoba.github.io/nalog`" class="tabButton">
                     <span class="material-symbols-rounded">
                         people
                     </span>
@@ -57,7 +57,7 @@
                     <p>Nalog</p>
                 </button>
 
-                <button onclick="window.location.href = `https://perinasoba.github.io/shop`">
+                <button onclick="window.location.href = `https://perinasoba.github.io/shop`" class="tabButton">
                     <span class="material-symbols-rounded">
                         shopping_bag
                     </span>
@@ -65,12 +65,12 @@
                     <p>Shop</p> 
                 </button>
                 
-                <button onclick="window.location.href = `https://perinasoba.github.io/ostalo`">
+                <button onclick="openOtherPopUp()" class="tabButton" id="otherNavButt"> 
                     <span class="material-symbols-rounded">
                         read_more
                     </span>
 
-                    <p>Ostalo</p> 
+                    <p>Ostalo</p>
                 </button>
             </div>
 
@@ -81,6 +81,32 @@
                     </span>
                 </button>
             </div>
+        </div>
+
+        <div class="popUp" id="sidePopUp">
+            <button onclick="window.location.href = `https://perinasoba.github.io/nikForum`" class="tabButton">
+                <span class="material-symbols-rounded">
+                    forum
+                </span>
+
+                <p>Nik Forum</p>
+            </button>
+
+            <button onclick="window.location.href = `https://perinasoba.github.io/nikBank`" class="tabButton">
+                <span class="material-symbols-rounded">
+                    account_balance
+                </span>
+
+                <p>Nik Bank</p>
+            </button>
+
+            <button onclick="window.location.href = `https://perinasoba.github.io/nikMagic`" class="tabButton">
+                <span class="material-symbols-rounded">
+                    devices_other
+                </span>
+
+                <p>Nik Magic</p>
+            </button>
         </div>
 
         <div id="pageContent">
