@@ -64,3 +64,31 @@ function buyElectronics(modelName) {
         alert(`Potrebno je da se ulogujete kako bi izvršili kupovinu ${modelName}.`)
     }
 }
+
+function donateToOrg(orgName, amount) {
+    if (getCookie(`userCode`) != null) { 
+        const userInformation = decodeJwtResponse(getCookie(`userCode`));
+        
+        var email = userInformation.email;
+
+        if (confirm(`Sa vašeg računa će biti skinut iznos od ${amount} dinara. Da li ste sigurni?`) == true) {
+            fetch(`https://dev--nikbank--perinasoba.autocode.dev/donation?email=${email}&amount=${amount}&orgName=${orgName}`)
+            .then(response=> response.json())
+            .then((rsp) => {
+                if (rsp == `success`) {
+                    alert(`Uspešno ste donirali.`);
+                } else if (rsp == `no_money`) {
+                    alert(`Nemate dovoljno sredstava na vašem računu.`);
+                } else if (rsp == `no_account`) {
+                    alert(`Da bi ste završili transakciju potreban vam je Nik Bank nalog.`);
+                } else {
+                    alert(`Desila se nepoznata greška. Molimo pokušajte ponovo kasnije.`);
+                }
+            })
+        } else {
+            alert(`Doniranje obustavljeno. Iznos na vašem računu je ostao nepromenjen.`)
+        }
+    } else {
+        alert(`Potrebno je da se ulogujete kako bi ste donirali organizaciji ${orgName}.`)
+    }
+}

@@ -239,17 +239,17 @@ body {
     transition: 0.4s;
     transform: scale(1.05);
 }
-#sideButtons .activeCard {
+.activeCard {
     color: #001d35;
 }
-#sideButtons .activeCard span {
+.activeCard span {
     background-color: #c2e7ff;
 }
-#sideButtons .activeCard p {
+.activeCard p {
     font-weight: 500;
     color: #444746;
 }
-#sideButtons .activeCard:hover{
+.activeCard:hover{
     cursor: pointer;
     text-decoration: none;
 }

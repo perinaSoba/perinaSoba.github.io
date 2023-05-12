@@ -90,7 +90,7 @@ function openOtherPopUp() {
 
         navButt.classList.remove(`activeCard`);
 
-        pageContent.style.filter = `none`;
+        pageContent.style.filter = `none`; 
 
         try {
             activeCard.classList.add(`activeCard`);
@@ -100,8 +100,13 @@ function openOtherPopUp() {
     } else if (!popUpVisible) {
         popUp.style.display = `flex`;
 
+        console.log(activeCard.parentElement.id)
+        console.log(activeCard.parentElement.id != `sidePopUp`)
+
         try {
-            activeCard.classList.remove(`activeCard`);
+            if (activeCard.parentElement.id != `sidePopUp`) {
+                activeCard.classList.remove(`activeCard`);
+            }
         } catch (e) {
             
         }
