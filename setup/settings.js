@@ -227,11 +227,11 @@ function blackThemeSetup() {
     const mobThemeText = document.getElementById('mobThemeText')
     mobThemeText.innerHTML = 'Podesi svetlu temu';
 
+    // Set body class
+    document.body.classList.add(`darkTheme`);
+
     // Save cookie
     setCookie(`tema`, `tamna`, 365);
-
-    // Set body class
-    document.getElementById(`bodyTag`).classList.add(`darkTheme`);
 }
 
 if (getCookie(`tema`) == null) {
