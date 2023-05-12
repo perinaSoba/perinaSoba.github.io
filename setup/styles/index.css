@@ -537,3 +537,198 @@ body {
     }
 }
 
+
+/* Dark Mode */
+body.darkTheme {
+    background-color: #201c1c;
+    color: #e3e3e3!important;
+}
+
+body.darkTheme #pageContent {
+    background-color: #201c1c;
+}
+
+body.darkTheme #sideBar {
+    background-color: #2d2f31!important;
+}
+
+body.darkTheme #mobNavButt {
+    background-color: #2d2f31!important;
+}
+
+body.darkTheme #mobileNav {
+    background-color: #2d2f31!important;
+}
+
+body.darkTheme #mobileNav #currPageMob {
+    background-color: #0f537d!important;
+    color: #bce2fa!important;
+}
+
+body.darkTheme .mobNavOption:hover {
+    background-color: #383a3c!important;
+    color: #bce2fa!important;
+}
+
+body.darkTheme .material-symbols-rounded {
+    color: #c4c7c5!important;
+}
+
+body.darkTheme .tabButton:hover span {
+    background-color: #383a3c!important;
+}
+
+body.darkTheme .activeCard span {
+    background-color: #0f537d!important;
+    color: #c2e7ff!important;
+}
+
+body.darkTheme #pgBanner h1 {
+    color: #fff!important;
+}
+
+body.darkTheme #logInDiv {
+    border: 0.1rem #8b8e8c solid!important;
+    background-color: transparent!important;
+}
+
+body.darkTheme .textBox {
+    background-color: #28292a!important;
+}
+
+body.darkTheme .textBox a {
+    color: #a8c7fa!important;
+}
+
+body.darkTheme #userInfoCard #userImage {
+    border: 0.2rem solid #0f537d;
+}
+
+body.darkTheme #mobLogInDiv {
+    border-color: 0.1rem #8b8e8c solid!important;
+    background-color: transparent!important;
+}
+
+body.darkTheme .settingsChoser {
+    background-color: #28292a;
+}
+
+body.darkTheme .settingsChoser span:hover {
+    background-color: #343536;
+}
+
+body.darkTheme .settingsChoser .active {
+    background-color: #084c74;
+}
+
+body.darkTheme .settingsChoser .active:hover {
+    background-color: #185484;
+}
+
+body.darkTheme .mainInfo .buyBox {
+    background-color: #28292a;
+}
+
+body.darkTheme .mainInfo .buyBox .data .main .buyButton {
+    background-color: #004a77;
+}
+
+body.darkTheme .mainInfo .buyBox .data .main .buyButton:hover {
+    background-color: #125680;
+}
+
+body.darkTheme .storiesCont div {
+    background-color: #28292a;
+}
+
+body.darkTheme .storiesCont div:hover {
+    background-color: #084c74;
+}
+
+body.darkTheme .text a {
+    color: #a8c7fa!important;
+}
+
+body.darkTheme #logOutButton {
+    background-color: #004a77!important;
+}
+
+body.darkTheme #onPageUserInfoCard .contextHolder .mainData #onPageUserImage {
+    border-color: #0f537d!important;
+}
+
+body.darkTheme .mainInfo .buyBox .onSale svg {
+    fill: #fff;
+}
+
+body.darkTheme #errorDiv {
+    background-color: #201c1c;
+}
+
+body.darkTheme #errorDiv span a {
+    color: #a8c7fa!important;
+}
+
+body.darkTheme .box {
+    background-color: #28292a!important;
+}
+
+body.darkTheme .listedInfo {
+    background-color: #28292a!important;
+}
+
+body.darkTheme .listedInfo .dataCont .dataInfo {
+    background-color: #004a77!important;
+}
+
+body.darkTheme #loggedInDiv #transDiv {
+    background-color: #004a77!important;
+}
+
+body.darkTheme #loggedInDiv .lttlSpc {
+    border-color: #004a77!important;
+}
+
+body.darkTheme #loggedInDiv .userInfo img {
+    border-color: #004a77!important;
+}
+
+body.darkTheme .productPreviewCont .productPreviewBox {
+    background-color: #28292a;
+}
+
+body.darkTheme .productPreviewCont .productPreviewBox:hover {
+    background-color: #004a77;
+}
+
+body.darkTheme .mainMultCont {
+    background-color: #28292a!important;
+}
+
+body.darkTheme .multiCont .textBox {
+    background-color: #004a77!important;
+}
+
+body.darkTheme .multiCont .textBox p {
+    color: #fff!important;
+}
+
+body.darkTheme .shopHolder .shopItem {
+    background-color: #28292a!important;
+}
+
+body.darkTheme .shopHolder .shopItem .shopItemImage {
+    border: 0.1rem #004a77 solid!important;
+}
+
+body.darkTheme .shopHolder .shopItem .shopItemBuy {
+    background-color: #004a77!important;
+}
+
+body.darkTheme .bookCont {
+    background-color: #28292a!important;
+}
+
+body.darkTheme .popUp {
+    background-color: #2d2f31!important;
+}
