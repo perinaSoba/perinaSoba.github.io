@@ -62,10 +62,12 @@ if (getCookie(`userCode`) != null) {
                 var tempspan = document.createElement('span');
 
                 var tempspace = document.createElement('br');
+                var tempspace1 = document.createElement('br');
                 tempspan.innerHTML = `${userObject.transactions[repeatNum]}`;
                 
                 transDiv.appendChild(tempspan);
                 transDiv.appendChild(tempspace);
+                transDiv.appendChild(tempspace1);
 
                 repeatNum++;
             }
