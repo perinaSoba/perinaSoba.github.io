@@ -61,14 +61,11 @@ if (getCookie(`userCode`) != null) {
                 var transDiv = document.getElementById('transDiv');
                 var tempspan = document.createElement('span');
 
-                if (transDiv.firstChild) {
-                    var tempspace = document.createElement('br');
-
-                    transDiv.appendChild(tempspace);
-                }
-
+                var tempspace = document.createElement('br');
                 tempspan.innerHTML = `${userObject.transactions[repeatNum]}`;
+                
                 transDiv.appendChild(tempspan);
+                transDiv.appendChild(tempspace);
 
                 repeatNum++;
             }
