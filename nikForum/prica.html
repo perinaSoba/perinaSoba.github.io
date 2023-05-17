@@ -11,14 +11,13 @@
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
         <meta charset="UTF-8">
 
-        <meta name="author" content="Perina Soba" />
-        <meta name="description" content="Nik Forum je platforma za obljavljivanje priča u porodici Nikolić. Cilj ove platforme je da bi svi imali iste informacije, tojest, da bi neka priča bila ispričana (napisana) samo jednom i posle dostupna svima da je pročitaju." />
+        <meta name="author" content="<?=$author?>" />
         <link href="../media/nikForum/favicon.png" rel="icon"/>
         <meta property="og:url" content="https://perinasoba.github.io/nikForum"/>
-        <meta property="og:description" content="Nik Forum je platforma za obljavljivanje priča u porodici Nikolić. Cilj ove platforme je da bi svi imali iste informacije, tojest, da bi neka priča bila ispričana (napisana) samo jednom i posle dostupna svima da je pročitaju."/>
+        <meta property="og:description" content="<?=$description?>"/>
         <meta property="og:locale" content="sr_RS"/>
         <meta property="og:site_name" content="Perina Soba"/>
-        <meta property="og:image" content="https://perinasoba.github.io/media/nikForum/thumbnails/mainThumb.png"/>
+        <meta property="og:image" content="<?=$image_url?>"/>
     </head>
 
     <!-- Google tag (gtag.js) -->
@@ -32,6 +31,34 @@
     </script>
 
     <body>
+        <?php
+            echo($_GET['id'])
+                if (isset($_GET['id'])) {
+                    $url = 'https://perinasoba.github.io/nikForum/setup/stories.json';
+                    $json = file_get_contents($url);
+                    $data = json_decode($json);
+
+                    $targetTitle = $_GET['id'];
+
+                    foreach ($data as $story) {
+                        if ($story->title === $targetTitle) {
+                            $x = $story->x;
+                            break;
+                        }
+                    }
+
+                    echo $x;
+                    
+                    echo $data[$x]->author->name
+                    echo $data[$x]->short_text
+                    echo $image_url = $data[$x]->image_url
+
+                    $author = $data[$x]->author->name
+                    $description = $data[$x]->short_text
+                    $image_url = $data[$x]->image_url
+                }
+        ?>
+
         <div id="sideBar">
             <img src="../media/googleLogo.svg" id="logInDiv" onclick="reopenOneTap()" title="Log in with Google">
 
