@@ -1,7 +1,8 @@
 /* Page Container */
 #pageContent {
     width: 100%;
-    background-color: #fff;
+    background-color: var(--background);
+    color: var(--font);
 }
 
 /* StoriesInfo */
@@ -28,12 +29,10 @@
     border: none;
     border-radius: 1rem;
     margin-left: 0.3rem;
-    color: #666;
     background-color: #666;
     width: 0.1rem;
 }
 .storiesInfo #downSectionInfo span {
-    color: #666;
     font-size: 1.3rem;
     font-weight: 450;
     align-self: center;
@@ -53,11 +52,10 @@
 .text a {
     font-weight: 400;
     text-decoration: none;
-    color: #3556E3;
+    color: var(--link);
 }
 .text a:hover {
     text-decoration: underline;
-    color: #1A16B4;
     transition: 0.5s;
 }
 .heading {

@@ -20,11 +20,6 @@ function getCookie(name) {
 }
 
 function blackThemeSetup() {
-    // Script-based design
-    const star = document.createElement('style'); 
-    star.innerHTML = '*{color: #e3e3e3!important;}';
-    document.body.append(star);
-
     // Theme Button
     const themeSwitchButt = document.createElement('style'); 
     themeSwitchButt.innerHTML = '#themeSwitchButt {border: 0.1rem #8b8e8c solid!important; background-color: transparent!important;}';
@@ -39,8 +34,14 @@ function blackThemeSetup() {
     const mobThemeText = document.getElementById('mobThemeText')
     mobThemeText.innerHTML = 'Podesi svetlu temu';
 
-    // Set body class
-    document.body.classList.add(`darkTheme`);
+    // Set main colors
+    document.documentElement.style.setProperty(`--background`, `#201c1c`);
+    document.documentElement.style.setProperty(`--font`, `#e3e3e3`);
+    document.documentElement.style.setProperty(`--link`, `#a8c7fa`);
+    document.documentElement.style.setProperty(`--sideBar`, `#2d2f31`);
+    document.documentElement.style.setProperty(`--sideBar-hover`, `#383a3c`);
+    document.documentElement.style.setProperty(`--background-element`, `#28292a`);
+    document.documentElement.style.setProperty(`--blue-element`, `#004a77`);
 
     // Save cookie
     setCookie(`tema`, `tamna`, 365);
@@ -119,18 +120,15 @@ function openOtherPopUp() {
 
 function mobNavOpen() {
     var mobileNav = document.getElementById("mobileNav");
-    var mobNavButt = document.getElementById("mobNavButt");
 
     if (window.getComputedStyle(mobileNav, null).display == "none") {
         mobileNav.style.display = "block";
-        mobNavButt.style.background = "transparent";
 
         const pageContent_style = document.createElement('style'); 
         pageContent_style.innerHTML = '.contentHolder{filter: blur(5px)!important;}';
         document.body.append(pageContent_style);
     } else if (window.getComputedStyle(mobileNav, null).display == "block") {
         mobileNav.style.display = "none";
-        mobNavButt.style.background = "#fff";
         
         const pageContent_style = document.createElement('style'); 
         pageContent_style.innerHTML = '.contentHolder{filter: none!important;}';
