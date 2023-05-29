@@ -1,5 +1,20 @@
 [
     {
+        "title": "Potpuno nova Perina Soba",
+        "author": {
+            "name": "Perina Soba",
+            "email": "perinaSoba@gmail.com",
+            "profile_pic": "https://perinasoba.github.io/media/favicion.svg"
+        },
+        "public": true,
+        "relase_date": "27. Jun 2023.",
+        "short_relase_date": "27. 05. 2023.",
+        "url": "https://perinasoba.github.io/nikForum/prica?id=Potpuno nova Perina Soba",
+        "image_url": "https://perinasoba.github.io/media/nikForum/stories/potpunoNovaPerinaSoba.png",
+        "short_text": "Izveštavamo va o velikim promenama koje se dešavaju na našem sajtu u poslednje vreme",
+        "html_code": "<p class=\"text\">Izveštavamo va o velikim promenama koje se dešavaju na našem sajtu u poslednje vreme</p> <br> <img src=\"https://perinasoba.github.io/media/nikForum/stories/potpunoNovaPerinaSoba.png\" class=\"image\"> <br><br> <h1 class=\"heading\" id=\"novi-font\">Novi font</h1> <p class=\"text\">Promena koje je odmah uočljiva je novi font. Prošli font je bila kombinacija Robota, Helvetice, Ariala i Sans Serifa. Novi font se zove Google Sans (Product Sans).</p> <br><br> <h1 class=\"heading\" id=\"novi-meni\">Novi meni</h1> <p class=\"text\">Pre ovog ažuriranja kada pritisnete na karticu \"Ostlao\" bili bi ste preusmereni. Kada pritisnete to dugme otvara se novi meni u kojem možete da izaberete gde želite da budete preusmereni.</p> <br> <img src=\"https://perinasoba.github.io/media/nikForum/stories/sideMenuOnDesktop.png\" class=\"image\"> <img src=\"https://perinasoba.github.io/media/nikForum/stories/sideMenuOnMobile.png\" class=\"image\"> <br><br> <h1 class=\"heading\" id=\"nik-banka-i-nalog\">Nik Banka i nalog</h1> <p class=\"text\">Od sada kada želite da vidite status na vašem Nik Bank nalogu to možete uraditi na adresi <a target=\"_blank\" href=\"https://perinaSoba.github.io/nalog\">https://perinaSoba.github.io/nalog<\/a>.</p> <br><br> <h1 class=\"heading\" id=\"donacije\">Donacije</h1> <p class=\"text\">Shodno promeni koja je navedena iznad, na adresi na kojoj su se pre nalazili podaci o vašem Nik Bank nalogu sada se nalazi opcija za donaciju dobrotvornoj organizaciji \"Perin Novčanik\".</p> <br><br> <h1 class=\"heading\" id=\"nove-boje\">Nove Boje</h1> <p class=\"text\">Nije velika promena ali je treba pomenuti. Tamna tema je dobila neke nove boje koje se nadamo da izgledaju bolje.</p>"
+    },
+    {
         "title": "Nik Bank - Promena sistema isplate sa racuna",
         "author": {
             "name": "Perina Soba",
