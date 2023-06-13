@@ -33,3 +33,14 @@
     transition: 0.5s;
     cursor: pointer;
 }
+
+/* Responsive stuff */
+@media screen and (max-device-width:480px)  {
+    #dataHolder {
+        display: block;
+    }
+
+    #dataHolder div {
+        width: unset;
+    }
+}
