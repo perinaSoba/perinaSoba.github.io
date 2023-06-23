@@ -42,5 +42,6 @@
 
     #dataHolder div {
         width: unset;
+        margin: unset;
     }
 }
