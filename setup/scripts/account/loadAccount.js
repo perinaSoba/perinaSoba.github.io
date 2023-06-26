@@ -72,15 +72,19 @@ if (getCookie(`userCode`) != null) {
                 repeatNum++;
             }
 
+            document.getElementById(`transDiv`).style.display = `block`;
+            document.getElementById(`cards`).style.display = `block`;
+            document.getElementById(`balance`).style.display = `block`;
+            document.getElementById(`spaceLine`).style.display = `block`;
+            document.getElementById(`birthYear`).parentElement.style.display = `block`;
+            document.getElementById(`address`).parentElement.style.display = `block`;
+
             document.getElementById(`cardNum`).innerText = `XXXX XXXX XXXX ${userObject.creditCard.cardNumber.slice(-4)}`;
             document.getElementById(`validThruCard`).innerText = `${userObject.creditCard.validThru}`;
             document.getElementById(`cvvCard`).innerText = `${userObject.creditCard.CVV}`;
 
             document.getElementById(`birthYear`).innerText = `${userObject.bithday}`;
             document.getElementById(`address`).innerText = `${userObject.location}`;
-
-            document.getElementById(`dataHolder`).style.display = `block`;
-            document.getElementById(`aboutUser`).style.display = `block`; 
         }
     });
 } else {
