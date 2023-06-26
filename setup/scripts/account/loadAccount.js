@@ -25,32 +25,32 @@ function decodeJwtResponse(token) {
 };
 
 if (getCookie(`userCode`) != null) {
+    const responsePayload = decodeJwtResponse(getCookie(`userCode`));
+
+    document.getElementById(`name`).innerText = `${responsePayload.name}`;
+    document.getElementById(`e-mail`).innerText = `${responsePayload.email}`;
+    document.getElementById(`googleImage`).src = `${responsePayload.picture}`;
+
+    document.getElementById(`dataHolder`).style.display = `block`;
+    document.getElementById(`aboutUser`).style.display = `block`;
+    document.getElementById(`infoDiv`).style.display = `none`; 
+
+    document.getElementById(`transDiv`).style.display = `none`;
+    document.getElementById(`cards`).style.display = `none`;
+    document.getElementById(`balance`).style.display = `none`;
+    document.getElementById(`spaceLine`).style.display = `none`;
+    document.getElementById(`birthYear`).parentElement.style.display = `none`;
+    document.getElementById(`address`).parentElement.style.display = `none`;
+
     // Load user data
     fetch('https://dev--nikbank--perinasoba.autocode.dev/userData?useOfData=read')
     .then(response=> response.json())
     .then((allUsers) => {
-        const responsePayload = decodeJwtResponse(getCookie(`userCode`));
-
-        document.getElementById(`googleImage`).src = `${responsePayload.picture}`;
-
         var usersArray = allUsers.filter(function (el) {
             return responsePayload.email == el.emails[0];
         });
 
-        document.getElementById(`name`).innerText = `${responsePayload.name}`;
-        document.getElementById(`e-mail`).innerText = `${responsePayload.email}`;
-
-        if (JSON.stringify(usersArray) == `[]`) {
-            document.getElementById(`dataHolder`).style.display = `block`;
-            document.getElementById(`aboutUser`).style.display = `block`;
-
-            document.getElementById(`transDiv`).style.display = `none`;
-            document.getElementById(`cards`).style.display = `none`;
-            document.getElementById(`balance`).style.display = `none`;
-            document.getElementById(`spaceLine`).style.display = `none`;
-            document.getElementById(`birthYear`).parentElement.style.display = `none`;
-            document.getElementById(`address`).parentElement.style.display = `none`;
-        } else {
+        if (JSON.stringify(usersArray) != `[]`) {
             var userObject = usersArray[0];
             var numberOfTrans = userObject.transactions.length;
 
@@ -82,8 +82,6 @@ if (getCookie(`userCode`) != null) {
             document.getElementById(`dataHolder`).style.display = `block`;
             document.getElementById(`aboutUser`).style.display = `block`; 
         }
-
-        document.getElementById(`infoDiv`).style.display = `none`; 
     });
 } else {
     document.getElementById(`infoDiv`).style.display = `block`; 
