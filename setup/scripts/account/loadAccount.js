@@ -24,6 +24,16 @@ function decodeJwtResponse(token) {
     return JSON.parse(jsonPayload);
 };
 
+
+function changeElements(typeOfUse) {
+    document.getElementById(`transDiv`).style.display = `${typeOfUse}`;
+    document.getElementById(`cards`).style.display = `${typeOfUse}`;
+    document.getElementById(`balance`).style.display = `${typeOfUse}`;
+    document.getElementById(`spaceLine`).style.display = `${typeOfUse}`;
+    document.getElementById(`birthYear`).parentElement.style.display = `${typeOfUse}`;
+    document.getElementById(`address`).parentElement.style.display = `${typeOfUse}`;
+}
+
 if (getCookie(`userCode`) != null) {
     const responsePayload = decodeJwtResponse(getCookie(`userCode`));
 
@@ -35,12 +45,7 @@ if (getCookie(`userCode`) != null) {
     document.getElementById(`aboutUser`).style.display = `block`;
     document.getElementById(`infoDiv`).style.display = `none`; 
 
-    document.getElementById(`transDiv`).style.display = `none`;
-    document.getElementById(`cards`).style.display = `none`;
-    document.getElementById(`balance`).style.display = `none`;
-    document.getElementById(`spaceLine`).style.display = `none`;
-    document.getElementById(`birthYear`).parentElement.style.display = `none`;
-    document.getElementById(`address`).parentElement.style.display = `none`;
+    changeElements(`none`);
 
     // Load user data
     fetch('https://dev--nikbank--perinasoba.autocode.dev/userData?useOfData=read')
@@ -72,12 +77,7 @@ if (getCookie(`userCode`) != null) {
                 repeatNum++;
             }
 
-            document.getElementById(`transDiv`).style.display = `block`;
-            document.getElementById(`cards`).style.display = `block`;
-            document.getElementById(`balance`).style.display = `block`;
-            document.getElementById(`spaceLine`).style.display = `block`;
-            document.getElementById(`birthYear`).parentElement.style.display = `block`;
-            document.getElementById(`address`).parentElement.style.display = `block`;
+            changeElements(`block`);
 
             document.getElementById(`cardNum`).innerText = `XXXX XXXX XXXX ${userObject.creditCard.cardNumber.slice(-4)}`;
             document.getElementById(`validThruCard`).innerText = `${userObject.creditCard.validThru}`;
