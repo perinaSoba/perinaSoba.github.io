@@ -35,13 +35,15 @@ function blackThemeSetup() {
     mobThemeText.innerHTML = 'Podesi svetlu temu';
 
     // Set main colors
-    document.documentElement.style.setProperty(`--background`, `#201c1c`);
     document.documentElement.style.setProperty(`--font`, `#e3e3e3`);
     document.documentElement.style.setProperty(`--link`, `#a8c7fa`);
-    document.documentElement.style.setProperty(`--sideBar`, `#2d2f31`);
-    document.documentElement.style.setProperty(`--sideBar-hover`, `#383a3c`);
-    document.documentElement.style.setProperty(`--background-element`, `#28292a`);
-    document.documentElement.style.setProperty(`--blue-element`, `#004a77`);
+    document.documentElement.style.setProperty(`--hover`, `#3e484d`);
+
+    document.documentElement.style.setProperty(`--surface`, `#101416`);
+    document.documentElement.style.setProperty(`--on-surface`, `#181c1e`);
+    document.documentElement.style.setProperty(`--on-surface-container`, `#20414e`);
+    document.documentElement.style.setProperty(`--sideBar-active`, `#20414e`);
+    document.documentElement.style.setProperty(`--outline`, `#889297`);
 
     // Save cookie
     setCookie(`tema`, `tamna`, 365);

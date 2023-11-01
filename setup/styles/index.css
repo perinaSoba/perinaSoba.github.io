@@ -4,13 +4,18 @@
 }
 
 :root {
-    --background: #fff;
+    --surface: #f6fafc;
+    --on-surface: #f1f4f7;
+    --on-surface-container: #c7e9fa;
+    --outline: #6f797e;
+
     --font: #444746;
     --link: #0b57d0;
-    --sideBar: #f3f6fc;
-    --sideBar-hover: #e8ecec;
-    --background-element: #f8fafd;
-    --blue-element: #c2e7ff;
+    --hover: #bec8ce;
+    --sideBar-active: #c7e9fa;
+    
+    --error: #b3261e;
+    --error-container: #f9dedc;
 }
 
 * {
@@ -25,7 +30,7 @@
 }
 body {
     display: flex;
-    background-color: var(--background);
+    background-color: var(--surface);
 }
 
 .material-symbols-rounded {
@@ -39,7 +44,7 @@ body {
 /* Page Container */
 #pageContent {
     width: 100%;
-    background-color: var(--background);
+    background-color: var(--surface);
     padding: 0;
 }
 
@@ -84,7 +89,7 @@ body {
 
 /* Text Boxes */
 .mainMultCont {
-    background-color: var(--background-element);
+    background-color: var(--on-surface);
     margin: 0.5rem;
     border-radius: 24px;
 }
@@ -100,7 +105,7 @@ body {
 .multiCont .textBox {
     padding: 1rem;
     padding-top: 0;
-    background-color: var(--blue-element);
+    border: var(--outline) solid 0.1rem;
 }
 .textBox {
     border: 0;
@@ -110,7 +115,7 @@ body {
     text-decoration: none;
     margin: 0.5rem;
     border-radius: 24px;
-    background-color: var(--background-element);
+    background-color: var(--on-surface);
 }
 .textBox h2 {
     margin-bottom: 1rem;
@@ -158,19 +163,20 @@ body {
 /* SideBar */
 #sideBar {
     min-width: fit-content;
-    background-color: var(--sideBar);
+    background-color: transparent;
     display: flex;
     flex-direction: column;
     text-align: center;
 }
 #logInDiv {
-    background-color: var(--background);
+    background-color: var(--surface);
     transition: 0.5s;
     border-radius: 100%;
     margin: 1rem;
     width: 3rem;
     height: fit-content;
     align-self: center;
+    border: var(--outline) solid 0.1rem;
 }
 #logInDiv:hover {
     border-radius: 12px;
@@ -190,7 +196,7 @@ body {
 #userInfoCard #userImage {
     height: 4rem;
     border-radius: 100%;
-    border: 0.2rem solid var(--blue-element);
+    border: 0.2rem solid var(--sideBar-active);
     padding: 0;
 }
 #sideButtons {
@@ -199,7 +205,7 @@ body {
 }
 .tabButton {
     border: 0;
-    background-color: var(--background);
+    background-color: var(--surface);
     padding-left: 1rem;
     padding-right: 1rem;
     margin-bottom: 0.5rem;
@@ -228,12 +234,12 @@ body {
     cursor: pointer;
 }
 .tabButton:hover span {
-    background-color: var(--sideBar-hover);
+    background-color: var(--hover);
     transition: 0.4s;
     transform: scale(1.05);
 }
 .activeCard span {
-    background-color: var(--blue-element);
+    background-color: var(--sideBar-active);
 }
 .activeCard p {
     font-weight: 500;
@@ -246,10 +252,10 @@ body {
     margin-top: auto;
 }
 #themeSetter #themeSwitchButt {
-    background-color: var(--background);
+    background-color: var(--surface);
     transition: 0.5s;
     border-radius: 100%;
-    border: 0;
+    border: var(--outline) solid 0.1rem;
     width: 3rem;
     height: 3rem;
     margin: 0.5rem;
@@ -279,7 +285,7 @@ body {
 /* Pop up */
 .popUp {
     min-width: max-content;
-    background-color: var(--sideBar);
+    background-color: var(--surface);
     display: flex;
     flex-direction: column;
     text-align: center;
@@ -308,7 +314,7 @@ body {
     text-decoration: none;
     margin: 0.5rem;
     border-radius: 24px;
-    background-color: var(--background-element);
+    background-color: var(--on-surface);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -316,13 +322,13 @@ body {
 }
 .shopHolder .shopItem .shopItemImage {
     padding: 0.5rem;
-    border: 0.1rem var(--blue-element) solid;
+    border: 0.1rem var(--on-surface) solid;
     border-radius: 100%;
     width: 10rem;
     height: 10rem;
     transition: 0.5s;
     z-index: 1;
-    background-color: var(--background);
+    background-color: var(--surface);
 }
 .shopHolder .shopItem .shopItemTitle {
     font-size: 1.5rem;
@@ -340,7 +346,7 @@ body {
     border-radius: 24px;
     padding: 0.5rem;
     margin-top: 3rem;
-    background-color: var(--blue-element);
+    background-color: var(--on-surface-container);
     transition: 0.5s;
 }
 
@@ -420,7 +426,7 @@ body {
 
     #mobileNav {
         display: none;
-        background-color: var(--sideBar);
+        background-color: var(--surface);
         position: absolute;
         top: 0;
         left: 0;
@@ -449,10 +455,10 @@ body {
         padding: 0.2rem;
     }
     #mobileNav #currPageMob {
-        background-color: var(--blue-element);
+        background-color: var(--on-surface);
     }
     .mobNavOption:hover {
-        background-color: var(--blue-element);
+        background-color: var(--on-surface);
         transition: 0.2s;
     }
 
@@ -492,7 +498,7 @@ body {
         position: fixed;
         display: flex;
         align-items: center;
-        background-color: var(--sideBar);
+        background-color: var(--surface);
         width: 100%;
         padding: 0.3rem;
     }
@@ -503,7 +509,7 @@ body {
     }
 
     #mobLogInDiv {
-        background-color: var(--background);
+        background-color: var(--surface);
         transition: 0.5s;
         border-radius: 100%;
         text-align: center;

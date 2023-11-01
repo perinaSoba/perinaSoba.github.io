@@ -1,7 +1,7 @@
 /* Page Container */
 #pageContent {
     width: 100%;
-    background-color: var(--background);
+    background-color: var(--surface);
     color: var(--font);
 }
 
@@ -22,7 +22,7 @@
 .storiesInfo #downSectionInfo img {
     max-height: 1.5rem;
     max-width: 1.5rem;
-    border: 0.06rem solid #0009;
+    border: 0.06rem solid var(--outline);
     border-radius: 100%;
 }
 .storiesInfo #downSectionInfo hr {
