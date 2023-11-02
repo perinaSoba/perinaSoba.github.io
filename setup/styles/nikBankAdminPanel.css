@@ -54,7 +54,7 @@
 /* Responsive stuff */
 @media screen and (max-device-width:480px)  {
     #userDataHolder {
-        display: block;
+        display: block!important;
     }
 
     #userDataHolder div {
