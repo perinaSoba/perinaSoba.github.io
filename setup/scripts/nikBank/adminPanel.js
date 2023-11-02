@@ -65,7 +65,7 @@ if (getCookie(`userCode`) != null) {
                 tempDiv.appendChild(tempP);
             }
 
-            document.getElementById(`newTransHolder`).style.display = `flex`;
+            document.getElementById(`newTransHolder`).style.display = `block`;
             document.getElementById(`userDataHolder`).style.display = `flex`;
         })
     }
