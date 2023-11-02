@@ -74,7 +74,7 @@ if (getCookie(`userCode`) != null) {
 function removeTransObject(arrayNum, recUser) {
     if (confirm("Da li ste sigurni da želite da obrišete ovu transakciju?")) {
         console.log(arrayNum);
-        userList[recUser].transactions = userList[recUser].transactions.splice(arrayNum, 1);
+        userList[recUser].transactions = userList[recUser].transactions.splice(arrayNum, 0);
 
         fetch(`https://dev--nikbank--perinasoba.autocode.dev/userData?useOfData=write&data=${encodeURIComponent(JSON.stringify(userList))}`)
         .then(response=> response.json())
