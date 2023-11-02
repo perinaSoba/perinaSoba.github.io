@@ -7,12 +7,6 @@
 }
 
 /* Content */
-.contentHolder {
-    width: 100%;
-    padding: 0;
-    margin: 0;
-}
-
 .mainInfo {
     display: flex;
     width: 100%;
@@ -119,9 +113,5 @@
     .mainInfo .buyBox #itemImage {
         width: 100%;
         height: 100%;
-    }
-
-    .contentHolder {
-        display: block;
     }
 }
