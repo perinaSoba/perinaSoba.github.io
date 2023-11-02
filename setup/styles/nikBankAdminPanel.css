@@ -22,7 +22,7 @@
 #dataHolder div span p {
     font-size: 1rem;
     font-weight: 350;
-    background-color: var(--on-surface);
+    background-color: var(--on-surface-container);
     border-radius: 24px;
     padding: 1rem;
     margin: 0.5rem;
