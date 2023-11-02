@@ -192,7 +192,7 @@
                     <h1>Admin Panel</h1>
                 </div>
 
-                <div id="dataHolder">
+                <div id="userDataHolder">
                     <div>
                         <h2>Jasmina Nikolić</h2>
                         <br>
@@ -205,6 +205,36 @@
                         <span id="miomirBalance"></span>
                         <span id="miomirTransactions"></span>
                     </div>
+                </div>
+
+                <div id="newTransHolder" class="mainMultCont">
+                    <h2 class="multiTitl">Nova transakcija</h2>
+                    <div class="multiCont">
+                        <div class="textBox" style="width: calc(100%/2)">
+                            <h3>Primalac</h3>
+                            <select id="personPicker">
+                                <option value="0">Jasmina Nikolić</option>
+                                <option value="1">Miomir Nikolić</option>
+                            </select>
+                        </div>
+
+                        <div class="textBox" style="width: calc(100%/2)">
+                            <h3>Specifikacija</h3>
+                            
+                            <h4 class="fontText">Datum</h4>
+                            <input type="text" id="newTransDate" value="31/10">
+                            <br><br>
+                            <h4 class="fontText">Novac (rsd)</h4>
+                            <input type="number" id="newTransMoney" value="-30">
+                            <br><br>
+                            <h4 class="fontText">Količina</h4>
+                            <input type="number" id="newTransQuantity" value="1">
+                            <br><br>
+                            <h4 class="fontText">Naziv</h4>
+                            <input type="text" id="newTransName" value="Perina Soba - Mesečna vožnja">
+                        </div>
+                    </div>
+                    <button class="fontText" id="newTransConf" onclick="addNewTrans()">Potvrdi</button>
                 </div>
             </div>
         </div>

@@ -21,6 +21,9 @@ function decodeJwtResponse(token) {
     return JSON.parse(jsonPayload);
 };
 
+document.getElementById(`newTransHolder`).style.display = `none`;
+document.getElementById(`userDataHolder`).style.display = `none`;
+
 if (getCookie(`userCode`) != null) {
     const userBody = decodeJwtResponse(getCookie(`userCode`));
 
@@ -61,18 +64,38 @@ if (getCookie(`userCode`) != null) {
 
                 tempDiv.appendChild(tempP);
             }
+
+            document.getElementById(`newTransHolder`).style.display = `flex`;
+            document.getElementById(`userDataHolder`).style.display = `flex`;
         })
-    } else {
-        document.getElementById(`dataHolder`).style.display = `none`; 
     }
-  
-} else {
-    document.getElementById(`dataHolder`).style.display = `none`; 
-}
+} 
 
 function removeTransObject(arrayNum, recUser) {
     if (confirm("Da li ste sigurni da želite da obrišete ovu transakciju?")) {
         userList[recUser].transactions = userList[recUser].transactions.splice(0, arrayNum);
+
+        fetch(`https://dev--nikbank--perinasoba.autocode.dev/userData?useOfData=write&data=${encodeURIComponent(JSON.stringify(userList))}`)
+        .then(response=> response.json())
+        .then((writeResponse) => {
+            alert(writeResponse);
+
+            location.reload();
+        });
+    }
+}
+
+function addNewTrans() {
+    if (confirm("Da li ste sigurni da želite da dodate transakciju?")) {
+        var userId = parseInt(document.getElementById(`personPicker`).value);
+
+        var newTransDate = document.getElementById(`newTransDate`).value;
+        var newTransMoney = parseInt(document.getElementById(`newTransMoney`).value);
+        var newTransQuantity = parseInt(document.getElementById(`newTransQuantity`).value);
+        var newTransName = document.getElementById(`newTransName`).value;
+
+        userList[userId].balance = userList[userId].balance + newTransMoney*newTransQuantity;
+        userList[userId].transactions.unshift(`${newTransDate} | ${newTransMoney}rsd | x${newTransQuantity} | ${newTransName}`);
 
         fetch(`https://dev--nikbank--perinasoba.autocode.dev/userData?useOfData=write&data=${encodeURIComponent(JSON.stringify(userList))}`)
         .then(response=> response.json())

@@ -89,6 +89,28 @@ body {
     font-weight: 350;
 }
 
+/* Div types */
+.onSurfaceElement {
+    background-color: var(--on-surface);
+    border-radius: 24px;
+    padding: 1rem;
+}
+.onSurfaceBorderElement {
+    border: var(--outline) solid 0.1rem;
+    border-radius: 24px;
+}
+
+/* Input fields */
+select, input {
+    border-radius: 24px;
+    padding: 0.5rem;
+    border: var(--outline) solid 0.1rem;
+    width: 15rem;
+    text-align: center;
+    background-color: var(--surface);
+    width: 100%;
+}
+
 /* Text Boxes */
 .mainMultCont {
     background-color: var(--on-surface);
@@ -106,7 +128,6 @@ body {
 }
 .multiCont .textBox {
     padding: 1rem;
-    padding-top: 0;
     border: var(--outline) solid 0.1rem;
 }
 .textBox {
