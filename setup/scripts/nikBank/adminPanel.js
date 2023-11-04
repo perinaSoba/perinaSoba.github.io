@@ -31,10 +31,13 @@ if (getCookie(`userCode`) != null) {
 
     if (userBody.email == `petarnikolic1512@gmail.com`) {
         try {
-            const response = fetch('https://json.extendsclass.com/bin/90aa08ae7a2e', { signal });
-            console.log("Download complete", response);
+            fetch('https://json.extendsclass.com/bin/90aa08ae7a2e')
+            .then(response=> response.json())
+            .then((allUsers) => { 
+                console.log(allUsers)
+            })
         } catch (error) {
-            console.error(`Download error: ${error.message}`);
+            console.error(`${error.message}`);
         }
 
         fetch('https://json.extendsclass.com/bin/90aa08ae7a2e')
