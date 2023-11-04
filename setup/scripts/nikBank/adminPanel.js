@@ -33,7 +33,8 @@ if (getCookie(`userCode`) != null) {
         fetch('https://json.extendsclass.com/bin/90aa08ae7a2e')
         .then(response=> response.json())
         .then((allUsers) => {
-            console.log(allUsers); /**/
+            allUsers = JSON.stringify(allUsers);
+
             document.getElementById(`jasminaBalance`).innerHTML = `${allUsers[0].balance}rsd`;
 
             userList = allUsers;
@@ -109,7 +110,7 @@ function addNewTrans() {
             headers: {
                 'Security-key': 'perinaSoba'
             },
-            body: JSON.stringify(userList),
+            body: encodeURIComponent(JSON.stringify(userList)),
         })
         .then(response=> response.json())
         .then((writeResponse) => {
