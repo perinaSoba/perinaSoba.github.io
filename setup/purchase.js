@@ -39,24 +39,49 @@ function buyElectronics(modelName) {
 
     if (getCookie(`userCode`) != null) { 
         const userInformation = decodeJwtResponse(getCookie(`userCode`));
-
-        var name = userInformation.given_name;
+        
         var email = userInformation.email;
 
         if (confirm(`Sa vašeg računa će biti skinut iznos od ${price} dinara. Da li ste sigurni?`) == true) {
-            fetch(`https://dev--nikbank--perinasoba.autocode.dev/purchase?name=${name}&email=${email}&price=${price}&modelName=${modelName}`)
+            fetch('https://json.extendsclass.com/bin/90aa08ae7a2e')
             .then(response=> response.json())
-            .then((rsp) => {
-                if (rsp == `success`) {
-                    alert(`Uspešna kupovina, proverite vaš e-mail ${email}.`);
-                } else if (rsp == `no_money`) {
-                    alert(`Nemate dovoljno sredstava na vašem računu.`);
-                } else if (rsp == `no_account`) {
-                    alert(`Da bi ste završili transakciju potreban vam je Nik Bank nalog.`);
+            .then((userData) => { 
+                var arrNum = userData.findIndex(el => el.emails[0] == email);
+  
+                if (arrNum != -1) {
+                    userData[arrNum].balance = (userData[arrNum].balance)-price;
+                    
+                    let dayInMonth = new Date().getDate();
+                    if (dayInMonth.toString().length == 1) {
+                        dayInMonth = `0${dayInMonth}`
+                    }
+                    
+                    let monthNum = (new Date().getMonth())+1;
+                    if (monthNum.toString().length == 1) {
+                        monthNum = `0${monthNum}`
+                    }
+                    
+                    userData[arrNum].transactions.unshift(`${dayInMonth}/${monthNum} | -${price}rsd | x1 | Perina Soba - Kupovina ${modelName}`);
+                    
+                    fetch(`https://json.extendsclass.com/bin/90aa08ae7a2e`, {
+                        method: 'PUT',
+                        headers: {
+                            'Security-key': 'perinaSoba'
+                        },
+                        body: JSON.stringify(userData)
+                    })
+                    .then(response=> response.json())
+                    .then((response) => {
+                        if (response.status == 0) {
+                            alert(`Uspešna kupovina.`);
+                        } else {
+                            alert(`Greška.`);
+                        }
+                    });
                 } else {
-                    alert(`Desila se nepoznata greška. Molimo pokušajte ponovo kasnije.`);
+                    alert(`Da bi ste donirali morate da imate Nik Bank nalog.`);
                 }
-            })
+            });
         } else {
             alert(`Kupovina obustavljena. Iznos na vašem računu je ostao nepromenjen.`)
         }
@@ -73,25 +98,45 @@ function donateToOrg(orgName, amount) {
 
         if (confirm(`Sa vašeg računa će biti skinut iznos od ${amount} dinara. Da li ste sigurni?`) == true) {
             fetch('https://json.extendsclass.com/bin/90aa08ae7a2e')
-                .then(response=> response.json())
-                .then((userData) => { 
-
-                });
-
-
-            fetch(`https://dev--nikbank--perinasoba.autocode.dev/donation?email=${email}&amount=${amount}&orgName=${orgName}`)
             .then(response=> response.json())
-            .then((rsp) => {
-                if (rsp == `success`) {
-                    alert(`Uspešno ste donirali.`);
-                } else if (rsp == `no_money`) {
-                    alert(`Nemate dovoljno sredstava na vašem računu.`);
-                } else if (rsp == `no_account`) {
-                    alert(`Da bi ste završili transakciju potreban vam je Nik Bank nalog.`);
+            .then((userData) => { 
+                var arrNum = userData.findIndex(el => el.emails[0] == email);
+                
+                if (arrNum != -1) {
+                    userData[arrNum].balance = (userData[arrNum].balance)-amount;
+                    
+                    let dayInMonth = new Date().getDate();
+                    if (dayInMonth.toString().length == 1) {
+                        dayInMonth = `0${dayInMonth}`
+                    }
+                    
+                    let monthNum = (new Date().getMonth())+1;
+                    if (monthNum.toString().length == 1) {
+                        monthNum = `0${monthNum}`
+                    }
+                    
+                    userData[arrNum].transactions.unshift(`${dayInMonth}/${monthNum} | -${amount}rsd | x1 | Nik Bank - Donacija organizaciji ${orgName}`);
+                    
+                    fetch(`https://json.extendsclass.com/bin/90aa08ae7a2e`, {
+                        method: 'PUT',
+                        headers: {
+                            'Security-key': 'perinaSoba'
+                        },
+                        body: JSON.stringify(userData)
+                    })
+                    .then(response=> response.json())
+                    .then((response) => {
+                        if (response.status == 0) {
+                            alert(`Uspešno ste donirali.`);
+                        } else {
+                            alert(`Greška.`);
+                        }
+                        
+                    });
                 } else {
-                    alert(`Desila se nepoznata greška. Molimo pokušajte ponovo kasnije.`);
+                    alert(`Da bi ste donirali morate da imate Nik Bank nalog.`);
                 }
-            })
+            });
         } else {
             alert(`Doniranje obustavljeno. Iznos na vašem računu je ostao nepromenjen.`)
         }
