@@ -30,6 +30,13 @@ if (getCookie(`userCode`) != null) {
     var userList;
 
     if (userBody.email == `petarnikolic1512@gmail.com`) {
+        try {
+            const response = await fetch('https://json.extendsclass.com/bin/90aa08ae7a2e', { signal });
+            console.log("Download complete", response);
+        } catch (error) {
+            console.error(`Download error: ${error.message}`);
+        }
+
         fetch('https://json.extendsclass.com/bin/90aa08ae7a2e')
         .then(response=> response.json())
         .then((allUsers) => {
