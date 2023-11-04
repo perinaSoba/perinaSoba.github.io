@@ -24,12 +24,12 @@ function decodeJwtResponse(token) {
 document.getElementById(`newTransHolder`).style.display = `none`;
 document.getElementById(`userDataHolder`).style.display = `none`;
 
-if (true) { /* getCookie(`userCode`) != null */
+if (getCookie(`userCode`) != null) {
     const userBody = decodeJwtResponse(getCookie(`userCode`));
 
     var userList;
 
-    if (true) { /* userBody.email == `petarnikolic1512@gmail.com` */
+    if (userBody.email == `petarnikolic1512@gmail.com`) { 
         fetch('https://json.extendsclass.com/bin/90aa08ae7a2e')
         .then(response=> response.json())
         .then((allUsers) => {
@@ -80,7 +80,7 @@ function removeTransObject(arrayNum, recUser) {
             headers: {
                 'Security-key': 'perinaSoba'
             },
-            body: userList, /* encodeURIComponent(JSON.stringify(userList)) */
+            body: JSON.stringify(userList)
         })
         .then(response=> response.json())
         .then((writeResponse) => {
