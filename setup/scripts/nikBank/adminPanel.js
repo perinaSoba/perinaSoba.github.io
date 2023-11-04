@@ -112,7 +112,7 @@ function addNewTrans() {
         })
         .then(response=> response.json())
         .then((writeResponse) => {
-            alert(json.stringify(writeResponse));
+            alert(writeResponse);
 
             location.reload();
         });
