@@ -84,7 +84,7 @@ function removeTransObject(arrayNum, recUser) {
         })
         .then(response=> response.json())
         .then((writeResponse) => {
-            alert(writeResponse);
+            alert(JSON.stringify(writeResponse));
 
             location.reload();
         });
@@ -108,11 +108,11 @@ function addNewTrans() {
             headers: {
                 'Security-key': 'perinaSoba'
             },
-            body: encodeURIComponent(JSON.stringify(userList)),
+            body: JSON.stringify(userList)
         })
         .then(response=> response.json())
         .then((writeResponse) => {
-            alert(writeResponse);
+            alert(JSON.stringify(writeResponse));
 
             location.reload();
         });
