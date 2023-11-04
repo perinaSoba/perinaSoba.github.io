@@ -30,20 +30,12 @@ if (getCookie(`userCode`) != null) {
     var userList;
 
     if (userBody.email == `petarnikolic1512@gmail.com`) {
-        try {
-            fetch('https://json.extendsclass.com/bin/90aa08ae7a2e')
-            .then(response=> response.json())
-            .then((allUsers) => { 
-                console.log(allUsers)
-            })
-        } catch (error) {
-            console.error(`${error.message}`);
-        }
-
         fetch('https://json.extendsclass.com/bin/90aa08ae7a2e')
         .then(response=> response.json())
         .then((allUsers) => {
-            allUsers = JSON.stringify(allUsers);
+            console.log(allUsers);
+            console.log(allUsers[0])
+            console.log(allUsers[0].transactions)
 
             document.getElementById(`jasminaBalance`).innerHTML = `${allUsers[0].balance}rsd`;
 
