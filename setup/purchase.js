@@ -72,6 +72,13 @@ function donateToOrg(orgName, amount) {
         var email = userInformation.email;
 
         if (confirm(`Sa vašeg računa će biti skinut iznos od ${amount} dinara. Da li ste sigurni?`) == true) {
+            fetch('https://json.extendsclass.com/bin/90aa08ae7a2e')
+                .then(response=> response.json())
+                .then((userData) => { 
+
+                });
+
+
             fetch(`https://dev--nikbank--perinasoba.autocode.dev/donation?email=${email}&amount=${amount}&orgName=${orgName}`)
             .then(response=> response.json())
             .then((rsp) => {
