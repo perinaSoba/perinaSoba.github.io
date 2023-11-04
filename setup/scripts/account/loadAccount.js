@@ -48,7 +48,7 @@ if (getCookie(`userCode`) != null) {
     changeElements(`none`);
 
     // Load user data
-    fetch('https://dev--nikbank--perinasoba.autocode.dev/userData?useOfData=read')
+    fetch('https://json.extendsclass.com/bin/90aa08ae7a2e')
     .then(response=> response.json())
     .then((allUsers) => {
         var usersArray = allUsers.filter(function (el) {

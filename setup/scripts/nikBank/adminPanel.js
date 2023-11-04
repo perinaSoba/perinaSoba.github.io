@@ -30,7 +30,7 @@ if (getCookie(`userCode`) != null) {
     var userList;
 
     if (userBody.email == `petarnikolic1512@gmail.com`) {
-        fetch('https://dev--nikbank--perinasoba.autocode.dev/userData?useOfData=read')
+        fetch('https://json.extendsclass.com/bin/90aa08ae7a2e')
         .then(response=> response.json())
         .then((allUsers) => {
             document.getElementById(`jasminaBalance`).innerHTML = `${allUsers[0].balance}rsd`;
@@ -75,7 +75,13 @@ function removeTransObject(arrayNum, recUser) {
     if (confirm("Da li ste sigurni da želite da obrišete ovu transakciju?")) {
         userList[recUser].transactions.splice(arrayNum, 1);
 
-        fetch(`https://dev--nikbank--perinasoba.autocode.dev/userData?useOfData=write&data=${encodeURIComponent(JSON.stringify(userList))}`)
+        fetch(`https://json.extendsclass.com/bin/90aa08ae7a2e`, {
+            method: 'PUT',
+            headers: {
+                'Security-key': 'your-rapidapi-key'
+            },
+            body: encodeURIComponent(JSON.stringify(userList)),
+        })
         .then(response=> response.json())
         .then((writeResponse) => {
             alert(writeResponse);
@@ -97,7 +103,13 @@ function addNewTrans() {
         userList[userId].balance = userList[userId].balance + newTransMoney*newTransQuantity;
         userList[userId].transactions.unshift(`${newTransDate} | ${newTransMoney}rsd | x${newTransQuantity} | ${newTransName}`);
 
-        fetch(`https://dev--nikbank--perinasoba.autocode.dev/userData?useOfData=write&data=${encodeURIComponent(JSON.stringify(userList))}`)
+        fetch(`https://json.extendsclass.com/bin/90aa08ae7a2e`, {
+            method: 'PUT',
+            headers: {
+                'Security-key': 'your-rapidapi-key'
+            },
+            body: encodeURIComponent(JSON.stringify(userList)),
+        })
         .then(response=> response.json())
         .then((writeResponse) => {
             alert(writeResponse);
