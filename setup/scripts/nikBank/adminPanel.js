@@ -78,7 +78,7 @@ function removeTransObject(arrayNum, recUser) {
         fetch(`https://json.extendsclass.com/bin/90aa08ae7a2e`, {
             method: 'PUT',
             headers: {
-                'Security-key': 'your-rapidapi-key'
+                'Security-key': 'perinaSoba'
             },
             body: encodeURIComponent(JSON.stringify(userList)),
         })
@@ -106,13 +106,13 @@ function addNewTrans() {
         fetch(`https://json.extendsclass.com/bin/90aa08ae7a2e`, {
             method: 'PUT',
             headers: {
-                'Security-key': 'your-rapidapi-key'
+                'Security-key': 'perinaSoba'
             },
             body: encodeURIComponent(JSON.stringify(userList)),
         })
         .then(response=> response.json())
         .then((writeResponse) => {
-            alert(writeResponse);
+            alert(json.stringify(writeResponse));
 
             location.reload();
         });
