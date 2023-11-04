@@ -33,10 +33,6 @@ if (getCookie(`userCode`) != null) {
         fetch('https://json.extendsclass.com/bin/90aa08ae7a2e')
         .then(response=> response.json())
         .then((allUsers) => {
-            console.log(allUsers);
-            console.log(allUsers[0])
-            console.log(allUsers[0].transactions)
-
             document.getElementById(`jasminaBalance`).innerHTML = `${allUsers[0].balance}rsd`;
 
             userList = allUsers;
