@@ -65,6 +65,18 @@ if (getCookie(`userCode`) != null) {
                 tempDiv.appendChild(tempP);
             }
 
+            let dayInMonth = new Date().getDate();
+            if (dayInMonth.toString().length == 1) {
+                dayInMonth = `0${dayInMonth}`
+            }
+            
+            let monthNum = (new Date().getMonth())+1;
+            if (monthNum.toString().length == 1) {
+                monthNum = `0${monthNum}`
+            }
+
+            document.getElementById(`newTransDate`).value = `${dayInMonth}/${monthNum}`;
+
             document.getElementById(`newTransHolder`).style.display = `block`;
             document.getElementById(`userDataHolder`).style.display = `flex`;
         })
