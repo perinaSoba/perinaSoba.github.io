@@ -51,6 +51,7 @@ fetch('https://json.extendsclass.com/bin/987bd36c8663')
         document.getElementById("billHeading").innerHTML = "eID računa nije unet";
         document.getElementById("billData").style.display = "none";
         document.getElementById("productHolder").style.display = "none";
+        document.getElementById("cardInfo").style.display = "none";
     }
 
     var thisTrans = allTransData.filter(function (el) {
@@ -119,5 +120,6 @@ fetch('https://json.extendsclass.com/bin/987bd36c8663')
         document.getElementById("billHeading").innerHTML = "eID računa koji ste uneli ne postoji u našem sistemu";
         document.getElementById("billData").style.display = "none";
         document.getElementById("productHolder").style.display = "none";
+        document.getElementById("cardInfo").style.display = "none";
     }
 });
