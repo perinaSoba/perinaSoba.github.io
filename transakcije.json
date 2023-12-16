@@ -1,0 +1,87 @@
+[
+    {
+        "eID": "8FA95E",
+        "prodavac": "Perina Soba",
+        "kasir": "Petar Nikolić",
+        "artikli": [
+            {
+                "imeArtikla": "Perina Soba - Mesečna vožnja",
+                "idArtikla": null,
+                "oznakaPoreza": "A",
+                "komadCena": 30,
+                "kolicina": 1,
+                "ukupnaCena": 30
+            },
+            {
+                "imeArtikla": "Perina Soba - Štampanje u boji",
+                "idArtikla": null,
+                "oznakaPoreza": "A",
+                "komadCena": 20,
+                "kolicina": 4,
+                "ukupnaCena": 80
+            },
+            {
+                "imeArtikla": "Perina Soba - Uplata na račun",
+                "idArtikla": null,
+                "oznakaPoreza": "A",
+                "komadCena": -100,
+                "kolicina": 1,
+                "ukupnaCena": -100
+            }
+        ],
+        "platniTip": "Gotovina",
+        "ukupnaCena": 10,
+        "uplaceno": 10,
+        "kusur": 0,
+        "vreme": "16.12.2023.",
+        "podaciOPlatnojKartici": null
+    },
+    {
+        "eID": "3AD45F",
+        "prodavac": "Perina Soba",
+        "kasir": "Petar Nikolić",
+        "artikli": [
+            {
+                "imeArtikla": "Perina Soba - Test gotovine",
+                "idArtikla": null,
+                "oznakaPoreza": "A",
+                "komadCena": 10,
+                "kolicina": 2,
+                "ukupnaCena": 20
+            }
+        ],
+        "platniTip": "Gotovina",
+        "ukupnaCena": 20,
+        "uplaceno": 20,
+        "kusur": 0,
+        "vreme": "16.12.2023.",
+
+        "podaciOPlatnojKartici": null
+    },
+    {
+        "eID": "1GA85J",
+        "prodavac": "Perina Soba",
+        "kasir": "Petar Nikolić",
+        "artikli": [
+            {
+                "imeArtikla": "Perina Soba - Test kartica",
+                "idArtikla": null,
+                "oznakaPoreza": "A",
+                "komadCena": 10,
+                "kolicina": 2,
+                "ukupnaCena": 20
+            }
+        ],
+        "platniTip": "Kartica",
+        "ukupnaCena": 20,
+        "uplaceno": 20,
+        "kusur": null,
+        "vreme": "16.12.2023.",
+        "podaciOPlatnojKartici": {
+            "nosilacKartice": "Jasmina Nikolic",
+            "idKartice": "5381",
+            "tipKartice": "mastercard",
+            "goldKartica": "Da"
+        }
+    }
+]

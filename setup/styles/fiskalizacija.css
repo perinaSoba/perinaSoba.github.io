@@ -1,0 +1,22 @@
+.contentHolder {
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Table */ 
+table {
+    padding: 0.5rem!important;
+    width: 100%;
+}
+
+td, th {
+    padding: 0.2rem;
+}
+
+/* Responsive stuff */
+@media screen and (max-device-width:480px)  {
+    
+}
+
