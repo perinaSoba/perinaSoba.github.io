@@ -5,6 +5,10 @@
     flex-direction: column;
 }
 
+.boxHolders {
+    margin: 0.5rem;
+}
+
 /* Table */ 
 table {
     padding: 0.5rem!important;
