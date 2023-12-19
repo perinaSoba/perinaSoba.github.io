@@ -50,7 +50,6 @@
     cursor: pointer;
 }
 
-
 /* Responsive stuff */
 @media screen and (max-device-width:480px)  {
     #userDataHolder {

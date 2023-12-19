@@ -1,5 +1,57 @@
 [
     {
+        "eID": "0ZY14G",
+        "prodavac": "Perina Soba",
+        "kasir": "Petar Nikolić",
+        "artikli": [
+            {
+                "imeArtikla": "Perina Soba - Uplata na račun",
+                "idArtikla": null,
+                "oznakaPoreza": "A",
+                "komadCena": -100,
+                "kolicina": 1,
+                "ukupnaCena": -100
+            }
+        ],
+        "platniTip": "Kartica",
+        "ukupnaCena": -100,
+        "uplaceno": -100,
+        "kusur": null,
+        "vreme": "16.12.2023.",
+        "podaciOPlatnojKartici": {
+            "nosilacKartice": "Jasmina Nikolic",
+            "idKartice": "5381",
+            "tipKartice": "mastercard",
+            "goldKartica": "Da"
+        }
+    },
+    {
+        "eID": "7GH80F",
+        "prodavac": "Perina Soba",
+        "kasir": "Petar Nikolić",
+        "artikli": [
+            {
+                "imeArtikla": "Perina Soba - Štampanje u boji",
+                "idArtikla": null,
+                "oznakaPoreza": "A",
+                "komadCena": 20,
+                "kolicina": 4,
+                "ukupnaCena": 80
+            }
+        ],
+        "platniTip": "Kartica",
+        "ukupnaCena": 80,
+        "uplaceno": 80,
+        "kusur": null,
+        "vreme": "16.12.2023.",
+        "podaciOPlatnojKartici": {
+            "nosilacKartice": "Jasmina Nikolic",
+            "idKartice": "5381",
+            "tipKartice": "mastercard",
+            "goldKartica": "Da"
+        }
+    },
+    {
         "eID": "8FA95E",
         "prodavac": "Perina Soba",
         "kasir": "Petar Nikolić",
@@ -11,30 +63,19 @@
                 "komadCena": 30,
                 "kolicina": 1,
                 "ukupnaCena": 30
-            },
-            {
-                "imeArtikla": "Perina Soba - Štampanje u boji",
-                "idArtikla": null,
-                "oznakaPoreza": "A",
-                "komadCena": 20,
-                "kolicina": 4,
-                "ukupnaCena": 80
-            },
-            {
-                "imeArtikla": "Perina Soba - Uplata na račun",
-                "idArtikla": null,
-                "oznakaPoreza": "A",
-                "komadCena": -100,
-                "kolicina": 1,
-                "ukupnaCena": -100
             }
         ],
-        "platniTip": "Gotovina",
-        "ukupnaCena": 10,
-        "uplaceno": 10,
-        "kusur": 0,
+        "platniTip": "Kartica",
+        "ukupnaCena": 30,
+        "uplaceno": 30,
+        "kusur": null,
         "vreme": "16.12.2023.",
-        "podaciOPlatnojKartici": null
+        "podaciOPlatnojKartici": {
+            "nosilacKartice": "Jasmina Nikolic",
+            "idKartice": "5381",
+            "tipKartice": "mastercard",
+            "goldKartica": "Da"
+        }
     },
     {
         "eID": "3AD45F",
@@ -55,7 +96,6 @@
         "uplaceno": 20,
         "kusur": 0,
         "vreme": "16.12.2023.",
-
         "podaciOPlatnojKartici": null
     },
     {
@@ -77,6 +117,32 @@
         "uplaceno": 20,
         "kusur": null,
         "vreme": "16.12.2023.",
+        "podaciOPlatnojKartici": {
+            "nosilacKartice": "Jasmina Nikolic",
+            "idKartice": "5381",
+            "tipKartice": "mastercard",
+            "goldKartica": "Da"
+        }
+    },
+    {
+        "eID": "3JI79T",
+        "prodavac": "Nik Bank",
+        "kasir": "Petar Nikolić",
+        "artikli": [
+            {
+                "imeArtikla": "Nik Bank - Isplata sa računa",
+                "idArtikla": null,
+                "oznakaPoreza": "A",
+                "komadCena": -20,
+                "kolicina": 1,
+                "ukupnaCena": -20
+            }
+        ],
+        "platniTip": "Kartica",
+        "ukupnaCena": -20,
+        "uplaceno": -20,
+        "kusur": null,
+        "vreme": "15.12.2023.",
         "podaciOPlatnojKartici": {
             "nosilacKartice": "Jasmina Nikolic",
             "idKartice": "5381",

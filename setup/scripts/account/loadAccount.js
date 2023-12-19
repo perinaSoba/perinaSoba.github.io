@@ -61,21 +61,28 @@ if (getCookie(`userCode`) != null) {
 
             document.getElementById(`balance`).innerText = `Stanje računa: ${userObject.balance}rsd`;
                     
-            var repeatNum = 0;
-            while (repeatNum != numberOfTrans) {
-                var transDiv = document.getElementById('transDiv');
-                var tempspan = document.createElement('span');
+            fetch('https://json.extendsclass.com/bin/987bd36c8663')
+            .then(response => response.json())
+            .then((allTransData) => {
+                var repeatNum = 0;
+                while (repeatNum != numberOfTrans) {
+                    var transDiv = document.getElementById('transDiv');
+                    var tempspan = document.createElement('span');
 
-                var tempspace = document.createElement('br');
-                var tempspace1 = document.createElement('br');
-                tempspan.innerHTML = `${userObject.transactions[repeatNum]}`;
-                
-                transDiv.appendChild(tempspace);
-                transDiv.appendChild(tempspace1);
-                transDiv.appendChild(tempspan);
+                    var tempspace = document.createElement('br');
+                    var tempspace1 = document.createElement('br');
 
-                repeatNum++;
-            }
+                    var tempTrans = allTransData.filter(function (el) {return el.eID == userObject.transactions[repeatNum];});
+
+                    tempspan.innerHTML = `${tempTrans[0].vreme} | x${tempTrans[0].artikli[0].kolicina} | ${-tempTrans[0].artikli[0].komadCena} rsd | ${tempTrans[0].artikli[0].imeArtikla}`;
+                    
+                    transDiv.appendChild(tempspace);
+                    transDiv.appendChild(tempspace1);
+                    transDiv.appendChild(tempspan);
+
+                    repeatNum++;
+                }
+            });
 
             changeElements(`block`);
 

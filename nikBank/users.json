@@ -1,51 +1,45 @@
 [
     {
-        "nameAndSurname": "Jasmina Nikolić",
-        "name": "Jasmina",
-        "surname": "Nikolić",
-        "bithday": "22/01/1963",
-        "location": "Jovana Rajića 5c",
-        "balance": -30,
-        "emails": [
-            "jamiko1512@gmail.com",
-            "jasmina.nikolic@tenfore.net",
-            "jamiko@mts.rs"
-        ],
+        "nameAndSurname":"Jasmina Nikolić",
+        "name":"Jasmina",
+        "surname":"Nikolić",
+        "bithday":"22/01/1963",
+        "location":"Jovana Rajića 5c",
+        "balance": 30,
+        "emails":["jamiko1512@gmail.com", "jasmina.nikolic@tenfore.net", "jamiko@mts.rs"],
         "creditCard": {
-            "cardHolder": "Jasmina Nikolić",
-            "mainCardNumbers": "5381",
-            "cardNumber": "5381 8921 3564 7856",
-            "validThru": "01/30",
-            "cardType": "credit",
-            "cardNetwork": "mastercard",
-            "CVV": "846"
+            "cardHolder":"Jasmina Nikolić",
+            "mainCardNumbers":"5381",
+            "cardNumber":"5381 8921 3564 7856",
+            "validThru":"01/30",
+            "cardType":"credit",
+            "cardNetwork":"mastercard",
+            "CVV":"846"
         },
         "transactions": [
-            "02/11 | -20rsd | x4 | Perina Soba - Štampanje u boji",
-            "01/11 | -30rsd | x1 | Perina Soba - Mesečna vožnja"
+            "0ZY14G",
+            "7GH80F",
+            "8FA95E",
+            "3JI79T"
         ]
     },
-    { 
-        "nameAndSurname": "Miomir Nikolić",
-        "name": "Miomir",
-        "surname": "Nikolić",
-        "bithday": "02/08/1961",
-        "location": "Jovana Rajića 5c",
-        "balance": 30,
-        "emails": [
-            "miomirnikolic61@gmail.com"
-        ],
+    {
+        "nameAndSurname":"Miomir Nikolić",
+        "name":"Miomir",
+        "surname":"Nikolić",
+        "bithday":"02/08/1961",
+        "location":"Jovana Rajića 5c",
+        "balance":30,
+        "emails":["miomirnikolic61@gmail.com"],
         "creditCard": {
-            "cardHolder": "Miomir Nikolić",
-            "mainCardNumbers": "5381",
-            "cardNumber": "5381 8921 9564 9975",
-            "validThru": "01/30",
-            "cardType": "credit",
-            "cardNetwork": "mastercard",
-            "CVV": "391"
+            "cardHolder":"Miomir Nikolić",
+            "mainCardNumbers":"5381",
+            "cardNumber":"5381 8921 9564 9975",
+            "validThru":"01/30",
+            "cardType":"credit",
+            "cardNetwork":"mastercard",
+            "CVV":"391"
         },
-        "transactions": [
-            "04/11 | +15rsd | x1 | Perina Soba - Isplata za vožnju"
-        ]
+        "transactions": []
     }
 ]

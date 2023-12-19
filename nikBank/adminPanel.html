@@ -213,27 +213,44 @@
                     <h2 class="multiTitl">Nova transakcija</h2>
                     <div class="multiCont">
                         <div class="textBox" style="width: calc(100%/2)">
-                            <h3>Primalac</h3>
-                            <select id="personPicker">
+                            <h3>Specifikacije</h3>
+
+                            <h4 class="fontText">Potrošač</h4>
+                            <select id="personPicker" onchange="newTransRecivier()">
                                 <option value="0">Jasmina Nikolić</option>
                                 <option value="1">Miomir Nikolić</option>
+                                <option value="2">Neoznačeno</option>
                             </select>
+
+                            <br><br>
+                            <h4 class="fontText">Datum</h4>
+                            <input type="text" id="newTransDate" value="17.12.2023.">
+                            <br><br>
+                            <h4 class="fontText">Prodavac</h4>
+                            <input type="text" id="newTransStoreName" value="Perina Soba">
+                            <br><br>
+                            <h4 class="fontText">Kasir</h4>
+                            <input type="text" id="newTransSeller" value="Petar Nikolić">
+                            <br><br>
                         </div>
 
                         <div class="textBox" style="width: calc(100%/2)">
-                            <h3>Specifikacija</h3>
-                            
-                            <h4 class="fontText">Datum</h4>
-                            <input type="text" id="newTransDate" value="13/12">
-                            <br><br>
-                            <h4 class="fontText">Novac (rsd)</h4>
-                            <input type="number" id="newTransMoney" value="-30">
+                            <h3>Artikli i iznos</h3>
+
+                            <h4 class="fontText">Artikal</h4>
+                            <input type="text" id="newTransItem" value="Perina Soba - Mesečna vožnja">
                             <br><br>
                             <h4 class="fontText">Količina</h4>
-                            <input type="number" id="newTransQuantity" value="1">
+                            <input type="number" id="newTransAmount" value="1">
                             <br><br>
-                            <h4 class="fontText">Naziv</h4>
-                            <input type="text" id="newTransName" value="Perina Soba - Mesečna vožnja">
+                            <h4 class="fontText">Cena za komad</h4>
+                            <input type="number" id="newTransPiecePrice" value="30">
+                            <br><br>
+                            <h4 class="fontText" id="newTransTotalyPaidTitle">Uplaćeno</h4>
+                            <input type="number" id="newTransTotalyPaid" value="30">
+                            <br><br>
+                            <h4 class="fontText" id="newTransChangeTitle">Kusur</h4>
+                            <input type="number" id="newTransChange" value="0">
                         </div>
                     </div>
                     <button class="fontText" id="newTransConf" onclick="addNewTrans()">Potvrdi</button>
