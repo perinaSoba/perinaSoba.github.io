@@ -58,7 +58,7 @@
 #aboutUser {
     margin: 0.5rem;
     padding: 0.5rem;
-    display: none;
+    display: block;
 }
 
 #logOutButton {

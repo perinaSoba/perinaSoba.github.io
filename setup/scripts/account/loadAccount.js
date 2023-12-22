@@ -46,7 +46,6 @@ if (getCookie(`userCode`) != null) {
     document.getElementById(`googleImage`).src = `${responsePayload.picture}`;
 
     document.getElementById(`dataHolder`).style.display = `block`;
-    document.getElementById(`aboutUser`).style.display = `block`;
     document.getElementById(`infoDiv`).style.display = `none`; 
 
     changeElements(`none`);
@@ -80,7 +79,7 @@ if (getCookie(`userCode`) != null) {
                     tempspan.innerHTML = `${tempTrans[0].vreme} | x${tempTrans[0].artikli[0].kolicina} | ${-tempTrans[0].artikli[0].komadCena} rsd | ${tempTrans[0].artikli[0].imeArtikla}`;
                     tempspan.classList.add(`onSurfaceContainer`);
                     tempspan.classList.add(`fontText`);
-                    tempspan.setAttribute("onclick", "goToBillPage(" + tempTrans[0].eID + ")");
+                    tempspan.setAttribute("onclick", "goToBillPage(`" + tempTrans[0].eID + "`)");
                     
                     transDiv.appendChild(tempspace);
                     transDiv.appendChild(tempspan);
