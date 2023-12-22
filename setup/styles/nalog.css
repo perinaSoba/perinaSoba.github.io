@@ -50,7 +50,7 @@
     display: block;
 }
 #loggedInDiv #transDiv span:hover {
-    border-radius: 48px;
+    border-radius: 12px;
     cursor: pointer;
     transition: 0.5s;
 }

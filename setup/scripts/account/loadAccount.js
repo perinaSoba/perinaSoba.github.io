@@ -35,7 +35,7 @@ function changeElements(typeOfUse) {
 }
 
 function goToBillPage(eID) {
-    window.open("https://perinasoba.github.io/fiskalizacija?eID=" + eID, "_blank");
+    window.location.replace("https://perinasoba.github.io/fiskalizacija?eID=" + eID);
 }
 
 if (getCookie(`userCode`) != null) {
