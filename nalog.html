@@ -212,22 +212,24 @@
                 </div>
     
                 <div class="box" id="dataHolder">
-                    <div id="logOutButton" onclick="logOutButtonPress()">
-                        <span class="material-symbols-rounded">
-                            logout
-                        </span>
-                        <span id="text">Izlogujte se</span>
-                    </div>
+                    
     
                     <div id="loggedInDiv">
                         <div class="userInfo">
                             <img id="googleImage" src="" alt="">
                             <h2 id="name"></h2>
+
+                            <div id="logOutButton" onclick="logOutButtonPress()" class="onSurfaceContainer">
+                                <span class="material-symbols-rounded">
+                                    logout
+                                </span>
+                                <span id="text">Izlogujte se</span>
+                            </div>
                         </div>
                         <span id="balance"></span>
                         <hr class="lttlSpc" id="spaceLine">
                         
-                        <div id="transDiv">
+                        <div id="transDiv" class="onSurfaceBorderElement">
                             <h3>Transakcije:</h3>
                         </div>
                     </div>
@@ -236,17 +238,17 @@
                         <h2>Kreditna kartica</h2>
                         
                         <div class="dataCont">
-                            <div class="dataInfo">
+                            <div class="dataInfo onSurfaceBorderElement">
                                 <h3>Broj kartice</h3>
                                 <span id="cardNum"></span>
                             </div>
             
-                            <div class="dataInfo">
+                            <div class="dataInfo onSurfaceBorderElement">
                                 <h3>Važi do</h3>
                                 <span id="validThruCard"></span>
                             </div>
             
-                            <div class="dataInfo">
+                            <div class="dataInfo onSurfaceBorderElement">
                                 <h3>CVV</h3>
                                 <span id="cvvCard"></span>
                             </div>
@@ -257,17 +259,17 @@
                         <h2>O vama</h2>
     
                         <div class="dataCont">
-                            <div class="dataInfo">
+                            <div class="dataInfo onSurfaceBorderElement">
                                 <h3>Godina Rođenja</h3>
                                 <span id="birthYear"></span>
                             </div>
             
-                            <div class="dataInfo">
+                            <div class="dataInfo onSurfaceBorderElement">
                                 <h3>Adresa</h3>
                                 <span id="address"></span>
                             </div>
             
-                            <div class="dataInfo">
+                            <div class="dataInfo onSurfaceBorderElement">
                                 <h3>E-mail adresa</h3>
                                 <span id="e-mail"></span>
                             </div>
