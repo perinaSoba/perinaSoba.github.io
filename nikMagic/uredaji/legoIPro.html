@@ -184,6 +184,34 @@
                     <span id="mobThemeText">Podesi tamnu temu</span>
                 </button>
             </div>
+
+            <div id="payOptionsHolder">
+                <h2 class="fontHeading" id="payOptionTitle">Izaberite način plaćanja</h2>
+                <p id="warningText">Da li ste sigurni?</p>
+                <br>
+                <div id="methodButts">
+                    <button id="NBPay" class="onSurfaceContainer payOptionButtons" onclick="changePayOption(1)">
+                        <img src="../../media/nikBank/favicion.png" alt="Nik Bank Pay">
+                        <span class="fontSubHeading">Račun u Nik Banci</span>
+                        <span class="material-symbols-rounded payOptionTick" id="payOptionIcon1">
+                            check_circle
+                        </span>
+                    </button>
+                    <button id="IPSQR" class="surfaceElement payOptionButtons" onclick="changePayOption(2)">
+                        <img src="../../media/ipsQrCodeLogo.png" alt="IPS QR Code Pay">
+                        <span class="fontSubHeading">IPS QR Kod</span>
+                        <span class="material-symbols-rounded payOptionTick" id="payOptionIcon2">
+                            radio_button_unchecked
+                        </span>
+                    </button>
+                </div>
+                <img src="" alt="IPS QR Code" id="ipsQrCodeSpot">
+                <br>
+                <div id="operationButts">
+                    <button class="onSurfaceElement payOptionButtons fontText payOptionBoldOnHover" onclick="stopTransaction()" id="payOptionCancelButt">Poništi</button>
+                    <button class="onSurfaceContainer payOptionButtons fontText" onclick="finishTransaction()" id="payOptionNextButt">Nastavi</button>
+                </div>
+            </div>
             
             <div class="contentHolder">
                 <div class="mainInfo">

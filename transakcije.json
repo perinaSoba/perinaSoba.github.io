@@ -1,5 +1,130 @@
 [
     {
+        "eID": "2UJ27V",
+        "prodavac": "Perina Soba",
+        "kasir": "Petar Nikolić",
+        "artikli": [
+            {
+                "imeArtikla": "Perina Soba - Servisna usluga",
+                "idArtikla": null,
+                "oznakaPoreza": "A",
+                "komadCena": 20,
+                "kolicina": 1,
+                "ukupnaCena": 20
+            }
+        ],
+        "platniTip": "Kartica",
+        "ukupnaCena": 20,
+        "uplaceno": 20,
+        "kusur": null,
+        "vreme": "02.01.2024.",
+        "podaciOPlatnojKartici": {
+            "nosilacKartice": "Jasmina Nikolić",
+            "idKartice": "5381",
+            "tipKartice": "mastercard",
+            "goldKartica": "Da"
+        }
+    },
+    {
+        "eID": "1PS92S",
+        "prodavac": "Perina Soba",
+        "kasir": "Petar Nikolić",
+        "artikli": [
+            {
+                "imeArtikla": "Perina Soba - Mesečna vožnja",
+                "idArtikla": null,
+                "oznakaPoreza": "A",
+                "komadCena": 30,
+                "kolicina": 1,
+                "ukupnaCena": 30
+            }
+        ],
+        "platniTip": "Kartica",
+        "ukupnaCena": 30,
+        "uplaceno": 30,
+        "kusur": null,
+        "vreme": "01.01.2024.",
+        "podaciOPlatnojKartici": {
+            "nosilacKartice": "Jasmina Nikolić",
+            "idKartice": "5381",
+            "tipKartice": "mastercard",
+            "goldKartica": "Da"
+        }
+    },
+    {
+        "eID": "7KF19R",
+        "prodavac": "Perina Soba",
+        "kasir": "Petar Nikolić",
+        "artikli": [
+            {
+                "imeArtikla": "Nik Bank - Uplata na račun",
+                "idArtikla": null,
+                "oznakaPoreza": "A",
+                "komadCena": -50,
+                "kolicina": 1,
+                "ukupnaCena": -50
+            }
+        ],
+        "platniTip": "Kartica",
+        "ukupnaCena": -50,
+        "uplaceno": -50,
+        "kusur": null,
+        "vreme": "25.12.2023.",
+        "podaciOPlatnojKartici": {
+            "nosilacKartice": "Jasmina Nikolić",
+            "idKartice": "5381",
+            "tipKartice": "mastercard",
+            "goldKartica": "Da"
+        }
+    },
+    {
+        "eID": "6AF88M",
+        "prodavac": "Perina Soba",
+        "kasir": "Petar Nikolić",
+        "artikli": [
+            {
+                "imeArtikla": "Perina Soba - Servisna podrška",
+                "idArtikla": null,
+                "oznakaPoreza": "A",
+                "komadCena": 20,
+                "kolicina": 1,
+                "ukupnaCena": 20
+            }
+        ],
+        "platniTip": "Kartica",
+        "ukupnaCena": 20,
+        "uplaceno": 20,
+        "kusur": null,
+        "vreme": "23.12.2023.",
+        "podaciOPlatnojKartici": {
+            "nosilacKartice": "Jasmina Nikolić",
+            "idKartice": "5381",
+            "tipKartice": "mastercard",
+            "goldKartica": "Da"
+        }
+    },
+    {
+        "eID": "0ES94F",
+        "prodavac": "Perina Soba",
+        "kasir": "Petar Nikolić",
+        "artikli": [
+            {
+                "imeArtikla": "Perina Soba - Instalacija Win11",
+                "idArtikla": null,
+                "oznakaPoreza": "A",
+                "komadCena": 2000,
+                "kolicina": 1,
+                "ukupnaCena": 2000
+            }
+        ],
+        "platniTip": "Gotovina",
+        "ukupnaCena": 2000,
+        "uplaceno": 2000,
+        "kusur": 0,
+        "vreme": "23.12.2023.",
+        "podaciOPlatnojKartici": null
+    },
+    {
         "eID": "0ZY14G",
         "prodavac": "Perina Soba",
         "kasir": "Petar Nikolić",

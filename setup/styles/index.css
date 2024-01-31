@@ -142,6 +142,80 @@ body {
     border-radius: 24px;
 }
 
+/* Payment related */
+#payOptionsHolder {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    background-color: var(--on-surface);
+    border-radius: 12px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#payOptionsHolder h2 {
+    text-align: center;
+    padding: 1rem;
+}
+#payOptionsHolder p {
+    text-align: center;
+    color: #b3261e;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+}
+
+#payOptionsHolder div {
+    display: flex;
+}
+
+#payOptionsHolder #methodButts {
+    height: auto;
+    display: flex;
+    justify-content: center;
+}
+#payOptionsHolder #methodButts button {
+    width: calc(100%/4);
+    margin: 0.5rem;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}
+#payOptionsHolder #methodButts button .payOptionTick {
+    padding: 0.2rem;
+    
+}
+#payOptionsHolder #methodButts button img {
+    width: 50%;
+}
+
+#payOptionsHolder #ipsQrCodeSpot {
+    display: none;
+    margin: auto;
+    border-radius: 24px;
+}
+
+#payOptionsHolder #operationButts {
+    float: right;
+}
+#payOptionsHolder #operationButts button {
+    margin: 0.5rem;
+    width: 8rem;
+}
+
+.payOptionButtons {
+    border: 0;
+    padding: 0.5rem;
+    border-radius: 24px;
+}
+.payOptionBoldOnHover:hover {
+    font-weight: bold;
+}
+.payOptionButtons:hover {
+    cursor: pointer;
+    border-radius: 12px;
+}
+
 /* Hover reactions */
 .hoverClickable:hover {
     cursor: pointer;
@@ -455,6 +529,14 @@ select, input {
     /* Mobile properties */
     .hideSmall {
         display: none;
+    }
+
+    /* Payment related */
+    #payOptionsHolder {
+        width: 90%;
+    }
+    #payOptionsHolder #methodButts button {
+        width: calc(100%/2);
     }
 
     /* Mobile Nav*/
