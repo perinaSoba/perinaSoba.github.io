@@ -127,6 +127,7 @@ function finishTransaction() {
                     var arrNum = userData.findIndex(el => el.emails[0] == email);
                     
                     if (arrNum != -1) {
+                        alert(`Email found, email number ${arrNum}`); //TODO
                         fetch('https://json.extendsclass.com/bin/987bd36c8663')
                         .then(response => response.json())
                         .then((allTransData) => {
@@ -155,6 +156,7 @@ function finishTransaction() {
 
                             var userId = arrNum;
 
+                            alert(`userID: ${userID}`); //TODO
                             let dayInMonth = new Date().getDate();
                             if (dayInMonth.toString().length == 1) {
                                 dayInMonth = `0${dayInMonth}`
@@ -219,7 +221,11 @@ function finishTransaction() {
                                 goldCard = "Ne"; 
                             }
 
+                            alert(`${template}`); //TODO
+
                             userData[userId].balance = userData[userId].balance - (newTransPiecePrice * newTransAmount);
+                            
+                            alert(`${userData[userId]}`); //TODO
                             
                             template.podaciOPlatnojKartici = {
                                 "nosilacKartice": userData[userId].nameAndSurname,
@@ -242,6 +248,7 @@ function finishTransaction() {
                             .then(response=> response.json())
                             .then((writeResponse) => {
                                 console.log(`Users synced!`);
+                                alert(`${writeResponse}`); //TODO
                             });
 
                             fetch(`https://json.extendsclass.com/bin/987bd36c8663`, {
@@ -253,6 +260,7 @@ function finishTransaction() {
                             })
                             .then(response=> response.json())
                             .then((writeResponse) => {
+                                alert(`${writeResponse}`); //TODO
                                 warningText.innerText = `Transakcija je uspešna. eID transakcije je ${newEID}`;
                                 warningText.style.display = `block`;
 
