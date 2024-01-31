@@ -131,6 +131,7 @@ function finishTransaction() {
                         fetch('https://json.extendsclass.com/bin/987bd36c8663')
                         .then(response => response.json())
                         .then((allTransData) => {
+                            alert(`userID: ${allTransData}`); //TODO
                             function letterGenerator(length) {
                                 let result = '';
                                 const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
@@ -153,7 +154,7 @@ function finishTransaction() {
                                 }
                                 return result;
                             }
-
+                            alert(`ARRnum: ${arrNum}`); //TODO
                             var userId = arrNum;
 
                             alert(`userID: ${userID}`); //TODO
