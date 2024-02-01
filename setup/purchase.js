@@ -116,186 +116,185 @@ function finishTransaction() {
         }
 
         if (payMethod == `nikBank`) {
-            /*if (getCookie(`userCode`) != null) {*/ 
-                /*const userInformation = decodeJwtResponse(getCookie(`userCode`));*/
-                
-                /*var email = userInformation.email;*/
-
-                var email = `jamiko1512@gmail.com`;
-
-                fetch('https://json.extendsclass.com/bin/90aa08ae7a2e')
-                .then(response=> response.json())
-                .then((userData) => { 
-                    var arrNum = userData.findIndex(el => el.emails[0] == email);
+            if (getCookie(`userCode`) != null) {
+                try {
+                    const userInformation = decodeJwtResponse(getCookie(`userCode`));
                     
-                    if (arrNum != -1) {
-                        fetch('https://json.extendsclass.com/bin/987bd36c8663')
-                        .then(response => response.json())
-                        .then((allTransData) => {
-                            function letterGenerator(length) {
-                                let result = '';
-                                const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
-                                const charactersLength = characters.length;
-                                let counter = 0;
-                                while (counter < length) {
-                                    result += characters.charAt(Math.floor(Math.random() * charactersLength));
-                                    counter += 1;
-                                }
-                                return result;
-                            }
-                            function numberGenerator(length) {
-                                let result = '';
-                                const characters = '0123456789';
-                                const charactersLength = characters.length;
-                                let counter = 0;
-                                while (counter < length) {
-                                    result += characters.charAt(Math.floor(Math.random() * charactersLength));
-                                    counter += 1;
-                                }
-                                return result;
-                            }
-                            var userId = arrNum;
+                    var email = userInformation.email;
 
-                            let dayInMonth = new Date().getDate();
-                            if (dayInMonth.toString().length == 1) {
-                                dayInMonth = `0${dayInMonth}`
-                            }
-                            
-                            let monthNum = (new Date().getMonth())+1;
-                            if (monthNum.toString().length == 1) {
-                                monthNum = `0${monthNum}`
-                            }
+                    var email = `jamiko1512@gmail.com`;
 
-                            let year = new Date().getFullYear();
-
-                            var newTransDate = `${dayInMonth}.${monthNum}.${year}.`;
-                            var newTransStoreName = prodName.substring(0, prodName.indexOf(` -`));
-                            var newTransSeller = `Petar Nikolić`;
-                            var newTransItem = prodName;
-                            var newTransAmount = 1;
-
-                            var newTransPiecePrice = price;
-
-                            var newEID = `${numberGenerator(1)}${letterGenerator(2)}${numberGenerator(2)}${letterGenerator(1)}`;
-
-                            var thisTrans = allTransData.filter(function (el) {return el.eID == newEID;});
-
-                            while (thisTrans[0] != undefined) {
-                                newEID = `${numberGenerator(1)}${letterGenerator(2)}${numberGenerator(2)}${letterGenerator(1)}`;
-
-                                thisTrans = allTransData.filter(function (el) {return el.eID == newEID;});
-                            }
-
-                            var template = {
-                                "eID": newEID,
-                                "prodavac": newTransStoreName,
-                                "kasir": newTransSeller,
-                                "artikli": [
-                                    {
-                                        "imeArtikla": newTransItem,
-                                        "idArtikla": null,
-                                        "oznakaPoreza": "A",
-                                        "komadCena": newTransPiecePrice,
-                                        "kolicina": newTransAmount,
-                                        "ukupnaCena": (newTransPiecePrice * newTransAmount)
+                    fetch('https://json.extendsclass.com/bin/90aa08ae7a2e')
+                    .then(response=> response.json())
+                    .then((userData) => { 
+                        var arrNum = userData.findIndex(el => el.emails[0] == email);
+                        
+                        if (arrNum != -1) {
+                            fetch('https://json.extendsclass.com/bin/987bd36c8663')
+                            .then(response => response.json())
+                            .then((allTransData) => {
+                                function letterGenerator(length) {
+                                    let result = '';
+                                    const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+                                    const charactersLength = characters.length;
+                                    let counter = 0;
+                                    while (counter < length) {
+                                        result += characters.charAt(Math.floor(Math.random() * charactersLength));
+                                        counter += 1;
                                     }
-                                ],
-                                "platniTip": "Kartica",
-                                "ukupnaCena": (newTransPiecePrice * newTransAmount),
-                                "uplaceno": (newTransPiecePrice * newTransAmount),
-                                "kusur": null,
-                                "vreme": newTransDate,
-                                "podaciOPlatnojKartici": {
-                                    "nosilacKartice": "",
-                                    "idKartice": "",
-                                    "tipKartice": "",
-                                    "goldKartica": ""
+                                    return result;
                                 }
-                            }
-                            
-                            var goldCard;
-                            if (userId == 0) {
-                                goldCard = "Da"; 
-                            } else {
-                                goldCard = "Ne"; 
-                            }
+                                function numberGenerator(length) {
+                                    let result = '';
+                                    const characters = '0123456789';
+                                    const charactersLength = characters.length;
+                                    let counter = 0;
+                                    while (counter < length) {
+                                        result += characters.charAt(Math.floor(Math.random() * charactersLength));
+                                        counter += 1;
+                                    }
+                                    return result;
+                                }
+                                var userId = arrNum;
 
-                            userData[userId].balance = userData[userId].balance - (newTransPiecePrice * newTransAmount);
-                            
-                            template.podaciOPlatnojKartici = {
-                                "nosilacKartice": userData[userId].nameAndSurname,
-                                "idKartice": userData[userId].creditCard.mainCardNumbers,
-                                "tipKartice": userData[userId].creditCard.cardNetwork,
-                                "goldKartica": goldCard
-                            }
+                                let dayInMonth = new Date().getDate();
+                                if (dayInMonth.toString().length == 1) {
+                                    dayInMonth = `0${dayInMonth}`
+                                }
+                                
+                                let monthNum = (new Date().getMonth())+1;
+                                if (monthNum.toString().length == 1) {
+                                    monthNum = `0${monthNum}`
+                                }
 
-                            userData[userId].transactions.unshift(`${newEID}`);
+                                let year = new Date().getFullYear();
 
-                            allTransData.unshift(template);
+                                var newTransDate = `${dayInMonth}.${monthNum}.${year}.`;
+                                var newTransStoreName = prodName.substring(0, prodName.indexOf(` -`));
+                                var newTransSeller = `Petar Nikolić`;
+                                var newTransItem = prodName;
+                                var newTransAmount = 1;
 
-                            const request = new XMLHttpRequest();
-                            request.open("PUT", "https://json.extendsclass.com/bin/90aa08ae7a2e", true);
-                            request.setRequestHeader("Security-key", "perinaSoba");
-                            request.onreadystatechange = () => {
-                            };
-                            request.send(`${userData}`);
+                                var newTransPiecePrice = price;
 
-                            const request2 = new XMLHttpRequest();
-                            request2.open("PUT", "https://json.extendsclass.com/bin/987bd36c8663", true);
-                            request2.setRequestHeader("Security-key", "perinaSoba");
-                            request2.onreadystatechange = () => {
-                            };
-                            request2.send(allTransData);
-                            
-                            /*fetch(`https://json.extendsclass.com/bin/90aa08ae7a2e`, {
-                                method: 'PUT',
-                                headers: {
-                                    'Security-key': 'perinaSoba'
-                                },
-                                body: JSON.stringify(userData)
+                                var newEID = `${numberGenerator(1)}${letterGenerator(2)}${numberGenerator(2)}${letterGenerator(1)}`;
+
+                                var thisTrans = allTransData.filter(function (el) {return el.eID == newEID;});
+
+                                while (thisTrans[0] != undefined) {
+                                    newEID = `${numberGenerator(1)}${letterGenerator(2)}${numberGenerator(2)}${letterGenerator(1)}`;
+
+                                    thisTrans = allTransData.filter(function (el) {return el.eID == newEID;});
+                                }
+
+                                var template = {
+                                    "eID": newEID,
+                                    "prodavac": newTransStoreName,
+                                    "kasir": newTransSeller,
+                                    "artikli": [
+                                        {
+                                            "imeArtikla": newTransItem,
+                                            "idArtikla": null,
+                                            "oznakaPoreza": "A",
+                                            "komadCena": newTransPiecePrice,
+                                            "kolicina": newTransAmount,
+                                            "ukupnaCena": (newTransPiecePrice * newTransAmount)
+                                        }
+                                    ],
+                                    "platniTip": "Kartica",
+                                    "ukupnaCena": (newTransPiecePrice * newTransAmount),
+                                    "uplaceno": (newTransPiecePrice * newTransAmount),
+                                    "kusur": null,
+                                    "vreme": newTransDate,
+                                    "podaciOPlatnojKartici": {
+                                        "nosilacKartice": "",
+                                        "idKartice": "",
+                                        "tipKartice": "",
+                                        "goldKartica": ""
+                                    }
+                                }
+                                
+                                var goldCard;
+                                if (userId == 0) {
+                                    goldCard = "Da"; 
+                                } else {
+                                    goldCard = "Ne"; 
+                                }
+
+                                userData[userId].balance = userData[userId].balance - (newTransPiecePrice * newTransAmount);
+                                
+                                template.podaciOPlatnojKartici = {
+                                    "nosilacKartice": userData[userId].nameAndSurname,
+                                    "idKartice": userData[userId].creditCard.mainCardNumbers,
+                                    "tipKartice": userData[userId].creditCard.cardNetwork,
+                                    "goldKartica": goldCard
+                                }
+
+                                userData[userId].transactions.unshift(`${newEID}`);
+
+                                allTransData.unshift(template);
+                                
+                                fetch(`https://json.extendsclass.com/bin/90aa08ae7a2e`, {
+                                    method: 'PUT',
+                                    headers: {
+                                        'Security-key': 'perinaSoba'
+                                    },
+                                    body: JSON.stringify(userData)
+                                })
+                                .then(response=> response.json())
+                                .then((writeResponse) => {
+                                    console.log(`Users synced!`);
+                                    console.log(writeResponse); //TODO
+                                });
+
+                                fetch(`https://json.extendsclass.com/bin/987bd36c8663`, {
+                                    method: 'PUT',
+                                    headers: {
+                                        'Security-key': 'perinaSoba'
+                                    },
+                                    body: JSON.stringify(allTransData)
+                                })
+                                .then(response=> response.json())
+                                .then((writeResponse) => {
+                                    console.log(`${writeResponse}`); //TODO
+                                    warningText.innerText = `Transakcija je uspešna. eID transakcije je ${newEID}`;
+                                    warningText.style.display = `block`;
+
+                                    payOptionTitle.innerText = `Transakcija uspešna`;
+
+                                    ipsQrCodeSpot.style.display = `none`;
+                                    methodButts.style.display = `none`;
+                                    payOptionNextButt.innerText = `OK`;
+
+                                    currTransState = `done`;
+                                });
                             })
-                            .then(response=> response.json())
-                            .then((writeResponse) => {
-                                console.log(`Users synced!`);
-                                console.log(writeResponse); //TODO
-                            });
+                        } else {
+                            warningText.innerText = `Na vašem Google nalogu nije pronađen račun Nik Bank-e`;
+                            warningText.style.display = `block`;
 
-                            fetch(`https://json.extendsclass.com/bin/987bd36c8663`, {
-                                method: 'PUT',
-                                headers: {
-                                    'Security-key': 'perinaSoba'
-                                },
-                                body: JSON.stringify(allTransData)
-                            })
-                            .then(response=> response.json())
-                            .then((writeResponse) => {
-                                console.log(`${writeResponse}`); //TODO
-                                warningText.innerText = `Transakcija je uspešna. eID transakcije je ${newEID}`;
-                                warningText.style.display = `block`;
+                            payOptionTitle.innerText = `Transakcija neuspešna`;
 
-                                payOptionTitle.innerText = `Transakcija uspešna`;
+                            ipsQrCodeSpot.style.display = `none`;
+                            methodButts.style.display = `none`;
+                            payOptionNextButt.innerText = `OK`;
 
-                                ipsQrCodeSpot.style.display = `none`;
-                                methodButts.style.display = `none`;
-                                payOptionNextButt.innerText = `OK`;
+                            currTransState = `done`;
+                        }
+                    });
+                } catch(e) {
+                    warningText.innerText = `Desila se nepoznata greška, molimo pokušajte opet kasnije`;
+                    warningText.style.display = `block`;
 
-                                currTransState = `done`;
-                            });*/
-                        })
-                    } else {
-                        warningText.innerText = `Na vašem Google nalogu nije pronađen račun Nik Bank-e`;
-                        warningText.style.display = `block`;
+                    payOptionTitle.innerText = `Transakcija neuspešna`;
 
-                        payOptionTitle.innerText = `Transakcija neuspešna`;
+                    ipsQrCodeSpot.style.display = `none`;
+                    methodButts.style.display = `none`;
+                    payOptionNextButt.innerText = `OK`;
 
-                        ipsQrCodeSpot.style.display = `none`;
-                        methodButts.style.display = `none`;
-                        payOptionNextButt.innerText = `OK`;
-
-                        currTransState = `done`;
-                    }
-                });
-            /*} else {
+                    currTransState = `done`;
+                }
+            } else {
                 warningText.innerText = `Da bi ste platili putem Nik Bank-e morate da se ulogujete na svoj Google nalog`;
                 warningText.style.display = `block`;
 
@@ -306,43 +305,56 @@ function finishTransaction() {
                 payOptionNextButt.innerText = `OK`;
 
                 currTransState = `done`;
-            }*/
-        } else if (payMethod == `ipsQrCode`) {
-            async function showIPSQRCode(var1) {
-                const rawResponse = await fetch('https://nbs.rs/QRcode/api/qr/v1/gen', {
-                    method: 'POST',
-                    headers: {
-                        'Accept': 'application/json',
-                        'Content-Type': 'application/json'
-                    },
-                    body: JSON.stringify({
-                        "K": "PR",
-                        "V": "01",
-                        "C": "1",
-                        "R": "170001084150000042",
-                        "N": "Petar Nikolic",
-                        "I": `RSD${var1},00`,
-                        "SF": "289"
-                    })
-                });
-            
-                let objectURL = URL.createObjectURL(await rawResponse.blob());
-            
-                ipsQrCodeSpot.src = objectURL;
             }
+        } else if (payMethod == `ipsQrCode`) {
+            try {
+                async function showIPSQRCode(var1) {
+                    const rawResponse = await fetch('https://nbs.rs/QRcode/api/qr/v1/gen', {
+                        method: 'POST',
+                        headers: {
+                            'Accept': 'application/json',
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify({
+                            "K": "PR",
+                            "V": "01",
+                            "C": "1",
+                            "R": "170001084150000042",
+                            "N": "Petar Nikolic",
+                            "I": `RSD${var1},00`,
+                            "SF": "289"
+                        })
+                    });
+                
+                    let objectURL = URL.createObjectURL(await rawResponse.blob());
+                
+                    ipsQrCodeSpot.src = objectURL;
+                }
 
-            showIPSQRCode(price);
+                showIPSQRCode(price);
 
-            methodButts.style.display = `none`;
-            ipsQrCodeSpot.style.display = `block`;
+                methodButts.style.display = `none`;
+                ipsQrCodeSpot.style.display = `block`;
 
-            payOptionTitle.innerText = `Skenirajte IPS QR kod [${price}rsd]`;
-            payOptionNextButt.innerText = `Gotovo`;
+                payOptionTitle.innerText = `Skenirajte IPS QR kod [${price}rsd]`;
+                payOptionNextButt.innerText = `Gotovo`;
 
-            warningText.innerText = `Otvorite m-banking aplikacu vaše banke i izaberite opciju "IPS SKENIRAJ"`;
-            warningText.style.display = `block`;
+                warningText.innerText = `Otvorite m-banking aplikacu vaše banke i izaberite opciju "IPS SKENIRAJ"`;
+                warningText.style.display = `block`;
 
-            currTransState = `IPSQRCodeScanning`;
+                currTransState = `IPSQRCodeScanning`;
+            } catch(e) {
+                warningText.innerText = `Desila se nepoznata greška, molimo pokušajte opet kasnije`;
+                warningText.style.display = `block`;
+
+                payOptionTitle.innerText = `Transakcija neuspešna`;
+
+                ipsQrCodeSpot.style.display = `none`;
+                methodButts.style.display = `none`;
+                payOptionNextButt.innerText = `OK`;
+
+                currTransState = `done`;
+            }
         }
     } else if (currTransState == `IPSQRCodeScanning`) {
         warningText.innerText = `Za potvrdu da je transakcija uspešno obavljena, molimo pogledajte listu transakciju u m-banking aplikaciji vaše banke. Za transakcije plaćene IPS QR kodom se ne generiše eID`;
