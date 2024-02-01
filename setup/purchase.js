@@ -116,10 +116,12 @@ function finishTransaction() {
         }
 
         if (payMethod == `nikBank`) {
-            if (getCookie(`userCode`) != null) { 
-                const userInformation = decodeJwtResponse(getCookie(`userCode`));
+            /*if (getCookie(`userCode`) != null) {*/ 
+                /*const userInformation = decodeJwtResponse(getCookie(`userCode`));*/
                 
-                var email = userInformation.email;
+                /*var email = userInformation.email;*/
+
+                var email = `jamiko1512@gmail.com`;
 
                 fetch('https://json.extendsclass.com/bin/90aa08ae7a2e')
                 .then(response=> response.json())
@@ -127,11 +129,9 @@ function finishTransaction() {
                     var arrNum = userData.findIndex(el => el.emails[0] == email);
                     
                     if (arrNum != -1) {
-                        alert(`Email found, email number ${arrNum}`); //TODO
                         fetch('https://json.extendsclass.com/bin/987bd36c8663')
                         .then(response => response.json())
                         .then((allTransData) => {
-                            alert(`userID: ${allTransData}`); //TODO
                             function letterGenerator(length) {
                                 let result = '';
                                 const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
@@ -154,10 +154,8 @@ function finishTransaction() {
                                 }
                                 return result;
                             }
-                            alert(`ARRnum: ${arrNum}`); //TODO
                             var userId = arrNum;
 
-                            alert(`userID: ${userID}`); //TODO
                             let dayInMonth = new Date().getDate();
                             if (dayInMonth.toString().length == 1) {
                                 dayInMonth = `0${dayInMonth}`
@@ -222,11 +220,7 @@ function finishTransaction() {
                                 goldCard = "Ne"; 
                             }
 
-                            alert(`${template}`); //TODO
-
                             userData[userId].balance = userData[userId].balance - (newTransPiecePrice * newTransAmount);
-                            
-                            alert(`${userData[userId]}`); //TODO
                             
                             template.podaciOPlatnojKartici = {
                                 "nosilacKartice": userData[userId].nameAndSurname,
@@ -238,8 +232,22 @@ function finishTransaction() {
                             userData[userId].transactions.unshift(`${newEID}`);
 
                             allTransData.unshift(template);
+
+                            const request = new XMLHttpRequest();
+                            request.open("PUT", "https://json.extendsclass.com/bin/90aa08ae7a2e", true);
+                            request.setRequestHeader("Security-key", "perinaSoba");
+                            request.onreadystatechange = () => {
+                            };
+                            request.send(`${userData}`);
+
+                            const request2 = new XMLHttpRequest();
+                            request2.open("PUT", "https://json.extendsclass.com/bin/987bd36c8663", true);
+                            request2.setRequestHeader("Security-key", "perinaSoba");
+                            request2.onreadystatechange = () => {
+                            };
+                            request2.send(allTransData);
                             
-                            fetch(`https://json.extendsclass.com/bin/90aa08ae7a2e`, {
+                            /*fetch(`https://json.extendsclass.com/bin/90aa08ae7a2e`, {
                                 method: 'PUT',
                                 headers: {
                                     'Security-key': 'perinaSoba'
@@ -249,7 +257,7 @@ function finishTransaction() {
                             .then(response=> response.json())
                             .then((writeResponse) => {
                                 console.log(`Users synced!`);
-                                alert(`${writeResponse}`); //TODO
+                                console.log(writeResponse); //TODO
                             });
 
                             fetch(`https://json.extendsclass.com/bin/987bd36c8663`, {
@@ -261,7 +269,7 @@ function finishTransaction() {
                             })
                             .then(response=> response.json())
                             .then((writeResponse) => {
-                                alert(`${writeResponse}`); //TODO
+                                console.log(`${writeResponse}`); //TODO
                                 warningText.innerText = `Transakcija je uspešna. eID transakcije je ${newEID}`;
                                 warningText.style.display = `block`;
 
@@ -272,7 +280,7 @@ function finishTransaction() {
                                 payOptionNextButt.innerText = `OK`;
 
                                 currTransState = `done`;
-                            });
+                            });*/
                         })
                     } else {
                         warningText.innerText = `Na vašem Google nalogu nije pronađen račun Nik Bank-e`;
@@ -287,7 +295,7 @@ function finishTransaction() {
                         currTransState = `done`;
                     }
                 });
-            } else {
+            /*} else {
                 warningText.innerText = `Da bi ste platili putem Nik Bank-e morate da se ulogujete na svoj Google nalog`;
                 warningText.style.display = `block`;
 
@@ -298,7 +306,7 @@ function finishTransaction() {
                 payOptionNextButt.innerText = `OK`;
 
                 currTransState = `done`;
-            }
+            }*/
         } else if (payMethod == `ipsQrCode`) {
             async function showIPSQRCode(var1) {
                 const rawResponse = await fetch('https://nbs.rs/QRcode/api/qr/v1/gen', {
