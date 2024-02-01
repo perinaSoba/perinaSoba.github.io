@@ -18,10 +18,23 @@ function openPayPopUp(value1, value2) {
     stopTransaction();
     payOptionsHolder.style.display = `block`;
 
-    payOptionTitle.innerText = `Izaberite način plaćanja [${value2}rsd]`;
+    if (value2 == -1) {
+        currTransState = `messagePopUpOnly`;
 
-    currTransState = `choosingPaymentMethod`;
+        warningText.innerText = `${value1}`;
+        warningText.style.display = `block`;
 
+        payOptionTitle.innerText = `Poruka`;
+
+        ipsQrCodeSpot.style.display = `none`;
+        methodButts.style.display = `none`;
+        payOptionNextButt.innerText = `OK`;
+    } else {
+        payOptionTitle.innerText = `Izaberite način plaćanja [${value2}rsd]`;
+
+        currTransState = `choosingPaymentMethod`;
+    }
+    
     prodName = value1;
     price = value2;
 }
@@ -367,6 +380,8 @@ function finishTransaction() {
 
         currTransState = `done`;
     } else if (currTransState == `done`) {
+        stopTransaction();
+    } else if (currTransState == `messagePopUpOnly`) {
         stopTransaction();
     } else if (currTransState == `choosingPaymentMethod`) {
         warningText.innerText = `Da li ste sigurni?`;
