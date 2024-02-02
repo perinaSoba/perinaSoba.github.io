@@ -252,7 +252,7 @@ function finishTransaction() {
                                         headers: {
                                             'Security-key': 'perinaSoba'
                                         },
-                                        body: userData/*JSON.stringify(userData)*/
+                                        body: JSON.stringify(userData)
                                     })
                                     .then(response=> response.json())
                                     .then((writeResponse) => {
@@ -265,7 +265,7 @@ function finishTransaction() {
                                         headers: {
                                             'Security-key': 'perinaSoba'
                                         },
-                                        body: allTransData/*JSON.stringify(allTransData)*/
+                                        body: JSON.stringify(allTransData)
                                     })
                                     .then(response=> response.json())
                                     .then((writeResponse) => {
