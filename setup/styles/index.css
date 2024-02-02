@@ -53,6 +53,7 @@ body {
     width: 100%;
     padding: 0;
     margin: 0;
+    transition: 0.5s;
 }
 
 /* Page Banner */
@@ -313,6 +314,7 @@ select, input {
     display: flex;
     flex-direction: column;
     text-align: center;
+    transition: 0.5s;
 }
 #logInDiv {
     background-color: var(--surface);

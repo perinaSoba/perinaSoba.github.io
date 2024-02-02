@@ -18,6 +18,14 @@ function openPayPopUp(value1, value2) {
     stopTransaction();
     payOptionsHolder.style.display = `block`;
 
+    const pageContent_style = document.createElement('style'); 
+    pageContent_style.innerHTML = '.contentHolder{filter: blur(5px)!important;}';
+    document.body.append(pageContent_style);
+
+    const sideBar_style = document.createElement('style'); 
+    sideBar_style.innerHTML = '#sideBar{filter: blur(5px)!important;}';
+    document.body.append(sideBar_style);
+
     if (value2 == -1) {
         currTransState = `messagePopUpOnly`;
 
@@ -99,6 +107,14 @@ function stopTransaction() {
 
     payOptionsHolder.style.display = `none`;
     warningText.style.display = `none`;
+
+    const pageContent_style = document.createElement('style'); 
+    pageContent_style.innerHTML = '.contentHolder{filter: blur(0px)!important;}';
+    document.body.append(pageContent_style);
+
+    const sideBar_style = document.createElement('style'); 
+    sideBar_style.innerHTML = '#sideBar{filter: blur(0px)!important;}';
+    document.body.append(sideBar_style);
 
     changePayOption(1);
 }
