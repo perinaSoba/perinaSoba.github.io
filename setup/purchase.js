@@ -157,6 +157,9 @@ function finishTransaction() {
                     .then(response=> response.json())
                     .then((userData) => { 
                         var arrNum = userData.findIndex(el => el.emails[0] == email);
+
+                        console.log(arrNum)
+                        console.log(email)
                         
                         if (arrNum != -1) {
                             fetch('https://json.extendsclass.com/bin/987bd36c8663')
@@ -185,6 +188,8 @@ function finishTransaction() {
                                     return result;
                                 }
                                 var userId = arrNum;
+
+                                console.log(userId);
 
                                 let dayInMonth = new Date().getDate();
                                 if (dayInMonth.toString().length == 1) {
