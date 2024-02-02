@@ -151,16 +151,11 @@ function finishTransaction() {
                     
                     var email = userInformation.email;
 
-                    var email = `jamiko1512@gmail.com`;
-
                     fetch('https://json.extendsclass.com/bin/90aa08ae7a2e')
                     .then(response=> response.json())
                     .then((userData) => { 
                         var arrNum = userData.findIndex(el => el.emails[0] == email);
 
-                        console.log(arrNum)
-                        console.log(email)
-                        
                         if (arrNum != -1) {
                             fetch('https://json.extendsclass.com/bin/987bd36c8663')
                             .then(response => response.json())
@@ -188,8 +183,6 @@ function finishTransaction() {
                                     return result;
                                 }
                                 var userId = arrNum;
-
-                                console.log(userId);
 
                                 let dayInMonth = new Date().getDate();
                                 if (dayInMonth.toString().length == 1) {
