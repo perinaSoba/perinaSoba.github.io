@@ -145,7 +145,7 @@ body {
 
 /* Payment related */
 #payOptionsHolder {
-    position: absolute;
+    position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -533,6 +533,7 @@ select, input {
     /* Banner */
     #pgBanner {
         background-position: unset;
+        margin-top: unset;
     }
     #pgBanner div {
         padding-top: 15%;
