@@ -246,41 +246,44 @@ function finishTransaction() {
                                 userData[userId].transactions.unshift(`${newEID}`);
 
                                 allTransData.unshift(template);
-                                
-                                fetch(`https://json.extendsclass.com/bin/90aa08ae7a2e`, {
-                                    method: 'PUT',
-                                    headers: {
-                                        'Security-key': 'perinaSoba'
-                                    },
-                                    body: userData/*JSON.stringify(userData)*/
-                                })
-                                .then(response=> response.json())
-                                .then((writeResponse) => {
-                                    console.log(`Users synced!`);
-                                    console.log(writeResponse); //TODO
-                                });
-
-                                fetch(`https://json.extendsclass.com/bin/987bd36c8663`, {
-                                    method: 'PUT',
-                                    headers: {
-                                        'Security-key': 'perinaSoba'
-                                    },
-                                    body: allTransData/*JSON.stringify(allTransData)*/
-                                })
-                                .then(response=> response.json())
-                                .then((writeResponse) => {
-                                    console.log(`${writeResponse}`); //TODO
-                                    warningText.innerText = `Transakcija je uspešna. eID transakcije je ${newEID}`;
-                                    warningText.style.display = `block`;
-
-                                    payOptionTitle.innerText = `Transakcija uspešna`;
-
-                                    ipsQrCodeSpot.style.display = `none`;
-                                    methodButts.style.display = `none`;
-                                    payOptionNextButt.innerText = `OK`;
-
-                                    currTransState = `done`;
-                                });
+                                try {
+                                    fetch(`https://json.extendsclass.com/bin/90aa08ae7a2e`, {
+                                        method: 'PUT',
+                                        headers: {
+                                            'Security-key': 'perinaSoba'
+                                        },
+                                        body: userData/*JSON.stringify(userData)*/
+                                    })
+                                    .then(response=> response.json())
+                                    .then((writeResponse) => {
+                                        console.log(`Users synced!`);
+                                        console.log(writeResponse); //TODO
+                                    });
+    
+                                    fetch(`https://json.extendsclass.com/bin/987bd36c8663`, {
+                                        method: 'PUT',
+                                        headers: {
+                                            'Security-key': 'perinaSoba'
+                                        },
+                                        body: allTransData/*JSON.stringify(allTransData)*/
+                                    })
+                                    .then(response=> response.json())
+                                    .then((writeResponse) => {
+                                        console.log(`${writeResponse}`); //TODO
+                                        warningText.innerText = `Transakcija je uspešna. eID transakcije je ${newEID}`;
+                                        warningText.style.display = `block`;
+    
+                                        payOptionTitle.innerText = `Transakcija uspešna`;
+    
+                                        ipsQrCodeSpot.style.display = `none`;
+                                        methodButts.style.display = `none`;
+                                        payOptionNextButt.innerText = `OK`;
+    
+                                        currTransState = `done`;
+                                    });
+                                } catch(e) {
+                                    console.error(e)
+                                }
                             })
                         } else {
                             warningText.innerText = `Na vašem Google nalogu nije pronađen račun Nik Bank-e`;
