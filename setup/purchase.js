@@ -247,6 +247,13 @@ function finishTransaction() {
 
                                 allTransData.unshift(template);
                                 try {
+                                    console.log(userData);
+                                    console.log(typeof(userData));
+
+                                    console.log(allTransData);
+                                    console.log(typeof(allTransData));
+
+
                                     fetch(`https://json.extendsclass.com/bin/90aa08ae7a2e`, {
                                         method: 'PUT',
                                         headers: {
