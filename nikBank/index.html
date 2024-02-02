@@ -64,13 +64,31 @@
 
                     <p>Shop</p> 
                 </button>
-                
-                <button onclick="openOtherPopUp()" class="tabButton activeCard" id="otherNavButt"> 
-                    <span class="material-symbols-rounded">
-                        read_more
-                    </span>
 
-                    <p>Ostalo</p>
+                <hr style="border: solid 0.05rem var(--font); border-radius: 24px; margin: 1rem;">
+                
+                <button onclick="window.location.href = `https://perinasoba.github.io/nikForum`" class="tabButton">
+                    <span class="material-symbols-rounded">
+                        forum
+                    </span>
+    
+                    <p>Nik Forum</p>
+                </button>
+    
+                <button id="activeCard" class="tabButton activeCard">
+                    <span class="material-symbols-rounded">
+                        account_balance
+                    </span>
+    
+                    <p>Nik Bank</p>
+                </button>
+    
+                <button onclick="window.location.href = `https://perinasoba.github.io/nikMagic`" class="tabButton">
+                    <span class="material-symbols-rounded">
+                        devices_other
+                    </span>
+    
+                    <p>Nik Magic</p>
                 </button>
             </div>
 
@@ -81,32 +99,6 @@
                     </span>
                 </button>
             </div>
-        </div>
-
-        <div class="popUp" id="sidePopUp">
-            <button onclick="window.location.href = `https://perinasoba.github.io/nikForum`" class="tabButton">
-                <span class="material-symbols-rounded">
-                    forum
-                </span>
-
-                <p>Nik Forum</p>
-            </button>
-
-            <button id="activeCard" class="tabButton activeCard">
-                <span class="material-symbols-rounded">
-                    account_balance
-                </span>
-
-                <p>Nik Bank</p>
-            </button>
-
-            <button onclick="window.location.href = `https://perinasoba.github.io/nikMagic`" class="tabButton">
-                <span class="material-symbols-rounded">
-                    devices_other
-                </span>
-
-                <p>Nik Magic</p>
-            </button>
         </div>
 
         <div id="pageContent">

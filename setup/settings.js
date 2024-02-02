@@ -81,45 +81,6 @@ function switchTheme() {
 
 document.getElementById("themeSwitchButt").addEventListener("click", switchTheme);
 
-function openOtherPopUp() {
-    var navButt = document.getElementById(`otherNavButt`);
-    var activeCard = document.getElementById(`activeCard`);
-    var pageContent = document.getElementById(`pageContent`);
-    var popUp = document.getElementById(`sidePopUp`);
-    var popUpVisible = popUp.style.display == `flex`;
-
-    if (popUpVisible) {
-        popUp.style.display = `none`;
-
-        navButt.classList.remove(`activeCard`);
-
-        pageContent.style.filter = `none`; 
-
-        try {
-            activeCard.classList.add(`activeCard`);
-        } catch (e) {
-            
-        }
-    } else if (!popUpVisible) {
-        popUp.style.display = `flex`;
-
-        console.log(activeCard.parentElement.id)
-        console.log(activeCard.parentElement.id != `sidePopUp`)
-
-        try {
-            if (activeCard.parentElement.id != `sidePopUp`) {
-                activeCard.classList.remove(`activeCard`);
-            }
-        } catch (e) {
-            
-        }
-    
-        pageContent.style.filter = `blur(5px)`;
-        
-        navButt.classList.add(`activeCard`);
-    }
-}
-
 function mobNavOpen() {
     var mobileNav = document.getElementById("mobileNav");
 
