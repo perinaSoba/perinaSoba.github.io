@@ -12,12 +12,10 @@ let price = ``;
 let currTransState = null;
 
 payOptionsHolder.style.opacity = `0`;
-payOptionsHolder.style.display = `block`;
+payOptionsHolder.style.display = `none`;
 warningText.style.display = `none`;
 
 function openPayPopUp(value1, value2) {
-    stopTransaction();
-
     const pageContent_style = document.createElement('style'); 
     pageContent_style.innerHTML = '.contentHolder{filter: blur(5px)!important;}';
     document.body.append(pageContent_style);
@@ -46,6 +44,7 @@ function openPayPopUp(value1, value2) {
     prodName = value1;
     price = value2;
 
+    payOptionsHolder.style.display = `block`;
     payOptionsHolder.style.opacity = `100`;
 }
 
@@ -95,22 +94,6 @@ function changePayOption(optionID) {
 function stopTransaction() {
     payOptionsHolder.style.opacity = `0`;
 
-    payOptionTitle.innerText = `Izaberite način plaćanja`;
-    warningText.innerText = `Da li ste sigurni?`;
-    ipsQrCodeSpot.src = ``;
-    payOptionNextButt.innerText = `Nastavi`;
-    payOptionCancelButt.innerHTML = `Poništi`;
-
-    prodName = ``;
-    price = ``;
-
-    currTransState = null;
-
-    methodButts.style.display = `flex`;
-    ipsQrCodeSpot.style.display = `none`;
-
-    warningText.style.display = `none`;
-
     const pageContent_style = document.createElement('style'); 
     pageContent_style.innerHTML = '.contentHolder{filter: blur(0px)!important;}';
     document.body.append(pageContent_style);
@@ -119,7 +102,27 @@ function stopTransaction() {
     sideBar_style.innerHTML = '#sideBar{filter: blur(0px)!important;}';
     document.body.append(sideBar_style);
 
-    changePayOption(1);
+    setTimeout(function() {
+        payOptionTitle.innerText = `Izaberite način plaćanja`;
+        warningText.innerText = `Da li ste sigurni?`;
+        ipsQrCodeSpot.src = ``;
+        payOptionNextButt.innerText = `Nastavi`;
+        payOptionCancelButt.innerHTML = `Poništi`;
+
+        prodName = ``;
+        price = ``;
+
+        currTransState = null;
+
+        methodButts.style.display = `flex`;
+        ipsQrCodeSpot.style.display = `none`;
+
+        warningText.style.display = `none`;
+
+        changePayOption(1);
+
+        payOptionsHolder.style.display = `none`;
+    }, 550);
 }
 
 function finishTransaction() {
