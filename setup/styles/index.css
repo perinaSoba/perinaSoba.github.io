@@ -30,6 +30,7 @@
 }
 body {
     background-color: var(--surface);
+    margin-top: 6rem;
 }
 
 .material-symbols-rounded {
@@ -61,7 +62,6 @@ body {
     background-position: center center;
     margin: 0.5rem;
     border-radius: 24px; 
-    margin-top: 6rem;
 }
 #pgBanner div {
     backdrop-filter: blur(10px);
@@ -493,6 +493,7 @@ select, input {
         display: block;
         justify-content: center;
         justify-items: center;
+        margin-top: unset;
     }
 
     #pageContent {
@@ -533,7 +534,6 @@ select, input {
     /* Banner */
     #pgBanner {
         background-position: unset;
-        margin-top: unset;
     }
     #pgBanner div {
         padding-top: 15%;
