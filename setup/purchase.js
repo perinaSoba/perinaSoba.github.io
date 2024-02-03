@@ -11,12 +11,12 @@ let price = ``;
 
 let currTransState = null;
 
-payOptionsHolder.style.display = `none`;
+payOptionsHolder.style.opacity = `0`;
+payOptionsHolder.style.display = `block`;
 warningText.style.display = `none`;
 
 function openPayPopUp(value1, value2) {
     stopTransaction();
-    payOptionsHolder.style.display = `block`;
 
     const pageContent_style = document.createElement('style'); 
     pageContent_style.innerHTML = '.contentHolder{filter: blur(5px)!important;}';
@@ -45,6 +45,8 @@ function openPayPopUp(value1, value2) {
     
     prodName = value1;
     price = value2;
+
+    payOptionsHolder.style.opacity = `100`;
 }
 
 function changePayOption(optionID) {
@@ -91,6 +93,8 @@ function changePayOption(optionID) {
 
 
 function stopTransaction() {
+    payOptionsHolder.style.opacity = `0`;
+
     payOptionTitle.innerText = `Izaberite način plaćanja`;
     warningText.innerText = `Da li ste sigurni?`;
     ipsQrCodeSpot.src = ``;
@@ -105,7 +109,6 @@ function stopTransaction() {
     methodButts.style.display = `flex`;
     ipsQrCodeSpot.style.display = `none`;
 
-    payOptionsHolder.style.display = `none`;
     warningText.style.display = `none`;
 
     const pageContent_style = document.createElement('style'); 
