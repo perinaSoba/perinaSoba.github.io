@@ -34,15 +34,16 @@ fetch('https://perinasoba.github.io/nikForum/setup/stories.json')
         document.getElementById("relsDate").innerHTML = storyObject.relase_date;
 
         document.getElementById("artCont").innerHTML = storyObject.html_code;
-        document.getElementById("errorDiv").style.display = "none";
     }
 
     /* Google block */
-    function googleBlock() {
-        document.getElementById("artCont").style.display = "none";
-        document.getElementById("storiesInfo").style.display = "none";
-                
-        document.getElementById("errorDiv").style.display = "block";
+    var loadOtherStories = true;
+    function showError(reason, urlEnd) {
+        openPayPopUp(`["${reason}", "Greška", "https://perinasoba.github.io/${urlEnd}"]`, -2)
+        loadOtherStories = false;
+
+        document.getElementById(`currStory`).style.display = `none`;
+        document.getElementById(`otherStories`).style.display = `none`;
     }
 
     function parseURLParams(url) {
@@ -75,7 +76,10 @@ fetch('https://perinasoba.github.io/nikForum/setup/stories.json')
 
     var storyObject = storyArray[0];
 
-    if (storyObject.public == true) {
+    if (storyObject == undefined) {
+        loadOtherStories = false;
+        showError(`Ova priča ne postoji, ili je došlo do neke nepoznate greške`, `nikForum`);
+    } else if (storyObject.public == true) {
         spawnStory()
     } else if (storyObject.public == false) {
         if (getCookie(`userCode`) != null) {
@@ -85,10 +89,47 @@ fetch('https://perinasoba.github.io/nikForum/setup/stories.json')
             if (responsePayload.email == "petarnikolic1512@gmail.com" || responsePayload.email == "postbgd@gmail.com" || responsePayload.email == "perinasoba@gmail.com" || responsePayload.email == "jamiko1512@gmail.com" || responsePayload.email == "jasmina.nikolic@tenfore.net" || responsePayload.email == "miomirnikolic61@gmail.com") {
                 spawnStory()
             } else {
-                googleBlock()
+                showError(`Ova priča je dostupna samo korisnicima koji su se ulogovali na svoj Google nalog. Ukoliko ste se već ulogovali a i dalje vidite ovu poruku reloadujte ovu stranicu par puta`, `nalog`);
             }
         } else {
-            googleBlock()
+            showError(`Ova priča je dostupna samo korisnicima koji su se ulogovali na svoj Google nalog. Ukoliko ste se već ulogovali a i dalje vidite ovu poruku reloadujte ovu stranicu par puta`, `nalog`);
+        }
+    }
+
+    /* Load side stories */
+    if (loadOtherStories) {
+        var repeatNum = 0;
+        while (repeatNum != 3) {
+            repeatNum++;
+            var i = repeatNum-1;
+    
+            // On page material
+            var otherStoriesDiv = document.getElementById('otherStories');
+            // Main div
+            var tempDiv = document.createElement('div');
+            // Image
+            var tempImg = document.createElement('img');
+            // Info
+            var tempSpan = document.createElement('span');
+            // About
+            var tempP = document.createElement('p');
+    
+            // Set element data
+            tempP.innerText = storiesJson[i].short_text;
+            tempSpan.innerText = `${storiesJson[i].author.name} • ${storiesJson[i].short_relase_date}`;
+    
+            // On Click function
+            tempDiv.setAttribute("onclick", `window.location.href = \`${storiesJson[i].url}\``);
+            tempDiv.classList.add(`onSurfaceBorderElement`);
+            tempSpan.classList.add(`fontSubHeading`);
+            tempP.classList.add(`fontText`);
+            tempImg.setAttribute("src", `${storiesJson[i].image_url}`);
+    
+            // Set elemnts location
+            otherStoriesDiv.appendChild(tempDiv);
+            tempDiv.appendChild(tempImg);
+            tempDiv.appendChild(tempSpan);
+            tempDiv.appendChild(tempP);
         }
     }
 });

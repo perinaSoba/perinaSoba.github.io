@@ -7,6 +7,7 @@
         <script src="../setup/googleLogIn.js" defer></script>
         <script src="../setup/scripts/nikForum/spawnStory.js" defer></script>
         <script src="../setup/settings.js" defer></script>
+        <script src="../setup/purchase.js" defer></script>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
         <meta charset="UTF-8">
@@ -205,24 +206,54 @@
                 </button>
             </div>
 
-            <div class="contentHolder">
-                <div class="storiesInfo" id="storiesInfo">
-                    <h1 class="titleOfStories" id="title"></h1>
-                    <div id="downSectionInfo">
-                        <img src="" id="authImg">
-                        <span id="authName"></span>
-    
-                        <hr>
-    
-                        <span id="relsDate"></span>
-                    </div>
+            <div id="payOptionsHolder">
+                <h2 class="fontHeading" id="payOptionTitle">Izaberite način plaćanja</h2>
+                <p id="warningText">Da li ste sigurni?</p>
+                <br>
+                <div id="methodButts">
+                    <button id="NBPay" class="onSurfaceContainer payOptionButtons" onclick="changePayOption(1)">
+                        <img src="../media/nikBank/favicion.png" alt="Nik Bank Pay">
+                        <span class="fontSubHeading">Račun u Nik Banci</span>
+                        <span class="material-symbols-rounded payOptionTick" id="payOptionIcon1">
+                            check_circle
+                        </span>
+                    </button>
+                    <button id="IPSQR" class="surfaceElement payOptionButtons" onclick="changePayOption(2)">
+                        <img src="../media/ipsQrCodeLogo.png" alt="IPS QR Code Pay">
+                        <span class="fontSubHeading">IPS QR Kod</span>
+                        <span class="material-symbols-rounded payOptionTick" id="payOptionIcon2">
+                            radio_button_unchecked
+                        </span>
+                    </button>
                 </div>
-    
-                <div id="artCont"></div>
-    
-                <div class="textBox" id="errorDiv">
-                    <h2>Greška!</h2>
-                    <p>Ova priča je dostupna samo korisnicima koji su se ulogovali na svoj Google nalog. Ukoliko ste se već ulogovali a i dalje vidite ovu poruku reloadujte ovu stranicu par puta. Za više informacija o tome kako da se ulogujete pritisnite <a href="https://perinasoba.github.io/nalog">ovaj link</a>.</p>
+                <img src="" alt="IPS QR Code" id="ipsQrCodeSpot">
+                <br>
+                <div id="operationButts">
+                    <button class="onSurfaceElement payOptionButtons fontText payOptionBoldOnHover" onclick="stopTransaction()" id="payOptionCancelButt">Poništi</button>
+                    <button class="onSurfaceContainer payOptionButtons fontText" onclick="finishTransaction()" id="payOptionNextButt">Nastavi</button>
+                </div>
+            </div>
+
+            <div class="contentHolder">
+                <div id="currStory">
+                    <div id="storiesInfo">
+                        <h1 class="fontHeading" id="title"></h1>
+                        <div id="downSectionInfo">
+                            <img src="" id="authImg">
+                            <span class="fontSubHeading" id="authName"></span>
+        
+                            <hr>
+        
+                            <span class="fontSubHeading" id="relsDate"></span>
+                        </div>
+                    </div>
+        
+                    <div id="artCont"></div>
+                </div>
+
+                <div id="otherStories" class="onSurfaceElement">
+                    <h1 class="fontHeading">Ostale priče</h1>
+            
                 </div>
             </div>
         </div>

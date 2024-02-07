@@ -4,44 +4,35 @@
     background-color: var(--surface);
     color: var(--font);
 }
-
-/* StoriesInfo */
-.storiesInfo {
-    display: block;
-    padding: 2rem 5rem;
-    padding-bottom: 0;
-}
-.storiesInfo h1 {
-    font-size: 1.9rem;
-    font-weight: 500;
-}
-
-.storiesInfo #downSectionInfo {
+.contentHolder {
     display: flex;
 }
-.storiesInfo #downSectionInfo img {
+
+/* StoriesInfo */
+#currStory {
+    padding: 1rem 1rem;
+    width: calc(70% - 2rem);
+}
+
+#storiesInfo #downSectionInfo {
+    display: flex;
+}
+#storiesInfo #downSectionInfo img {
     max-height: 1.5rem;
     max-width: 1.5rem;
     border: 0.06rem solid var(--outline);
     border-radius: 100%;
 }
-.storiesInfo #downSectionInfo hr {
+#storiesInfo #downSectionInfo hr {
     border: none;
     border-radius: 1rem;
     margin-left: 0.3rem;
     background-color: #666;
     width: 0.1rem;
 }
-.storiesInfo #downSectionInfo span {
-    font-size: 1.3rem;
-    font-weight: 450;
+#storiesInfo #downSectionInfo span {
     align-self: center;
     margin-left: 0.3rem;
-}
-
-/* Container */
-#artCont {
-    padding: 2rem 5rem;
 }
 
 /* Text decoration */
@@ -68,6 +59,32 @@
     border: 0.02rem solid rgb(0 0 0 / 10%);
 }
 
+/* Other stories */
+#otherStories {
+    width: calc(30% - 1rem);
+}
+
+#otherStories div {
+    text-decoration: none;
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+#otherStories div img {
+    width: 100%;
+    border-radius: 24px;
+    transition: 0.5s;
+}
+
+#otherStories div:hover {
+    cursor: pointer;
+    border-radius: 12px;
+    transition: 0.5s;
+}
+#otherStories div:hover img {
+    border-radius: 12px;
+    transition: 0.5s;
+}
+
 /* Responsive stuff */
 @media screen and (max-device-width:480px)  {
     #pageContent {
@@ -78,52 +95,11 @@
         justify-items: center;
     }
 
-    .storiesInfo {
-        margin-bottom: 1.2rem;
-        padding: 0;
-    }
-    .storiesInfo h1 {
-        margin-left: 1rem;
-        margin-right: 1rem;
-        font-size: 2rem;
-        margin-bottom: 0.5rem;
-    }
-    .storiesInfo #downSectionInfo img {
-        border: 0.09rem solid #0009;
-        border-radius: 100%;
-        margin-left: 1rem;
-    }
-    
-    .storiesInfo #downSectionInfo span {
-        margin-left: 1rem;
-        margin-right: 1rem;
-    }
-    .inPostAuthor p {
-        display: none;
+    #currStory {
+        width: unset;
     }
 
-    /* Container */
-    #artCont {
-        padding: 0;
-    }
-    
-    .text {
-        margin-left: 1rem;
-        margin-right: 1rem;
-        text-align: justify;
-    }
-    .heading {
-        margin-left: 1rem;
-        margin-right: 1rem;
-        font-weight: bold;
-    }
-    .image {
-        width: none;
-        border-radius: 1rem;
-        max-width: calc(90% - 0.018rem);
-        text-align: center;
-        margin-left: 1rem;
-        margin-right: 1rem;
-        border: 0;
+    #otherStories {
+        display: none;
     }
 }

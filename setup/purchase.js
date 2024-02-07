@@ -35,6 +35,24 @@ function openPayPopUp(value1, value2) {
         ipsQrCodeSpot.style.display = `none`;
         methodButts.style.display = `none`;
         payOptionNextButt.innerText = `OK`;
+    } if (value2 == -2) {
+        currTransState = `switchPage`;
+
+        var json = JSON.parse(value1);
+
+        payOptionTitle.innerText = `${json[1]}`;
+        payOptionTitle.style.display = `block`;
+
+        warningText.innerText = `${json[0]}`;
+        warningText.style.display = `block`;
+
+        payOptionCancelButt.style.display = `none`;
+
+        payOptionNextButt.setAttribute("onclick", `window.location.href = \`${json[2]}\``);
+
+        ipsQrCodeSpot.style.display = `none`;
+        methodButts.style.display = `none`;
+        payOptionNextButt.innerText = `OK`;
     } else {
         payOptionTitle.innerText = `Izaberite način plaćanja [${value2}rsd]`;
 
