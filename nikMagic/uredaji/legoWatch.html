@@ -4,7 +4,7 @@
         <link rel="stylesheet" href="../../setup/styles/magicUredaji.css">
         <link rel="stylesheet" href="../../setup/styles/index.css">
         <script src="../../setup/googleLogIn.js" defer></script>
-        <script src="../../setup/purchase.js" defer></script>
+        <script src="../../setup/popUp.js" defer></script>
         <script src="../../setup/settings.js" defer></script>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
@@ -177,11 +177,11 @@
                 </button>
             </div>
 
-            <div id="payOptionsHolder">
-                <h2 class="fontHeading" id="payOptionTitle">Izaberite način plaćanja</h2>
+            <div id="optionsHolder">
+                <h2 class="fontHeading" id="optionsTitle">Izaberite način plaćanja</h2>
                 <p id="warningText">Da li ste sigurni?</p>
                 <br>
-                <div id="methodButts">
+                <div id="payMethodsHolder">
                     <button id="NBPay" class="onSurfaceContainer payOptionButtons" onclick="changePayOption(1)">
                         <img src="../../media/nikBank/favicion.png" alt="Nik Bank Pay">
                         <span class="fontSubHeading">Račun u Nik Banci</span>
@@ -200,8 +200,8 @@
                 <img src="" alt="IPS QR Code" id="ipsQrCodeSpot">
                 <br>
                 <div id="operationButts">
-                    <button class="onSurfaceElement payOptionButtons fontText payOptionBoldOnHover" onclick="stopTransaction()" id="payOptionCancelButt">Poništi</button>
-                    <button class="onSurfaceContainer payOptionButtons fontText" onclick="finishTransaction()" id="payOptionNextButt">Nastavi</button>
+                    <button onclick="closePopUp()" id="closePopUpButt" class="onSurfaceElement payOptionButtons fontText payOptionBoldOnHover">Poništi</button>
+                    <button onclick="nextPopUpPress()" id="nextPopUpButt" class="onSurfaceContainer payOptionButtons fontText">Nastavi</button>
                 </div>
             </div>
             
@@ -218,7 +218,7 @@
                             <div class="main">
                                 <span class="priceTag">3.000rsd</span>
                                 <br>
-                                <button class="buyButton" id="buyButt" onclick="openPayPopUp(`Perina Soba - Lego Watch`, 3000)">Kupi</button>
+                                <button class="buyButton" id="buyButt" onclick="openPopUp(`Perina Soba - Lego Watch`, 3000)">Kupi</button>
                             </div>
 
                             <div class="onSale">

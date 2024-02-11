@@ -4,7 +4,7 @@
         <link rel="stylesheet" href="../setup/styles/index.css">
         <script src="../setup/googleLogIn.js" defer></script>
         <script src="../setup/settings.js" defer></script>
-        <script src="../setup/purchase.js" defer></script>
+        <script src="../setup/popUp.js" defer></script>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
         <meta charset="UTF-8">
@@ -176,11 +176,11 @@
                 </button>
             </div>
 
-            <div id="payOptionsHolder">
-                <h2 class="fontHeading" id="payOptionTitle">Izaberite način plaćanja</h2>
+            <div id="optionsHolder">
+                <h2 class="fontHeading" id="optionsTitle">Izaberite način plaćanja</h2>
                 <p id="warningText">Da li ste sigurni?</p>
                 <br>
-                <div id="methodButts">
+                <div id="payMethodsHolder">
                     <button id="NBPay" class="onSurfaceContainer payOptionButtons" onclick="changePayOption(1)">
                         <img src="../media/nikBank/favicion.png" alt="Nik Bank Pay">
                         <span class="fontSubHeading">Račun u Nik Banci</span>
@@ -199,8 +199,8 @@
                 <img src="" alt="IPS QR Code" id="ipsQrCodeSpot">
                 <br>
                 <div id="operationButts">
-                    <button class="onSurfaceElement payOptionButtons fontText payOptionBoldOnHover" onclick="stopTransaction()" id="payOptionCancelButt">Poništi</button>
-                    <button class="onSurfaceContainer payOptionButtons fontText" onclick="finishTransaction()" id="payOptionNextButt">Nastavi</button>
+                    <button onclick="closePopUp()" id="closePopUpButt" class="onSurfaceElement payOptionButtons fontText payOptionBoldOnHover">Poništi</button>
+                    <button onclick="nextPopUpPress()" id="nextPopUpButt" class="onSurfaceContainer payOptionButtons fontText">Nastavi</button>
                 </div>
             </div>
             
@@ -222,7 +222,7 @@
     
                         <a class="fontCenter borderRadius onSurfaceBorderElement onSurfaceElement flexHolder" style="width: calc(100%/3);">
                             <h3 class="fontMiddleHeading">Debitna kartica</h3>
-                            <p>Debitna kartica vam omogućava plaćanje bez brige o prekoračenju vašeg novčanog limita koji ste prethodno uplatili na vaš račun</p>
+                            <p>Debitna kartica vam omogućava plaćanje bez brige o prekoračenju vašeg novčanog limita koji ste prethodno openPopUppayuplatili na vaš račun</p>
                         </a>
     
                         <a class="fontCenter borderRadius onSurfaceBorderElement onSurfaceElement flexHolder" style="width: calc(100%/3);">
@@ -238,8 +238,8 @@
                         <a class="fontCenter borderRadius onSurfaceBorderElement onSurfaceElement flexHolder" style="width: 100%;">
                             <h3 class="fontMiddleHeading">Organizacija Perin Novčanik</h3>
                             <h4 class="fontText" style="margin-top: 0.5rem;">Iznos [rsd]</h4>
-                            <input type="number" id="orgPNAmountInput" value="500">
-                            <button class="fontSubHeading onSurfaceContainer hoverClickable" style="margin-top: 1rem;" onclick="openPayPopUp(`Nik Bank - Donacija organizaciji Perin Novčanik`, document.getElementById(`orgPNAmountInput`).value)">Doniraj</button>
+                            <input type="number" id="orgPNAmountInput" value="500" min="0" max="1000000">
+                            <button class="fontSubHeading onSurfaceContainer hoverClickable" style="margin-top: 1rem;" onclick="openPopUp(`Nik Bank - Donacija organizaciji Perin Novčanik`, document.getElementById(`orgPNAmountInput`).value)">Doniraj</button>
                         </a>
                     </div>
                 </div>

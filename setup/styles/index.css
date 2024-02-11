@@ -144,7 +144,7 @@ body {
 }
 
 /* Payment related */
-#payOptionsHolder {
+#optionsHolder {
     position: fixed;
     top: 50%;
     left: 50%;
@@ -157,51 +157,51 @@ body {
     display: none;
 }
 
-#payOptionsHolder h2 {
+#optionsHolder h2 {
     text-align: center;
     padding: 1rem;
 }
-#payOptionsHolder p {
+#optionsHolder p {
     text-align: center;
     color: #b3261e;
     margin-left: 0.5rem;
     margin-right: 0.5rem;
 }
 
-#payOptionsHolder div {
+#optionsHolder div {
     display: flex;
 }
 
-#payOptionsHolder #methodButts {
+#optionsHolder #payMethodsHolder {
     height: auto;
     display: flex;
     justify-content: center;
 }
-#payOptionsHolder #methodButts button {
+#optionsHolder #payMethodsHolder button {
     width: calc(100%/4);
     margin: 0.5rem;
     display: flex;
     flex-flow: column;
     align-items: center;
 }
-#payOptionsHolder #methodButts button .payOptionTick {
+#optionsHolder #payMethodsHolder button .payOptionTick {
     padding: 0.2rem;
     
 }
-#payOptionsHolder #methodButts button img {
+#optionsHolder #payMethodsHolder button img {
     width: 50%;
 }
 
-#payOptionsHolder #ipsQrCodeSpot {
+#optionsHolder #ipsQrCodeSpot {
     display: none;
     margin: auto;
     border-radius: 24px;
 }
 
-#payOptionsHolder #operationButts {
+#optionsHolder #operationButts {
     float: right;
 }
-#payOptionsHolder #operationButts button {
+#optionsHolder #operationButts button {
     margin: 0.5rem;
     width: 8rem;
 }
@@ -548,10 +548,10 @@ select, input {
     }
 
     /* Payment related */
-    #payOptionsHolder {
+    #optionsHolder {
         width: 90%;
     }
-    #payOptionsHolder #methodButts button {
+    #optionsHolder #payMethodsHolder button {
         width: calc(100%/2);
     }
 

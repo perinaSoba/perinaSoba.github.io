@@ -1,21 +1,21 @@
-let payOptionsHolder = document.getElementById(`payOptionsHolder`);
-let payOptionTitle = document.getElementById(`payOptionTitle`);
+let optionsHolder = document.getElementById(`optionsHolder`);
+let optionsTitle = document.getElementById(`optionsTitle`);
 let warningText = document.getElementById(`warningText`);
-let methodButts = document.getElementById(`methodButts`);
+let payMethodsHolder = document.getElementById(`payMethodsHolder`);
 let ipsQrCodeSpot = document.getElementById(`ipsQrCodeSpot`);
-let payOptionNextButt = document.getElementById(`payOptionNextButt`);
-let payOptionCancelButt = document.getElementById(`payOptionCancelButt`);
+let nextPopUpButt = document.getElementById(`nextPopUpButt`);
+let closePopUpButt = document.getElementById(`closePopUpButt`);
 
 let prodName = ``;
 let price = ``;
 
 let currTransState = null;
 
-payOptionsHolder.style.opacity = `0`;
-payOptionsHolder.style.display = `none`;
+optionsHolder.style.opacity = `0`;
+optionsHolder.style.display = `none`;
 warningText.style.display = `none`;
 
-function openPayPopUp(value1, value2) {
+function openPopUp(value1, value2) {
     const pageContent_style = document.createElement('style'); 
     pageContent_style.innerHTML = '.contentHolder{filter: blur(5px)!important;}';
     document.body.append(pageContent_style);
@@ -25,36 +25,49 @@ function openPayPopUp(value1, value2) {
     document.body.append(sideBar_style);
 
     if (value2 == -1) {
+        console.log(`-1`)
         currTransState = `messagePopUpOnly`;
 
         warningText.innerText = `${value1}`;
         warningText.style.display = `block`;
 
-        payOptionTitle.innerText = `Poruka`;
+        optionsTitle.innerText = `Poruka`;
 
         ipsQrCodeSpot.style.display = `none`;
-        methodButts.style.display = `none`;
-        payOptionNextButt.innerText = `OK`;
-    } if (value2 == -2) {
+        payMethodsHolder.style.display = `none`;
+        nextPopUpButt.innerText = `OK`;
+    } else if (value2 == -2) {
+        console.log(`-2`)
         currTransState = `switchPage`;
 
         var json = JSON.parse(value1);
 
-        payOptionTitle.innerText = `${json[1]}`;
-        payOptionTitle.style.display = `block`;
+        optionsTitle.innerText = `${json[1]}`;
+        optionsTitle.style.display = `block`;
 
         warningText.innerText = `${json[0]}`;
         warningText.style.display = `block`;
 
-        payOptionCancelButt.style.display = `none`;
+        closePopUpButt.style.display = `none`;
 
-        payOptionNextButt.setAttribute("onclick", `window.location.href = \`${json[2]}\``);
+        nextPopUpButt.setAttribute("onclick", `window.location.href = \`${json[2]}\``);
 
         ipsQrCodeSpot.style.display = `none`;
-        methodButts.style.display = `none`;
-        payOptionNextButt.innerText = `OK`;
+        payMethodsHolder.style.display = `none`;
+        nextPopUpButt.innerText = `OK`;
+    } else if (typeof(value2) != `number` && (value2.includes(`.`) || value2.includes(`,`))) {
+        currTransState = `messagePopUpOnly`;
+
+        warningText.innerText = `Molimo unesite iznos za donaciju bez tačke i zareza`;
+        warningText.style.display = `block`;
+
+        optionsTitle.innerText = `Poruka`;
+
+        ipsQrCodeSpot.style.display = `none`;
+        payMethodsHolder.style.display = `none`;
+        nextPopUpButt.innerText = `OK`;
     } else {
-        payOptionTitle.innerText = `Izaberite način plaćanja [${value2}rsd]`;
+        optionsTitle.innerText = `Izaberite način plaćanja [${value2}rsd]`;
 
         currTransState = `choosingPaymentMethod`;
     }
@@ -62,8 +75,8 @@ function openPayPopUp(value1, value2) {
     prodName = value1;
     price = value2;
 
-    payOptionsHolder.style.display = `block`;
-    payOptionsHolder.style.opacity = `100`;
+    optionsHolder.style.display = `block`;
+    optionsHolder.style.opacity = `100`;
 }
 
 function changePayOption(optionID) {
@@ -109,8 +122,8 @@ function changePayOption(optionID) {
 }
 
 
-function stopTransaction() {
-    payOptionsHolder.style.opacity = `0`;
+function closePopUp() {
+    optionsHolder.style.opacity = `0`;
 
     const pageContent_style = document.createElement('style'); 
     pageContent_style.innerHTML = '.contentHolder{filter: blur(0px)!important;}';
@@ -121,29 +134,29 @@ function stopTransaction() {
     document.body.append(sideBar_style);
 
     setTimeout(function() {
-        payOptionTitle.innerText = `Izaberite način plaćanja`;
+        optionsTitle.innerText = `Izaberite način plaćanja`;
         warningText.innerText = `Da li ste sigurni?`;
         ipsQrCodeSpot.src = ``;
-        payOptionNextButt.innerText = `Nastavi`;
-        payOptionCancelButt.innerHTML = `Poništi`;
+        nextPopUpButt.innerText = `Nastavi`;
+        closePopUpButt.innerHTML = `Poništi`;
 
         prodName = ``;
         price = ``;
 
         currTransState = null;
 
-        methodButts.style.display = `flex`;
+        payMethodsHolder.style.display = `flex`;
         ipsQrCodeSpot.style.display = `none`;
 
         warningText.style.display = `none`;
 
         changePayOption(1);
 
-        payOptionsHolder.style.display = `none`;
+        optionsHolder.style.display = `none`;
     }, 550);
 }
 
-function finishTransaction() {
+function nextPopUpPress() {
     if (currTransState == `paymentMethodChoosen`) {
         currTransState = `processingTransaction`
         
@@ -159,11 +172,11 @@ function finishTransaction() {
             warningText.innerText = `Desila se nepoznata greška, molimo pokušajte kasnije`;
             warningText.style.display = `block`;
 
-            payOptionTitle.innerText = `Transakcija neuspešna`;
+            optionsTitle.innerText = `Transakcija neuspešna`;
 
             ipsQrCodeSpot.style.display = `none`;
-            methodButts.style.display = `none`;
-            payOptionNextButt.innerText = `OK`;
+            payMethodsHolder.style.display = `none`;
+            nextPopUpButt.innerText = `OK`;
 
             currTransState = `done`;
         }
@@ -309,11 +322,11 @@ function finishTransaction() {
                                         warningText.innerText = `Transakcija je uspešna. eID transakcije je ${newEID}`;
                                         warningText.style.display = `block`;
     
-                                        payOptionTitle.innerText = `Transakcija uspešna`;
+                                        optionsTitle.innerText = `Transakcija uspešna`;
     
                                         ipsQrCodeSpot.style.display = `none`;
-                                        methodButts.style.display = `none`;
-                                        payOptionNextButt.innerText = `OK`;
+                                        payMethodsHolder.style.display = `none`;
+                                        nextPopUpButt.innerText = `OK`;
     
                                         currTransState = `done`;
                                     });
@@ -325,11 +338,11 @@ function finishTransaction() {
                             warningText.innerText = `Na vašem Google nalogu nije pronađen račun Nik Bank-e`;
                             warningText.style.display = `block`;
 
-                            payOptionTitle.innerText = `Transakcija neuspešna`;
+                            optionsTitle.innerText = `Transakcija neuspešna`;
 
                             ipsQrCodeSpot.style.display = `none`;
-                            methodButts.style.display = `none`;
-                            payOptionNextButt.innerText = `OK`;
+                            payMethodsHolder.style.display = `none`;
+                            nextPopUpButt.innerText = `OK`;
 
                             currTransState = `done`;
                         }
@@ -338,11 +351,11 @@ function finishTransaction() {
                     warningText.innerText = `Desila se nepoznata greška, molimo pokušajte opet kasnije`;
                     warningText.style.display = `block`;
 
-                    payOptionTitle.innerText = `Transakcija neuspešna`;
+                    optionsTitle.innerText = `Transakcija neuspešna`;
 
                     ipsQrCodeSpot.style.display = `none`;
-                    methodButts.style.display = `none`;
-                    payOptionNextButt.innerText = `OK`;
+                    payMethodsHolder.style.display = `none`;
+                    nextPopUpButt.innerText = `OK`;
 
                     currTransState = `done`;
                 }
@@ -350,11 +363,11 @@ function finishTransaction() {
                 warningText.innerText = `Da bi ste platili putem Nik Bank-e morate da se ulogujete na svoj Google nalog`;
                 warningText.style.display = `block`;
 
-                payOptionTitle.innerText = `Transakcija neuspešna`;
+                optionsTitle.innerText = `Transakcija neuspešna`;
 
                 ipsQrCodeSpot.style.display = `none`;
-                methodButts.style.display = `none`;
-                payOptionNextButt.innerText = `OK`;
+                payMethodsHolder.style.display = `none`;
+                nextPopUpButt.innerText = `OK`;
 
                 currTransState = `done`;
             }
@@ -385,11 +398,11 @@ function finishTransaction() {
 
                 showIPSQRCode(price);
 
-                methodButts.style.display = `none`;
+                payMethodsHolder.style.display = `none`;
                 ipsQrCodeSpot.style.display = `block`;
 
-                payOptionTitle.innerText = `Skenirajte IPS QR kod [${price}rsd]`;
-                payOptionNextButt.innerText = `Gotovo`;
+                optionsTitle.innerText = `Skenirajte IPS QR kod [${price}rsd]`;
+                nextPopUpButt.innerText = `Gotovo`;
 
                 warningText.innerText = `Otvorite m-banking aplikacu vaše banke i izaberite opciju "IPS SKENIRAJ"`;
                 warningText.style.display = `block`;
@@ -399,11 +412,11 @@ function finishTransaction() {
                 warningText.innerText = `Desila se nepoznata greška, molimo pokušajte opet kasnije`;
                 warningText.style.display = `block`;
 
-                payOptionTitle.innerText = `Transakcija neuspešna`;
+                optionsTitle.innerText = `Transakcija neuspešna`;
 
                 ipsQrCodeSpot.style.display = `none`;
-                methodButts.style.display = `none`;
-                payOptionNextButt.innerText = `OK`;
+                payMethodsHolder.style.display = `none`;
+                nextPopUpButt.innerText = `OK`;
 
                 currTransState = `done`;
             }
@@ -412,22 +425,22 @@ function finishTransaction() {
         warningText.innerText = `Za potvrdu da je transakcija uspešno obavljena, molimo pogledajte listu transakciju u m-banking aplikaciji vaše banke. Za transakcije plaćene IPS QR kodom se ne generiše eID`;
         warningText.style.display = `block`;
 
-        payOptionTitle.innerText = `Transakcija gotova`;
+        optionsTitle.innerText = `Transakcija gotova`;
 
         ipsQrCodeSpot.style.display = `none`;
-        payOptionNextButt.innerText = `OK`;
+        nextPopUpButt.innerText = `OK`;
 
         currTransState = `done`;
     } else if (currTransState == `done`) {
-        stopTransaction();
+        closePopUp();
     } else if (currTransState == `messagePopUpOnly`) {
-        stopTransaction();
+        closePopUp();
     } else if (currTransState == `choosingPaymentMethod`) {
         warningText.innerText = `Da li ste sigurni?`;
         warningText.style.display = `block`;
 
         currTransState = `paymentMethodChoosen`;
 
-        payOptionNextButt.innerText = `Da`;
+        nextPopUpButt.innerText = `Da`;
     }
 }

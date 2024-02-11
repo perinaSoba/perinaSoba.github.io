@@ -39,7 +39,7 @@ fetch('https://perinasoba.github.io/nikForum/setup/stories.json')
     /* Google block */
     var loadOtherStories = true;
     function showError(reason, urlEnd) {
-        openPayPopUp(`["${reason}", "Greška", "https://perinasoba.github.io/${urlEnd}"]`, -2)
+        openPopUp(`["${reason}", "Greška", "https://perinasoba.github.io/${urlEnd}"]`, -2)
         loadOtherStories = false;
 
         document.getElementById(`currStory`).style.display = `none`;
