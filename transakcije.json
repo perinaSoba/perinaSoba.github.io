@@ -1,5 +1,83 @@
 [
     {
+        "eID": "4AJ71H",
+        "prodavac": "Perina Soba",
+        "kasir": "Petar Nikolić",
+        "artikli": [
+            {
+                "imeArtikla": "Perina Soba - Isplata za rad",
+                "idArtikla": null,
+                "oznakaPoreza": "A",
+                "komadCena": -5,
+                "kolicina": 1,
+                "ukupnaCena": -5
+            }
+        ],
+        "platniTip": "Kartica",
+        "ukupnaCena": -5,
+        "uplaceno": -5,
+        "kusur": null,
+        "vreme": "19.02.2024.",
+        "podaciOPlatnojKartici": {
+            "nosilacKartice": "Miomir Nikolić",
+            "idKartice": "5381",
+            "tipKartice": "mastercard",
+            "goldKartica": "Ne"
+        }
+    },
+    {
+        "eID": "9VJ67G",
+        "prodavac": "Perina Soba",
+        "kasir": "Petar Nikolić",
+        "artikli": [
+            {
+                "imeArtikla": "Nik Bank - Uplata na račun",
+                "idArtikla": null,
+                "oznakaPoreza": "A",
+                "komadCena": -60,
+                "kolicina": 1,
+                "ukupnaCena": -60
+            }
+        ],
+        "platniTip": "Kartica",
+        "ukupnaCena": -60,
+        "uplaceno": -60,
+        "kusur": null,
+        "vreme": "03.02.2024.",
+        "podaciOPlatnojKartici": {
+            "nosilacKartice": "Jasmina Nikolić",
+            "idKartice": "5381",
+            "tipKartice": "mastercard",
+            "goldKartica": "Da"
+        }
+    },
+    {
+        "eID": "1ZD32E",
+        "prodavac": "Perina Soba",
+        "kasir": "Petar Nikolić",
+        "artikli": [
+            {
+                "imeArtikla": "Perina Soba - Mesečna vožnja",
+                "idArtikla": null,
+                "oznakaPoreza": "A",
+                "komadCena": 30,
+                "kolicina": 1,
+                "ukupnaCena": 30
+            }
+        ],
+        "platniTip": "Kartica",
+        "ukupnaCena": 30,
+        "uplaceno": 30,
+        "kusur": null,
+        "vreme": "01.02.2024.",
+        "podaciOPlatnojKartici": {
+            "nosilacKartice": "Jasmina Nikolić",
+            "idKartice": "5381",
+            "tipKartice": "mastercard",
+            "goldKartica": "Da"
+        }
+    },
+    {
         "eID": "2UJ27V",
         "prodavac": "Perina Soba",
         "kasir": "Petar Nikolić",

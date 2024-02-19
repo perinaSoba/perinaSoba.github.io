@@ -5,7 +5,7 @@
         "surname": "Nikolić",
         "bithday": "22/01/1963",
         "location": "Jovana Rajića 5c",
-        "balance": 10,
+        "balance": 40,
         "emails": [
             "jamiko1512@gmail.com",
             "jasmina.nikolic@tenfore.net",
@@ -21,8 +21,8 @@
             "CVV": "846"
         },
         "transactions": [
-            "2UJ27V",
-            "1PS92S"
+            "9VJ67G",
+            "1ZD32E"
         ]
     },
     {
@@ -31,7 +31,7 @@
         "surname": "Nikolić",
         "bithday": "02/08/1961",
         "location": "Jovana Rajića 5c",
-        "balance": 30,
+        "balance": 35,
         "emails": [
             "miomirnikolic61@gmail.com"
         ],
@@ -44,6 +44,8 @@
             "cardNetwork": "mastercard",
             "CVV": "391"
         },
-        "transactions": []
+        "transactions": [
+            "4AJ71H"
+        ]
     }
 ]
