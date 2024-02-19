@@ -1,5 +1,5 @@
 // Cookie functions
-function getCookie(name) {
+/*function getCookie(name) {
     var nameEQ = name + "=";
     var ca = document.cookie.split(';');
     for(var i=0;i < ca.length;i++) {
@@ -19,7 +19,7 @@ function decodeJwtResponse(token) {
     }).join(''));
 
     return JSON.parse(jsonPayload);
-};
+};*/
 
 document.getElementById(`newTransHolder`).style.display = `none`;
 document.getElementById(`userDataHolder`).style.display = `none`;

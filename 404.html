@@ -1,10 +1,10 @@
 <html>
     <head>
         <title>Perina Soba - Greška 404</title>
-        <link rel="stylesheet" href="https://perinasoba.github.io/setup/styles/404.css">
         <link rel="stylesheet" href="https://perinasoba.github.io/setup/styles/index.css">
         <script src="https://perinasoba.github.io/setup/googleLogIn.js" defer></script>
         <script src="https://perinasoba.github.io/setup/settings.js" defer></script>
+        <script src="https://perinasoba.github.io/setup/popUp.js" defer></script>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
         <meta charset="UTF-8">
@@ -102,8 +102,6 @@
         </div>
 
         <div id="pageContent">
-            <h1 class="pcTitle">Greška 404</h1>
-
             <div id="mobNavButt">
                 <svg id="navConfigButt" onclick="mobNavOpen()" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
                     <line x1="3" y1="12" x2="21" y2="12"></line>
@@ -179,8 +177,36 @@
                 </button>
             </div>
 
+            <div id="optionsHolder">
+                <h2 class="fontHeading" id="optionsTitle">Izaberite način plaćanja</h2>
+                <p id="warningText">Da li ste sigurni?</p>
+                <br>
+                <div id="payMethodsHolder">
+                    <button id="NBPay" class="onSurfaceContainer payOptionButtons" onclick="changePayOption(1)">
+                        <img src="https://perinasoba.github.io/media/nikBank/favicion.png" alt="Nik Bank Pay">
+                        <span class="fontSubHeading">Račun u Nik Banci</span>
+                        <span class="material-symbols-rounded payOptionTick" id="payOptionIcon1">
+                            check_circle
+                        </span>
+                    </button>
+                    <button id="IPSQR" class="surfaceElement payOptionButtons" onclick="changePayOption(2)">
+                        <img src="https://perinasoba.github.io/media/ipsQrCodeLogo.png" alt="IPS QR Code Pay">
+                        <span class="fontSubHeading">IPS QR Kod</span>
+                        <span class="material-symbols-rounded payOptionTick" id="payOptionIcon2">
+                            radio_button_unchecked
+                        </span>
+                    </button>
+                </div>
+                <img src="" alt="IPS QR Code" id="ipsQrCodeSpot">
+                <br>
+                <div id="operationButts">
+                    <button onclick="closePopUp()" id="closePopUpButt" class="onSurfaceElement payOptionButtons fontText payOptionBoldOnHover">Poništi</button>
+                    <button onclick="nextPopUpPress()" id="nextPopUpButt" class="onSurfaceContainer payOptionButtons fontText">Nastavi</button>
+                </div>
+            </div>
+
             <div class="contentHolder">
-                <div id="errorDiv">
+                <!--<div id="errorDiv">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"> 
                         <path stroke="none" d="M0 0h24v24H0z" fill="none"/> 
                         <path d="M3 7v4a1 1 0 0 0 1 1h3"/>
@@ -193,7 +219,12 @@
                     <p>Ova stranica ne postoji. Molimo proverite da li ste dobro uneli adresu ili pokušajte ponovo kasnije.</p>
                 </div>
     
-                <img src="https://perinasoba.github.io/media/errorPage/error404.png" id="erorrImage">
+                <img src="https://perinasoba.github.io/media/errorPage/error404.png" id="erorrImage">-->
+                <script>
+                    window.onload = function() {
+                        openPopUp(`["Ova stranica ne postoji. Molimo proverite da li ste dobro uneli adresu ili pokušajte ponovo kasnije", "Greška 404", "https://perinasoba.github.io/"]`, -2)
+                    };
+                </script>
             </div>
         </div>
     </body>

@@ -1,5 +1,5 @@
 // Cookie functions
-function setCookie(name,value,days) {
+/*function setCookie(name,value,days) {
     var expires = "";
     if (days) {
         var date = new Date();
@@ -17,7 +17,7 @@ function getCookie(name) {
         if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
     }
     return null;
-}
+}*/
 
 function blackThemeSetup() {
     // Theme Button

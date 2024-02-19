@@ -2,7 +2,7 @@ fetch('https://perinasoba.github.io/nikForum/setup/stories.json')
 .then(response=> response.json())
 .then((storiesJson) => {
     // Cookies
-    function getCookie(name) {
+    /*function getCookie(name) {
         var nameEQ = name + "=";
         var ca = document.cookie.split(';');
         for(var i=0;i < ca.length;i++) {
@@ -22,7 +22,7 @@ fetch('https://perinasoba.github.io/nikForum/setup/stories.json')
         }).join(''));
 
         return JSON.parse(jsonPayload);
-    };
+    };*/
 
     /* Spawn story */
     function spawnStory() {

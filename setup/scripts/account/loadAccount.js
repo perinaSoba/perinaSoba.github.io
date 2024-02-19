@@ -2,7 +2,7 @@
 document.getElementById(`infoDiv`).style.display = `none`; 
 
 // Cookie functions
-function getCookie(name) {
+/*function getCookie(name) {
     var nameEQ = name + "=";
     var ca = document.cookie.split(';');
     for(var i=0;i < ca.length;i++) {
@@ -22,7 +22,7 @@ function decodeJwtResponse(token) {
     }).join(''));
 
     return JSON.parse(jsonPayload);
-};
+};*/
 
 
 function changeElements(typeOfUse) {
