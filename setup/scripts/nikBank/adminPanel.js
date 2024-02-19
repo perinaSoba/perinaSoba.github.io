@@ -41,8 +41,8 @@ if (getCookie(`userCode`) != null) {
                     tempP.setAttribute("onclick", "removeTransObject(" + i + ", 1" + ")");
 
                     var tempTrans = allTransData.filter(function (el) {return el.eID == allUsers[1].transactions[i];});
-                    console.log(tempTrans)
-                    tempP.innerHTML = `${tempTrans[1].vreme} | x${tempTrans[1].artikli[0].kolicina} | ${-tempTrans[1].artikli[0].komadCena} rsd | ${tempTrans[1].artikli[0].imeArtikla}`;
+                    
+                    tempP.innerHTML = `${tempTrans[0].vreme} | x${tempTrans[0].artikli[0].kolicina} | ${-tempTrans[0].artikli[0].komadCena} rsd | ${tempTrans[0].artikli[0].imeArtikla}`;
 
                     tempDiv.appendChild(tempP);
                 }
